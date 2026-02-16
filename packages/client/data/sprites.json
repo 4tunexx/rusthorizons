@@ -6921,7 +6921,9 @@
     { "id": "items/bucket" },
     { "id": "items/burger" },
     { "id": "items/cake" },
+    { "id": "items/clamchowder" },
     { "id": "items/candykey" },
+
     { "id": "items/cayennebowlsmall" },
     { "id": "items/cayennepepper" },
     { "id": "items/cayenneshaker" },
@@ -6939,7 +6941,7 @@
     { "id": "items/cinnamonbowlsmall" },
     { "id": "items/cinnamonshaker" },
     { "id": "items/citrine" },
-    { "id": "items/clamchowder" },
+
     { "id": "items/clamobject" },
     { "id": "items/cloth" },
     { "id": "items/cloudberry" },

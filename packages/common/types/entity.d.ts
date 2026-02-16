@@ -37,8 +37,8 @@ export interface EntityData {
 
     // Character data
     movementSpeed?: number;
-    hitPoints?: number;
-    maxHitPoints?: number;
+    vitality?: number;
+    maxVitality?: number;
     attackRange?: number;
     level?: number;
     hiddenName?: boolean;

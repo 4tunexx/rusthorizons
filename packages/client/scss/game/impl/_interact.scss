@@ -8,4 +8,14 @@
     justify-content: space-evenly;
 
     width: 8em;
+
+    background: rgba(22, 22, 22, 0.92);
+    border: 3px solid rgba(246, 166, 35, 0.8);
+    border-radius: 6px;
+    padding: 0.5em;
+    box-shadow:
+        0 0 18px rgba(246, 166, 35, 0.4),
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
 }

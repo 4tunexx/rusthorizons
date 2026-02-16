@@ -2,9 +2,9 @@ import Hit from './hit';
 
 import Formulas from '../../../../info/formulas';
 
-import log from '@kaetram/common/util/log';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { CombatPacket, SpawnPacket } from '@kaetram/common/network/impl';
+import log from '@rusthorizons/common/util/log';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { CombatPacket, SpawnPacket } from '@rusthorizons/common/network/impl';
 
 import type Character from '../character';
 

@@ -3,9 +3,9 @@ import Messages from './messages';
 import log from '../lib/log';
 
 import type Game from '../game';
-import type { Packets } from '@kaetram/common/network';
-import type { SerializedServer } from '@kaetram/common/types/network';
-import type { TradePacketOutgoing } from '@kaetram/common/network/impl/trade';
+import type { Packets } from '@rusthorizons/common/network';
+import type { SerializedServer } from '@rusthorizons/common/types/network';
+import type { TradePacketOutgoing } from '@rusthorizons/common/network/impl/trade';
 
 interface OutgoingPackets {
     [Packets.Trade]: TradePacketOutgoing;

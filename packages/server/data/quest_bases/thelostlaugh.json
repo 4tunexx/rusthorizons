@@ -1,6 +1,6 @@
 {
     "name": "The Lost Laugh",
-    "description": "Comic relief.|Jester Jestin has lost his ability to laugh! Find the tickling feather that can restore his jovial spirit.",
+    "description": "Comic relief.|Comedian Jestin has gone flat after too many bad shifts. Find the static feather that can snap his morale back.",
     "rewards": ["giggly-potion", "jester-boots"],
     "stages": {
         "0": {
@@ -8,10 +8,10 @@
             "npc": "jesterjestin",
             "text": [
                 "Woe is me! My laugh, my joy, it's all gone!",
-                "Legend says a mystical tickling feather can bring it back.",
+                "Old camp rumor says a static tickling feather can bring it back.",
                 "Would you be a dear and find it for me?"
             ],
-            "completedText": ["Search for the legendary tickling feather."]
+            "completedText": ["Search for the static tickling feather."]
         },
         "1": {
             "task": "talk",
@@ -24,7 +24,7 @@
             "npc": "jesterjestin",
             "text": [
                 "Ha-HA! That's the stuff! I feel giggly already!",
-                "Here's a potion to share the giggles and some jester boots."
+                "Here's a potion to share the giggles and some stage boots."
             ],
             "itemRewards": [
                 {
@@ -38,7 +38,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@Jester Jestin's laugh is back, all thanks to you! Enjoy spreading giggles with the @crimson@giggly-potion@green@ and strut in your new jester boots.",
+                "text": "@green@Jestin's laugh is back, all thanks to you! Enjoy spreading giggles with the @crimson@giggly-potion@green@ and strut in your new stage boots.",
                 "colour": "#33cc33"
             }
         }

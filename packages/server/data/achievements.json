@@ -1,25 +1,25 @@
 {
     "firstrock": {
-        "name": "First Rock",
-        "description": "Mine your first rock!"
+        "name": "First Extraction",
+        "description": "Extract your first mineral deposit from the wasteland!"
     },
     "firstfish": {
-        "name": "First Fish",
-        "description": "Catch your first fish!"
+        "name": "First Catch",
+        "description": "Pull your first mutated catch from toxic waters!"
     },
     "ratinfestation": {
         "name": "Generic Task 1",
-        "description": "Bulk Bogan needs you to defeat 20 rats!",
+        "description": "Bulk Bogan needs you to defeat 20 rad-rats!",
         "region": "Mudwich",
         "npc": "forestnpc",
         "dialogueHidden": [
-            "Hello there fellow adventurer!",
+            "Hey there, fellow survivor!",
             "Please...",
-            "Please help me with these rats!",
+            "Please help me with these rad-rats!",
             "If you slay 20 of them, I'll su-",
             "Reward you with something special!"
         ],
-        "dialogueStarted": ["Please, those rats are really annoying!", "They won't let me be."],
+        "dialogueStarted": ["Please, those rad-rats are really annoying!", "They won't let me be."],
         "mob": ["rat", "icerat"],
         "mobCount": 20,
         "rewardSkill": "strength",
@@ -30,16 +30,16 @@
         "description": "Inspect 10 random things around the world."
     },
     "lumberjacking10": {
-        "name": "Lumberjacker",
-        "description": "Chop down 10 trees."
+        "name": "Timber Salvager",
+        "description": "Salvage 10 deadwood structures for resources."
     },
     "mining10": {
-        "name": "Miner Man",
-        "description": "Acquire 10 rocks."
+        "name": "Resource Extractor",
+        "description": "Extract 10 mineral deposits from the wasteland."
     },
     "fishing10": {
-        "name": "Fisherman",
-        "description": "Catch 10 fishies."
+        "name": "Toxic Angler",
+        "description": "Pull 10 irradiated catches from the bog."
     },
     "boxingman": {
         "name": "Generic Task 2",
@@ -65,7 +65,7 @@
     },
     "hiddenreward": {
         "name": "Hidden Reward",
-        "description": "Kill some secret spooky skeletons somewhere.",
+        "description": "Kill some secret rad-ghouls somewhere.",
         "region": "Mudwich"
     },
     "wormholes": {
@@ -76,12 +76,12 @@
         "rewardAbility": "precognition"
     },
     "ancientwizard": {
-        "name": "Ancient Wizard",
-        "description": "Defeat the ancient wizard in Mudwich!"
+        "name": "Relic Warcaster",
+        "description": "Eliminate the relic warcaster in Mudwich!"
     },
     "crabproblem": {
         "name": "Oh Crab!",
-        "description": "Help Bubba by defeating 10 crabs!",
+        "description": "Help Bubba by defeating 10 toxic crabs!",
         "region": "Mudwich",
         "hidden": true,
         "npc": "beachnpc",
@@ -89,9 +89,9 @@
             "Wassup man!",
             "Listen, could you lend me a hand?",
             "I see you're pretty good with the killing stuff.",
-            "Mind killing 10 crabs for me?"
+            "Mind killing 10 toxic crabs for me?"
         ],
-        "dialogueStarted": ["C'mon man, please kill me 10 crabs."],
+        "dialogueStarted": ["C'mon man, please kill me 10 toxic crabs."],
         "mob": ["crab", "hermitcrab"],
         "mobCount": 10,
         "rewardSkill": "accuracy",
@@ -121,7 +121,7 @@
     },
     "pirates": {
         "name": "Pirates",
-        "description": "There's skeleton pirates under the sea?",
+        "description": "There's ghoul pirates under the sea?",
         "region": "Under the Sea"
     },
     "piratestreasure": {
@@ -172,7 +172,7 @@
     },
     "pathofdeath": {
         "name": "Path of Death",
-        "description": "Defeat the ogre defending the ogre lord.",
+        "description": "Defeat the ogre defending the ogre chief.",
         "region": "Patsow",
         "hidden": true
     },
@@ -188,24 +188,24 @@
         "region": "Patsow"
     },
     "skeletonking": {
-        "name": "Skeleton King",
-        "description": "Defeat the Skeleton King!",
+        "name": "Ghoul Warlord",
+        "description": "Defeat the Ghoul Warlord!",
         "region": "Patsow",
         "hidden": true,
         "rewardSkill": "strength",
         "rewardExperience": 12560
     },
     "ogrelord": {
-        "name": "Ogre Lord",
-        "description": "Defeat the Ogre Lord!",
+        "name": "Ogre Chief",
+        "description": "Defeat the Ogre Chief!",
         "region": "Patsow",
         "hidden": true,
         "rewardSkill": "strength",
         "rewardExperience": 12560
     },
     "queenant": {
-        "name": "Queen Ant",
-        "description": "Defeat the Queen Ant!",
+        "name": "Alpha Ant",
+        "description": "Defeat the Alpha Ant!",
         "region": "Crullfeld",
         "hidden": true,
         "rewardSkill": "health",
@@ -236,7 +236,7 @@
     },
     "frozentundra": {
         "name": "Frozen Tundra",
-        "description": "Gain access to icelands by defeating the guardians.",
+        "description": "Gain access to the frozen sectors by defeating the guardians.",
         "region": "Lakesworld",
         "hidden": true
     },
@@ -257,13 +257,12 @@
     "getmaxlevel": {
         "name": "Get Max Level!",
         "description": "Receive max amount of experience if you talk to this inhabitant in hell.",
-        "region": "Kingdom of Kaetram",
-        "npc": "rick"
+        "region": "Rust Horizons Free Zone"
     },
     "roadtohell": {
         "name": "Road to Hell",
         "description": "Defeat the Dark Wolf guarding the entrance to the Hellhound.",
-        "region": "Kingdom of Kaetram",
+        "region": "Rust Horizons Free Zone",
         "hidden": true,
         "rewardSkill": "health",
         "rewardExperience": 4000
@@ -271,7 +270,7 @@
     "hellhound": {
         "name": "Hellhound",
         "description": "Defeat the hellhound in the hell dungeon!",
-        "region": "Kingdom of Kaetram",
+        "region": "Rust Horizons Free Zone",
         "hidden": true,
         "rewardSkill": "strength",
         "rewardExperience": 25600
@@ -295,92 +294,92 @@
         "secret": true
     },
     "lumberjacking50": {
-        "name": "Lumberjacker",
-        "description": "Cut down 50 trees.",
+        "name": "Scrap Collector",
+        "description": "Scavenge 50 junk piles.",
         "secret": true
     },
     "lumberjacking100": {
-        "name": "Lumberjacker",
-        "description": "Cut down 100 trees.",
+        "name": "Scrap Collector",
+        "description": "Scavenge 100 junk piles.",
         "secret": true
     },
     "lumberjacking500": {
-        "name": "Lumberjacker",
-        "description": "Cut down 500 trees.",
+        "name": "Junk Hauler",
+        "description": "Scavenge 500 junk piles.",
         "secret": true
     },
     "lumberjacking1000": {
-        "name": "Lumberjacker",
-        "description": "Cut down 1000 trees.",
+        "name": "Salvage Expert",
+        "description": "Scavenge 1000 junk piles.",
         "secret": true
     },
     "lumberjacking5000": {
-        "name": "Lumberjacker",
-        "description": "Cut down 5000 trees.",
+        "name": "Wasteland Reclaimer",
+        "description": "Scavenge 5000 junk piles.",
         "secret": true
     },
     "lumberjacking10000": {
-        "name": "Lumberjacker",
-        "description": "Cut down 10000 trees.",
+        "name": "Master Scrapper",
+        "description": "Scavenge 10000 junk piles.",
         "secret": true
     },
     "mining50": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 50 ores.",
         "secret": true
     },
     "mining100": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 100 ores.",
         "secret": true
     },
     "mining500": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 500 ores.",
         "secret": true
     },
     "mining1000": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 1000 ores.",
         "secret": true
     },
     "mining5000": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 5000 ores.",
         "secret": true
     },
     "mining10000": {
-        "name": "Miner Man",
+        "name": "Resource Extractor",
         "description": "Acquire 10000 ores.",
         "secret": true
     },
     "fishing50": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 50 fishies.",
         "secret": true
     },
     "fishing100": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 100 fishies.",
         "secret": true
     },
     "fishing500": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 500 fishies.",
         "secret": true
     },
     "fishing1000": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 1000 fishies.",
         "secret": true
     },
     "fishing5000": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 5000 fishies.",
         "secret": true
     },
     "fishing10000": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "description": "Catch 10000 fishies.",
         "secret": true
     },
@@ -389,9 +388,9 @@
         "description": "Discovered a cryptic set of gravestones.",
         "secret": true
     },
-    "kaetramdungeon": {
-        "name": "Kaetram's Dungeon",
-        "description": "Discovered the secret ladder to enter Kaetram's dungeon!",
+    "rusthorizonsdungeon": {
+        "name": "Rust Horizons' Dungeon",
+        "description": "Discovered the secret ladder to enter Rust Horizons' dungeon!",
         "secret": true
     },
 
@@ -427,7 +426,7 @@
     },
     "darkruins": {
         "name": "Ruins Explorer",
-        "description": "Discover the ancient ruins of Zanrik.",
+        "description": "Discover the old-world ruins of Zanrik.",
         "region": "Zanrik Plains"
     },
     "arenamaster": {
@@ -436,8 +435,8 @@
         "secret": true
     },
     "potionmaster": {
-        "name": "Potion Master",
-        "description": "Craft 1000 potions.",
+        "name": "Compound Master",
+        "description": "Craft 1000 compounds.",
         "secret": true
     },
     "bookworm": {
@@ -446,15 +445,15 @@
         "secret": true
     },
     "ancientsecrets": {
-        "name": "Ancient Secrets",
-        "description": "Decipher 5 ancient scrolls.",
+        "name": "Relic Secrets",
+        "description": "Decipher 5 old-world scrolls.",
         "region": "Valus Temples",
         "hidden": true
     },
     "darkhorse": {
         "name": "Dark Horse",
         "description": "Tame the elusive Shadowmare.",
-        "region": "Mystic Woods"
+        "region": "Blight Woods"
     },
     "merchantprince": {
         "name": "Merchant Prince",
@@ -462,7 +461,7 @@
         "secret": true
     },
     "merchantlord": {
-        "name": "Merchant Lord",
+        "name": "Merchant Mogul",
         "description": "Trade goods worth 1,000,000 gold coins.",
         "secret": true
     },
@@ -483,7 +482,7 @@
     },
     "questmaster": {
         "name": "Quest Master",
-        "description": "Complete all quests in Kaetram.",
+        "description": "Complete all quests in Rust Horizons.",
         "secret": true
     },
     "dungeoncrawler": {

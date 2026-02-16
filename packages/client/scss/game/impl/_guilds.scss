@@ -4,6 +4,15 @@
 #guilds {
     display: none;
     padding-left: 8.5em;
+
+    background: rgba(22, 22, 22, 0.92);
+    border: 3px solid rgba(246, 166, 35, 0.8);
+    border-radius: 10px;
+    box-shadow:
+        0 0 25px rgba(246, 166, 35, 0.5),
+        0 8px 30px rgba(0, 0, 0, 0.75),
+        inset 0 2px 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
 }
 
 #guilds-info-container {
@@ -93,6 +102,18 @@
     position: relative;
     box-sizing: border-box;
     padding: 0.375em;
+
+    background: rgba(34, 34, 34, 0.7);
+    border: 2px solid rgba(122, 122, 122, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        border-color: rgba(246, 166, 35, 0.85);
+        box-shadow: 0 0 10px rgba(246, 166, 35, 0.4);
+        transform: scale(1.05);
+    }
 }
 
 #guilds-info-header {

@@ -1,6 +1,6 @@
 {
     "name": "Sea Activities",
-    "description": "A mysterious being needs your help under the sea.|Venture under the sea by unlocking a secret entrance on the beach and talk to a fishy being about some underwater sea activities. If I remember correctly he may need your help with something.",
+    "description": "A submerged outpost contact needs your help.|Access the hidden underwater route from the beach and settle a supply dispute between two local survivors.",
     "rewards": ["1000 gold"],
     "stages": {
         "0": {
@@ -76,7 +76,7 @@
             "task": "talk",
             "npc": "sponge",
             "hasItemText": [
-                "Thank you adventurer! With this gold I can finally buy a new house!",
+                "Thank you, survivor! With this gold I can finally secure a new shelter!",
                 "Just you look at me, Mr. Sponge, homeowner!"
             ],
             "itemRequirements": [

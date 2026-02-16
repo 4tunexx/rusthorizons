@@ -13,20 +13,20 @@ import Network from '../network/network';
 import Client from '../network/client';
 import Events from '../controllers/events';
 
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
-import Discord from '@kaetram/common/api/discord';
-import { ChatPacket, GuildPacket } from '@kaetram/common/network/impl';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { PacketType } from '@kaetram/common/network/modules';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
+import Discord from '@rusthorizons/common/api/discord';
+import { ChatPacket, GuildPacket } from '@rusthorizons/common/network/impl';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { PacketType } from '@rusthorizons/common/network/modules';
 
 import type Grids from './map/grids';
 import type Connection from '../network/connection';
 import type Character from './entity/character/character';
 import type SocketHandler from '../network/sockethandler';
 import type Player from './entity/character/player/player';
-import type Packet from '@kaetram/common/network/packet';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
+import type Packet from '@rusthorizons/common/network/packet';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
 
 export interface PacketData {
     packet: Packet;

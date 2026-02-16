@@ -1,7 +1,7 @@
 import Util from '../utils/util';
 
 import { inflate } from 'pako';
-import { Packets, Opcodes, Modules } from '@kaetram/common/network';
+import { Packets, Opcodes, Modules } from '@rusthorizons/common/network';
 
 import type App from '../app';
 import type Game from '../game';
@@ -23,10 +23,10 @@ import type SpritesController from '../controllers/sprites';
 import type Player from '../entity/character/player/player';
 import type PointerController from '../controllers/pointer';
 import type EntitiesController from '../controllers/entities';
-import type { PlayerData } from '@kaetram/common/network/impl/player';
-import type { EntityDisplayInfo } from '@kaetram/common/types/entity';
-import type { SerializedSkills, SkillData } from '@kaetram/common/network/impl/skill';
-import type { SerializedAbility, AbilityData } from '@kaetram/common/network/impl/ability';
+import type { PlayerData } from '@rusthorizons/common/network/impl/player';
+import type { EntityDisplayInfo } from '@rusthorizons/common/types/entity';
+import type { SerializedSkills, SkillData } from '@rusthorizons/common/network/impl/skill';
+import type { SerializedAbility, AbilityData } from '@rusthorizons/common/network/impl/ability';
 import type {
     AbilityPacketData,
     AchievementPacketData,
@@ -64,12 +64,12 @@ import type {
     LootBagPacketData,
     CountdownPacketData,
     InterfacePacketData
-} from '@kaetram/common/types/messages/outgoing';
-import type { TradePacketValues } from '@kaetram/common/network/impl/trade';
-import type { EquipmentPacketValues } from '@kaetram/common/network/impl/equipment';
+} from '@rusthorizons/common/types/messages/outgoing';
+import type { TradePacketValues } from '@rusthorizons/common/network/impl/trade';
+import type { EquipmentPacketValues } from '@rusthorizons/common/network/impl/equipment';
 import type Resource from '../entity/objects/resource/resource';
-import type { ResourcePacketData } from '@kaetram/common/network/impl/resource';
-import type { NetworkPacketData } from '@kaetram/common/network/impl/network';
+import type { ResourcePacketData } from '@rusthorizons/common/network/impl/resource';
+import type { NetworkPacketData } from '@rusthorizons/common/network/impl/network';
 
 export default class Connection {
     /**
@@ -656,8 +656,8 @@ export default class Connection {
 
     /**
      * Handles the points packet. Used when a player is being hit
-     * or heals their hit points or mana.
-     * @param info Contains the player instance, hit points, and mana.
+     * or heals their hit points or drive.
+     * @param info Contains the player instance, hit points, and drive.
      */
 
     private handlePoints(info: PointsPacketData): void {
@@ -665,11 +665,11 @@ export default class Connection {
 
         if (!character || character.dead) return;
 
-        if (info.mana) character.setMana(info.mana, info.maxMana);
+        if (info.drive) character.setDrive(info.drive, info.maxDrive);
 
-        if (info.hitPoints) {
-            character.setHitPoints(info.hitPoints, info.maxHitPoints);
-            this.input.hud.updateCallback?.(info.instance, info.hitPoints);
+        if (info.vitality) {
+            character.setHitPoints(info.vitality, info.maxVitality);
+            this.input.hud.updateCallback?.(info.instance, info.vitality);
         }
     }
 
@@ -928,9 +928,9 @@ export default class Connection {
 
     /**
      * The healing packet is called when the player heals their health
-     * or mana. It is used to update the HUD and also display the healing
+     * or drive. It is used to update the HUD and also display the healing
      * special effect.
-     * @param info Contains the instance, type of healing (mana or health), and amount.
+     * @param info Contains the instance, type of healing (drive or health), and amount.
      */
 
     private handleHeal(info: HealPacketData): void {
@@ -949,8 +949,8 @@ export default class Connection {
                 break;
             }
 
-            case 'mana': {
-                this.info.create(Modules.Hits.Mana, info.amount, character.x, character.y);
+            case 'drive': {
+                this.info.create(Modules.Hits.Drive, info.amount, character.x, character.y);
                 break;
             }
         }
@@ -1023,9 +1023,9 @@ export default class Connection {
         // Stops the player from performing actions.
         this.game.player.teleporting = true;
 
-        // Set health and mana to 0
+        // Set health and drive to 0
         this.game.player.setHitPoints(0);
-        this.game.player.setMana(0);
+        this.game.player.setDrive(0);
 
         // Stop the music playing.
         this.audio.stopMusic();
@@ -1388,6 +1388,7 @@ export default class Connection {
         }
 
         this.game.menu.synchronize('profile');
+        this.game.menu.header.updateHudXp();
     }
 
     /**

@@ -18,16 +18,16 @@
             "npc": "codeguru",
             "text": [
                 "Ah, Keros' masterpieces. Always so... unexpected.",
-                "You'll need the Debug Elixir from the Glitch Grotto.",
+                "You'll need the Debug Compound from the Glitch Grotto.",
                 "Bring it to me, and we'll set things right."
             ],
-            "completedText": ["Retrieve the Debug Elixir from the Glitch Grotto."]
+            "completedText": ["Retrieve the Debug Compound from the Glitch Grotto."]
         },
         "2": {
             "task": "talk",
             "npc": "keros",
             "text": [
-                "You've got the elixir? Great!",
+                "You've got the compound? Great!",
                 "Let's pour this on the main server... carefully...",
                 "...and voila! The monsters are back!",
                 "Maybe I'll stick to just designing hats from now on.",

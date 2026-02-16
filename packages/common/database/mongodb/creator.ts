@@ -1,12 +1,12 @@
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import config from '@kaetram/common/config';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import config from '@rusthorizons/common/config';
 
-import type Player from '@kaetram/server/src/game/entity/character/player/player';
+import type Player from '@rusthorizons/server/src/game/entity/character/player/player';
 import type { Collection, Db } from 'mongodb';
-import type { Modules } from '@kaetram/common/network';
-import type { GuildData } from '@kaetram/common/network/impl/guild';
-import type { SerializedEffects } from '@kaetram/common/types/status';
+import type { Modules } from '@rusthorizons/common/network';
+import type { GuildData } from '@rusthorizons/common/network/impl/guild';
+import type { SerializedEffects } from '@rusthorizons/common/types/status';
 
 // Used for password reset
 export interface ResetToken {
@@ -29,8 +29,8 @@ export interface PlayerInfo {
     rank: Modules.Ranks;
     poison: PoisonInfo;
     effects: SerializedEffects;
-    hitPoints: number;
-    mana: number;
+    vitality: number;
+    drive: number;
     orientation: Modules.Orientation;
     ban: number;
     jail: number;
@@ -287,8 +287,8 @@ export default class Creator {
                 remaining: player.poison ? player.poison.getRemainingTime() : -1
             },
             effects: player.status.serialize(),
-            hitPoints: player.hitPoints.getHitPoints(),
-            mana: player.mana.getMana(),
+            vitality: player.hitPoints.getHitPoints(),
+            drive: player.drive.getDrive(),
             orientation: player.orientation,
             ban: player.ban,
             mute: player.mute,

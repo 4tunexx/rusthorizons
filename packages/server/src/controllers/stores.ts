@@ -1,10 +1,10 @@
 import storeData from '../../data/stores.json';
 import Item from '../game/entity/objects/item';
 
-import log from '@kaetram/common/util/log';
-import { t } from '@kaetram/common/i18n';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { StorePacket } from '@kaetram/common/network/impl';
+import log from '@rusthorizons/common/util/log';
+import { t } from '@rusthorizons/common/i18n';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { StorePacket } from '@rusthorizons/common/network/impl';
 
 import type World from '../game/world';
 import type NPC from '../game/entity/npc/npc';
@@ -14,7 +14,7 @@ import type {
     SerializedStoreInfo,
     SerializedStoreItem,
     StoreData
-} from '@kaetram/common/network/impl/store';
+} from '@rusthorizons/common/network/impl/store';
 
 interface StoreInfo {
     items: Item[];

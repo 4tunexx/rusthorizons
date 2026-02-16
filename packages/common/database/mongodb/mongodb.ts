@@ -3,21 +3,21 @@ import crypto from 'node:crypto';
 import Creator from './creator';
 import Loader from './loader';
 
-import Utils from '@kaetram/common/util/utils';
-import log from '@kaetram/common/util/log';
-import Filter from '@kaetram/common/util/filter';
+import Utils from '@rusthorizons/common/util/utils';
+import log from '@rusthorizons/common/util/log';
+import Filter from '@rusthorizons/common/util/filter';
 import { MongoClient, ObjectId } from 'mongodb';
 
-import type Player from '@kaetram/server/src/game/entity/character/player/player';
+import type Player from '@rusthorizons/server/src/game/entity/character/player/player';
 import type { Db } from 'mongodb';
-import type { Modules } from '@kaetram/common/network';
+import type { Modules } from '@rusthorizons/common/network';
 import type { PlayerInfo, ResetToken } from './creator';
 import type {
     MobAggregate,
     PvpAggregate,
     SkillExperience,
     TotalExperience
-} from '@kaetram/common/types/leaderboards';
+} from '@rusthorizons/common/types/leaderboards';
 
 export default class MongoDB {
     private connectionUrl: string;

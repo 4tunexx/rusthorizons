@@ -1,10 +1,10 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { EntityData } from '@kaetram/common/types/entity';
-import type Entity from '@kaetram/server/src/game/entity/entity';
-import type Player from '@kaetram/server/src/game/entity/character/player/player';
+import type { EntityData } from '@rusthorizons/common/types/entity';
+import type Entity from '@rusthorizons/server/src/game/entity/entity';
+import type Player from '@rusthorizons/server/src/game/entity/character/player/player';
 
 export type SpawnPacketCallback = (data: EntityData) => void;
 

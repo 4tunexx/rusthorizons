@@ -1,9 +1,9 @@
 import Area from '../../map/areas/area';
 import Minigame from '../minigame';
 
-import Utils from '@kaetram/common/util/utils';
-import { Team } from '@kaetram/common/api/minigame';
-import { Modules, Opcodes } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Team } from '@rusthorizons/common/api/minigame';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
 
 import type World from '../../world';
 import type Player from '../../entity/character/player/player';

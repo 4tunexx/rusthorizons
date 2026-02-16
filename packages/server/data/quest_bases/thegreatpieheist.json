@@ -1,40 +1,37 @@
 {
-    "name": "The Great Pie Heist",
-    "description": "Pie's gone missing!|Someone in town has taken Mrs. Berry's award-winning blueberry pie. It's up to you to follow the crumbs and solve this tasty mystery!",
+    "name": "Ration Theft",
+    "description": "Emergency rations went missing.|Someone stole Mrs. Berry's premium blueberry ration pie. Track the trail and recover critical food supplies.",
     "rewards": ["sliceofpie"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "mrsberry",
             "text": [
-                "Adventurer! My blueberry pie is gone!",
-                "I was going to enter it in the competition tomorrow!",
-                "Find it and there's a slice in it for you."
+                "Seeker! My blueberry ration pie is gone!",
+                "That batch was meant for tomorrow's supply allocation!",
+                "Find it and I'll cut you in on the recovery."
             ],
-            "completedText": ["Sniff out the pie thief!"]
+            "completedText": ["Track down the ration thief!"]
         },
         "1": {
             "task": "talk",
             "npc": "piecrumbs",
-            "text": [
-                "Following the trail of pie crumbs, you stumble upon a suspicious-looking squirrel.",
-                "It seems to be enjoying... a blueberry?"
-            ],
+            "text": ["Following crumb traces, you spot a suspicious squirrel.", "It's holding contraband blueberries."],
             "completedText": ["Confront the squirrel."]
         },
         "2": {
             "task": "talk",
             "npc": "squirrelnapper",
             "text": [
-                "Okay, okay! I took the pie! But it was for a good cause!",
-                "There's a party in the tree tonight. Want to join?"
+                "Alright, alright! I took the pie! But morale was low!",
+                "We've got a canopy party tonight. You in?"
             ],
-            "completedText": ["Return the pie... or party first?"]
+            "completedText": ["Return the ration pie... or party first?"]
         },
         "3": {
             "task": "talk",
             "npc": "mrsberry",
-            "text": ["You brought it back! Thank you, dear!", "Now, about that slice I promised..."],
+            "text": ["You brought it back! Thank you, Seeker!", "Now, about that slice I promised..."],
             "itemRewards": [
                 {
                     "key": "sliceofpie",
@@ -43,7 +40,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have cracked @crimson@The Great Pie Heist@green@. Enjoy your well-deserved slice of pie!",
+                "text": "@green@You have cracked @crimson@Ration Theft@green@. Enjoy your well-deserved slice of pie!",
                 "colour": "#33cc33"
             }
         }

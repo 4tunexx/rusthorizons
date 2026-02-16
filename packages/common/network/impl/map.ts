@@ -1,7 +1,7 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
-import Utils from '@kaetram/common/util/utils';
+import { Packets } from '@rusthorizons/common/network';
+import Utils from '@rusthorizons/common/util/utils';
 
 export type MapPacketCallback = (data: string) => void;
 

@@ -1,10 +1,10 @@
 import Equipment from '../equipment';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Item from '../../../../objects/item';
-import type { Enchantments } from '@kaetram/common/types/item';
-import type { EquipmentData } from '@kaetram/common/network/impl/equipment';
+import type { Enchantments } from '@rusthorizons/common/types/item';
+import type { EquipmentData } from '@rusthorizons/common/network/impl/equipment';
 
 export default class Weapon extends Equipment {
     public attackRate: number = Modules.Defaults.ATTACK_RATE;
@@ -14,7 +14,7 @@ export default class Weapon extends Equipment {
     public lumberjacking = -1;
     public mining = -1;
     public fishing = -1;
-    public manaCost = 0;
+    public driveCost = 0;
 
     // Default values for resetting variables when changing attack styles.
     public defaultAttackRange = 1;
@@ -51,7 +51,7 @@ export default class Weapon extends Equipment {
         this.freezing = item.freezing;
         this.burning = item.burning;
         this.projectileName = item.projectileName;
-        this.manaCost = item.manaCost;
+        this.driveCost = item.driveCost;
 
         this.bow = item.isBow();
         this.archer = item.isArcherWeapon();

@@ -1,6 +1,6 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
 export interface DespawnPacketData {
     instance: string; // The entity we are despawning.

@@ -1,8 +1,8 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { Opcodes } from '@kaetram/common/network';
+import type { Opcodes } from '@rusthorizons/common/network';
 
 export interface NotificationPacketData {
     title?: string; // Title when displaying a popup.

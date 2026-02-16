@@ -1,10 +1,10 @@
 import Character from '../character';
 
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Player from '../player/player';
-import type { PetData } from '@kaetram/common/types/pet';
+import type { PetData } from '@rusthorizons/common/types/pet';
 
 export default class Pet extends Character {
     public constructor(

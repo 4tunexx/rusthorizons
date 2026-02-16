@@ -1,9 +1,9 @@
-import config from '@kaetram/common/config';
-import { Opcodes } from '@kaetram/common/network';
-import { FriendsPacket } from '@kaetram/common/network/impl';
+import config from '@rusthorizons/common/config';
+import { Opcodes } from '@rusthorizons/common/network';
+import { FriendsPacket } from '@rusthorizons/common/network/impl';
 
 import type Player from './player';
-import type { Friend } from '@kaetram/common/network/impl/friends';
+import type { Friend } from '@rusthorizons/common/network/impl/friends';
 
 type SyncCallback = (username: string, status: boolean, serverId: number) => void;
 

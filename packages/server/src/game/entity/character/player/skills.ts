@@ -18,12 +18,12 @@ import Alchemy from './skill/impl/alchemy';
 
 import Formulas from '../../../../info/formulas';
 
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { ExperiencePacket, PointsPacket, SkillPacket } from '@kaetram/common/network/impl';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { ExperiencePacket, PointsPacket, SkillPacket } from '@rusthorizons/common/network/impl';
 
 import type Player from './player';
 import type Skill from './skill/skill';
-import type { SerializedSkills, SkillData } from '@kaetram/common/network/impl/skill';
+import type { SerializedSkills, SkillData } from '@rusthorizons/common/network/impl/skill';
 
 export default class Skills {
     private loaded = false;
@@ -96,7 +96,7 @@ export default class Skills {
     }
 
     /**
-     * Synchronizes the player's health, mana, and level with the client and sends
+     * Synchronizes the player's health, drive, and level with the client and sends
      * all the necessary packets.
      */
 
@@ -107,9 +107,9 @@ export default class Skills {
         let health = this.get(Modules.Skills.Health),
             magic = this.get(Modules.Skills.Magic);
 
-        // Update max hit points and mana.
+        // Update max hit points and drive.
         this.player.hitPoints.setMaxHitPoints(Formulas.getMaxHitPoints(health.level));
-        this.player.mana.setMaxMana(Formulas.getMaxMana(magic.level));
+        this.player.drive.setMaxDrive(Formulas.getMaxDrive(magic.level));
 
         // Update the player's level.
         this.player.level = this.getCombatLevel();
@@ -122,14 +122,14 @@ export default class Skills {
             })
         );
 
-        // Synchronize mana and hit points.
+        // Synchronize drive and hit points.
         this.player.send(
             new PointsPacket({
                 instance: this.player.instance,
-                hitPoints: this.player.hitPoints.getHitPoints(),
-                maxHitPoints: this.player.hitPoints.getMaxHitPoints(),
-                mana: this.player.mana.getMana(),
-                maxMana: this.player.mana.getMaxMana()
+                vitality: this.player.hitPoints.getHitPoints(),
+                maxVitality: this.player.hitPoints.getMaxHitPoints(),
+                drive: this.player.drive.getDrive(),
+                maxDrive: this.player.drive.getMaxDrive()
             })
         );
     }

@@ -1,9 +1,9 @@
 import Default from './default';
 
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
-import type Mob from '@kaetram/server/src/game/entity/character/mob/mob';
+import type Mob from '@rusthorizons/server/src/game/entity/character/mob/mob';
 
 export default class ForestDragon extends Default {
     private specialAttack = false;

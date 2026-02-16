@@ -1,17 +1,17 @@
 import Model from '.';
 
-import Packet from '@kaetram/common/network/packet';
-import { Opcodes, Packets } from '@kaetram/common/network';
-import log from '@kaetram/common/util/log';
-import { GuildPacket, FriendsPacket, ChatPacket } from '@kaetram/common/network/impl';
+import Packet from '@rusthorizons/common/network/packet';
+import { Opcodes, Packets } from '@rusthorizons/common/network';
+import log from '@rusthorizons/common/util/log';
+import { GuildPacket, FriendsPacket, ChatPacket } from '@rusthorizons/common/network/impl';
 
-import type { PlayerPacketData } from '@kaetram/common/network/impl/player';
-import type { HandshakePacketData } from '@kaetram/common/network/impl/handshake';
-import type { Member } from '@kaetram/common/network/impl/guild';
-import type { Friend } from '@kaetram/common/network/impl/friends';
-import type { ChatPacketData, FriendsPacketData } from '@kaetram/common/types/messages/hub';
-import type { SerializedServer } from '@kaetram/common/types/network';
-import type { GuildPacketData } from '@kaetram/common/types/messages/outgoing';
+import type { PlayerPacketData } from '@rusthorizons/common/network/impl/player';
+import type { HandshakePacketData } from '@rusthorizons/common/network/impl/handshake';
+import type { Member } from '@rusthorizons/common/network/impl/guild';
+import type { Friend } from '@rusthorizons/common/network/impl/friends';
+import type { ChatPacketData, FriendsPacketData } from '@rusthorizons/common/types/messages/hub';
+import type { SerializedServer } from '@rusthorizons/common/types/network';
+import type { GuildPacketData } from '@rusthorizons/common/types/messages/outgoing';
 
 export default class Server extends Model {
     public id = -1;

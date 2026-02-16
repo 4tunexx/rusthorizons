@@ -1,4 +1,4 @@
-import type { ProcessedArea } from '@kaetram/common/types/map';
+import type { ProcessedArea } from '@rusthorizons/common/types/map';
 
 export interface Door {
     height: number;

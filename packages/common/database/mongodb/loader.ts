@@ -1,19 +1,22 @@
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
 
-import type Player from '@kaetram/server/src/game/entity/character/player/player';
+import type Player from '@rusthorizons/server/src/game/entity/character/player/player';
 import type { Db } from 'mongodb';
-import type { SerializedAbility } from '@kaetram/common/network/impl/ability';
-import type { GuildData } from '@kaetram/common/network/impl/guild';
-import type { StatisticsData } from '@kaetram/common/types/statistics';
+import type { SerializedAbility } from '@rusthorizons/common/network/impl/ability';
+import type { GuildData } from '@rusthorizons/common/network/impl/guild';
+import type { StatisticsData } from '@rusthorizons/common/types/statistics';
 import type {
     AchievementData,
     SerializedAchievement
-} from '@kaetram/common/network/impl/achievement';
-import type { QuestData, SerializedQuest } from '@kaetram/common/network/impl/quest';
-import type { SerializedSkills, SkillData } from '@kaetram/common/network/impl/skill';
-import type { SerializedContainer, SlotData } from '@kaetram/common/types/slot';
-import type { EquipmentData, SerializedEquipment } from '@kaetram/common/network/impl/equipment';
+} from '@rusthorizons/common/network/impl/achievement';
+import type { QuestData, SerializedQuest } from '@rusthorizons/common/network/impl/quest';
+import type { SerializedSkills, SkillData } from '@rusthorizons/common/network/impl/skill';
+import type { SerializedContainer, SlotData } from '@rusthorizons/common/types/slot';
+import type {
+    EquipmentData,
+    SerializedEquipment
+} from '@rusthorizons/common/network/impl/equipment';
 
 export default class Loader {
     public constructor(private database?: Db) {}
@@ -21,7 +24,7 @@ export default class Loader {
     /**
      * Generalized function for loading data from the database. It will return a
      * data type that is later parsed by the caller. We use this since most serialized
-     * information in Kaetram is stored in a similar fashion, thus cleaning up the code.
+     * information in Rust Horizons is stored in a similar fashion, thus cleaning up the code.
      * Empty arrays are passed when we cannot find data (or the server is in offline mdoe).
      * @param username The username we are searching for in the collection.
      * @param collection The name of the collection.

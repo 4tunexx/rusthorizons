@@ -1,13 +1,13 @@
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { GuildPacket } from '@kaetram/common/network/impl';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { GuildPacket } from '@rusthorizons/common/network/impl';
 
 import type World from '../game/world';
 import type Player from '../game/entity/character/player/player';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
-import type { GuildData, ListInfo, Member } from '@kaetram/common/network/impl/guild';
-import type { GuildPacketData } from '@kaetram/common/types/messages/outgoing';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
+import type { GuildData, ListInfo, Member } from '@rusthorizons/common/network/impl/guild';
+import type { GuildPacketData } from '@rusthorizons/common/types/messages/outgoing';
 
 export default class Guilds {
     private database: MongoDB;

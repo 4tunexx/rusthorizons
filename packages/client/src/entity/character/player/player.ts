@@ -6,23 +6,23 @@ import Equipment from './equipment';
 
 import Character from '../character';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Game from '../../../game';
-import type { Light } from '@kaetram/common/types/item';
-import type { GuildPacketData } from '@kaetram/common/types/messages/outgoing';
-import type { AchievementData } from '@kaetram/common/network/impl/achievement';
-import type { PlayerData } from '@kaetram/common/network/impl/player';
-import type { SkillData } from '@kaetram/common/network/impl/skill';
-import type { QuestData } from '@kaetram/common/network/impl/quest';
-import type { AbilityData } from '@kaetram/common/network/impl/ability';
-import type { Friend as FriendType } from '@kaetram/common/network/impl/friends';
-import type { GuildData, Member } from '@kaetram/common/network/impl/guild';
-import type { EquipmentData } from '@kaetram/common/network/impl/equipment';
+import type { Light } from '@rusthorizons/common/types/item';
+import type { GuildPacketData } from '@rusthorizons/common/types/messages/outgoing';
+import type { AchievementData } from '@rusthorizons/common/network/impl/achievement';
+import type { PlayerData } from '@rusthorizons/common/network/impl/player';
+import type { SkillData } from '@rusthorizons/common/network/impl/skill';
+import type { QuestData } from '@rusthorizons/common/network/impl/quest';
+import type { AbilityData } from '@rusthorizons/common/network/impl/ability';
+import type { Friend as FriendType } from '@rusthorizons/common/network/impl/friends';
+import type { GuildData, Member } from '@rusthorizons/common/network/impl/guild';
+import type { EquipmentData } from '@rusthorizons/common/network/impl/equipment';
 
 type AbilityCallback = (key: string, level: number, quickSlot: number) => void;
 type PoisonCallback = (status: boolean) => void;
-type ManaCallback = (mana: number, maxMana: number) => void;
+type DriveCallback = (drive: number, maxDrive: number) => void;
 
 export default class Player extends Character {
     public serverId = -1;
@@ -50,8 +50,8 @@ export default class Player extends Character {
     public override hitPoints = 0;
     public override maxHitPoints = 0;
 
-    public override mana = 0;
-    public override maxMana = 0;
+    public drive = 0;
+    public maxDrive = 0;
 
     protected override attackAnimationSpeed = 120;
     protected override walkAnimationSpeed = 160;
@@ -68,7 +68,7 @@ export default class Player extends Character {
     private syncCallback?: () => void;
     private poisonCallback?: PoisonCallback;
     private abilityCallback?: AbilityCallback;
-    private manaCallback?: ManaCallback;
+    private driveCallback?: DriveCallback;
 
     public constructor(instance: string, game: Game) {
         super(instance, Modules.EntityType.Player, game);
@@ -118,9 +118,9 @@ export default class Player extends Character {
 
         if (!sync) this.setGridPosition(data.x, data.y);
 
-        this.setHitPoints(data.hitPoints!, data.maxHitPoints);
+        this.setHitPoints(data.vitality!, data.maxVitality);
 
-        this.setMana(data.mana!, data.maxMana);
+        this.setDrive(data.drive!, data.maxDrive);
 
         if (data.equipments) for (let equipment of data.equipments) this.equip(equipment);
     }
@@ -673,17 +673,17 @@ export default class Player extends Character {
     }
 
     /**
-     * Updates the mana of the player.
-     * @param mana The current amount of mana.
-     * @param maxMana Optional parameter for the max mana.
+     * Updates the drive of the player.
+     * @param drive The current amount of drive.
+     * @param maxDrive Optional parameter for the max drive.
      */
 
-    public setMana(mana: number, maxMana?: number): void {
-        this.mana = mana;
+    public setDrive(drive: number, maxDrive?: number): void {
+        this.drive = drive;
 
-        if (maxMana) this.maxMana = maxMana;
+        if (maxDrive) this.maxDrive = maxDrive;
 
-        this.manaCallback?.(this.mana, maxMana || this.maxMana);
+        this.driveCallback?.(this.drive, maxDrive || this.maxDrive);
     }
 
     /**
@@ -1058,11 +1058,11 @@ export default class Player extends Character {
     }
 
     /**
-     * Callback for when the player's mana changes.
-     * @param callback Contains the current mana and max mana.
+     * Callback for when the player's drive changes.
+     * @param callback Contains the current drive and max drive.
      */
 
-    public onMana(callback: ManaCallback): void {
-        this.manaCallback = callback;
+    public onDrive(callback: DriveCallback): void {
+        this.driveCallback = callback;
     }
 }

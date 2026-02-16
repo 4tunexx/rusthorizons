@@ -5,10 +5,10 @@ import Handler from './network/handler';
 import Models from './controllers/models';
 import Mailer from './controllers/mailer';
 
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import Discord from '@kaetram/common/api/discord';
-import Utils from '@kaetram/common/util/utils';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import Discord from '@rusthorizons/common/api/discord';
+import Utils from '@rusthorizons/common/util/utils';
 
 export default class Main {
     private cache: Cache = new Cache();

@@ -174,7 +174,7 @@ magic    → Energy/Plasma damage
 2. Particle effects → Dust, radiation, sparks
 3. Environmental objects → Wreckage, scrap piles, bunker doors
 
-### LOW PRIORITY (Keep from Kaetram for now)
+### LOW PRIORITY (Keep from Rust Horizons baseline for now)
 1. Some UI elements if they don't conflict
 2. Sound system (rename music regions)
 3. Animation systems (reuse existing)

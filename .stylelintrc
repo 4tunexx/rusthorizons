@@ -5,5 +5,23 @@
         "stylelint-config-html/astro",
         "stylelint-config-clean-order",
         "stylelint-config-prettier"
-    ]
+    ],
+    "rules": {
+        "order/properties-order": null,
+        "order/order": null,
+        "alpha-value-notation": null,
+        "color-function-notation": null,
+        "value-no-vendor-prefix": null,
+        "property-no-vendor-prefix": null,
+        "no-descending-specificity": null,
+        "shorthand-property-no-redundant-values": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        "value-keyword-case": null,
+        "no-duplicate-selectors": null,
+        "declaration-block-no-shorthand-property-overrides": null,
+        "custom-property-empty-line-before": null,
+        "declaration-empty-line-before": null,
+        "rule-empty-line-before": null
+    }
 }

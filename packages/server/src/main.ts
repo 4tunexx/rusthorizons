@@ -6,12 +6,12 @@ import Loader from './info/loader';
 import SocketHandler from './network/sockethandler';
 import Args from './args';
 
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import Database from '@kaetram/common/database/database';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import Database from '@rusthorizons/common/database/database';
 
 import type Connection from './network/connection';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
 
 class Main {
     private world?: World;
@@ -116,7 +116,7 @@ class Main {
         // Save all players
         this.world?.save();
 
-        log.info(`Shutting down Kaetram game engine.`);
+        log.info(`Shutting down Rust Horizons game engine.`);
 
         // Actually exit the process.
         setTimeout(() => exit(0), 2000);

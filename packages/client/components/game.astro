@@ -11,11 +11,44 @@
             <canvas id="text-canvas"></canvas>
         </div>
 
+            <canvas id="minimap"></canvas>
+
+            <div id="compass-bar" aria-hidden="true">
+                <div id="compass-strip">
+                    <div id="compass-coord-x"></div>
+                    <div id="compass-coord-y"></div>
+                    <div id="compass-track">
+                        <div class="compass-section">
+                            <span class="compass-dir">N</span>
+                            <span class="compass-deg">0°</span>
+                        </div>
+                        <div class="compass-section">
+                            <span class="compass-dir">E</span>
+                            <span class="compass-deg">90°</span>
+                        </div>
+                        <div class="compass-section">
+                            <span class="compass-dir">S</span>
+                            <span class="compass-deg">180°</span>
+                        </div>
+                        <div class="compass-section">
+                            <span class="compass-dir">W</span>
+                            <span class="compass-deg">270°</span>
+                        </div>
+                    </div>
+                    <div id="compass-markers"></div>
+                    <div id="compass-marker"></div>
+                </div>
+                <div id="compass-hover"></div>
+                <div id="compass-info">
+                    <span id="compass-map-name"></span>
+                </div>
+            </div>
+
         <div id="welcome" class="slice-container">
             <div id="close-welcome" class="close-container"></div>
 
             <div id="welcome-info">
-                <h1>Welcome to Kaetram!</h1>
+                <h1>Welcome to Rust Horizons!</h1>
 
                 <div id="welcome-stats">
                     <strong>Last login:</strong>
@@ -88,22 +121,23 @@
                     <div id="health-mask" class="hud-bar-fill health-mask-base"></div>
                     <div class="health-text stroke"></div>
                 </div>
-                <div id="mana" class="hud-bar hud-bar-mana">
-                    <div id="mana-mask" class="hud-bar-fill"></div>
-                    <div class="mana-text stroke"></div>
+                <div id="drive" class="hud-bar hud-bar-drive">
+                    <div id="drive-mask" class="hud-bar-fill"></div>
+                    <div class="drive-text stroke"></div>
                 </div>
             </div>
         </div>
 
+        <div id="buttons-edge-trigger" aria-hidden="true"></div>
         <ul id="buttons">
-            <li><div id="inventory-button"></div></li>
-            <li><div id="achievements-button"></div></li>
-            <li><div id="quests-button"></div></li>
-            <li><div id="warp-button"></div></li>
-            <li><div id="profile-button"></div></li>
-            <li><div id="friends-button"></div></li>
-            <li><div id="chat-button"></div></li>
-            <li><div id="settings-button"></div></li>
+            <li><div id="inventory-button" data-label="Inventory"></div></li>
+            <li><div id="achievements-button" data-label="Achievements"></div></li>
+            <li><div id="quests-button" data-label="Quests"></div></li>
+            <li><div id="warp-button" data-label="Warp"></div></li>
+            <li><div id="profile-button" data-label="Profile"></div></li>
+            <li><div id="friends-button" data-label="Friends"></div></li>
+            <li><div id="chat-button" data-label="Chat"></div></li>
+            <li><div id="settings-button" data-label="Settings"></div></li>
         </ul>
 
         <div id="chat">
@@ -442,6 +476,16 @@
         </div>
 
         <div id="inventory" class="slice-dialog">
+            <div id="inventory-header">
+                <div id="inventory-title">INVENTORY</div>
+                <div id="inventory-count"><span id="inventory-count-value">0</span>/100</div>
+            </div>
+            <div id="inventory-categories">
+                <button class="inventory-category active" data-category="all">ALL</button>
+                <button class="inventory-category" data-category="weapon">WEAPONS</button>
+                <button class="inventory-category" data-category="armor">ARMOR</button>
+                <button class="inventory-category" data-category="consumable">ITEMS</button>
+            </div>
             <div id="inventory-container">
                 <ul></ul>
             </div>
@@ -681,7 +725,7 @@
                     <p class="slash">Slash:</p>
                     <p class="stab">Stab:</p>
                     <p class="archery">Archery:</p>
-                    <p class="magic">Magic:</p>
+                    <p class="magic">Tech:</p>
                 </div>
 
                 <div id="defense-stats">
@@ -690,7 +734,7 @@
                     <p class="slash">Slash:</p>
                     <p class="stab">Stab:</p>
                     <p class="archery">Archery:</p>
-                    <p class="magic">Magic:</p>
+                    <p class="magic">Tech:</p>
                 </div>
 
                 <div id="bonuses">
@@ -698,7 +742,7 @@
                     <p class="accuracy">Accuracy:</p>
                     <p class="strength">Strength:</p>
                     <p class="archery">Archery:</p>
-                    <p class="magic">Magic:</p>
+                    <p class="magic">Tech:</p>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
 import { Client, IntentsBitField } from 'discord.js';
 
 import type { Message, TextChannel } from 'discord.js';

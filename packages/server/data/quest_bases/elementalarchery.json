@@ -1,6 +1,6 @@
 {
     "name": "Elemental Archery",
-    "description": "Legends speak of arrows imbued with the essence of nature's elements. Master Archer Elandrial holds the secrets of crafting such arrows but needs assistance in gathering the components.",
+    "description": "Operators speak of arrows tuned to extreme environmental conditions. Master Archer Elandrial holds the method for crafting them but needs assistance gathering components.",
     "rewards": ["Ability to craft Elemental Arrows", "3000 Archery experience"],
     "skillRequirements": {
         "archery": 25
@@ -10,8 +10,8 @@
             "task": "talk",
             "npc": "elandrial",
             "text": [
-                "Ah, a fellow archer! I've been trying to recreate the legendary elemental arrows.",
-                "These arrows were once used by ancient archers to battle the forces of darkness.",
+                "Ah, a fellow archer! I've been trying to recreate the high-output elemental arrows.",
+                "These arrows were once used by veteran units to survive high-threat sectors.",
                 "To craft these, I require special elements from the land. Will you help me?"
             ],
             "completedText": ["The journey won't be easy.", "Are you sure you're up for the task?"]
@@ -44,7 +44,7 @@
             "npc": "elandrial",
             "hasItemText": [
                 "You've proven your dedication! Now for the final element: 'Whisper of Wind'.",
-                "This can be found in the Whispering Woods, where the trees converse with the wind.",
+                "This can be found in the Whispering Ruins, where wind howls through collapsed structures.",
                 "Retrieve it, and we'll have everything to craft the Wind Arrows."
             ],
             "itemRequirements": [

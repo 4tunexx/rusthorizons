@@ -1,13 +1,13 @@
 import cors from 'cors';
 import express from 'express';
-import mobs from '@kaetram/server/data/mobs.json';
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
+import mobs from '@rusthorizons/server/data/mobs.json';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
 import Stripe from 'stripe';
 import * as Sentry from '@sentry/node';
 import * as Tracing from '@sentry/tracing';
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Cache from './cache';
 import type Server from '../model/server';
@@ -21,7 +21,7 @@ import type {
     PvpAggregate,
     SkillExperience,
     TotalExperience
-} from '@kaetram/common/types/leaderboards';
+} from '@rusthorizons/common/types/leaderboards';
 
 // Initialize stripe
 const stripe = new Stripe(config.stripeSecretKey, {
@@ -29,7 +29,7 @@ const stripe = new Stripe(config.stripeSecretKey, {
 });
 
 /**
- * We use the API format from `@kaetram/server`.
+ * We use the API format from `@rusthorizons/server`.
  */
 export default class API {
     public constructor(
@@ -271,8 +271,8 @@ export default class API {
             // Send the email to the user.
             this.mailer.send(
                 email,
-                'Kaetram Account Password Reset',
-                `Hello there, you have requested a password reset for your account. Please use the following link to reset your password: https://kaetram.com/reset/?token=${token}&id=${id}`
+                'Rust Horizons Account Password Reset',
+                `Hello there, you have requested a password reset for your account. Please use the following link to reset your password: https://rusthorizons.com/reset/?token=${token}&id=${id}`
             );
 
             // Send a response back to the client.

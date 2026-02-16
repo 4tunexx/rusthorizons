@@ -1,11 +1,11 @@
 import Connection from './connection';
 
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import Utils from '@kaetram/common/util/utils';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import Utils from '@rusthorizons/common/util/utils';
 import { App, DEDICATED_COMPRESSOR_3KB, type WebSocket } from 'uws';
 
-import type { ConnectionInfo } from '@kaetram/common/types/network';
+import type { ConnectionInfo } from '@rusthorizons/common/types/network';
 
 /**
  * The hub websocket works as a publisher/subscriber system. It is responsible for

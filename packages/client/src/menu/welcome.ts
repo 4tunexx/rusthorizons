@@ -1,7 +1,7 @@
 import Menu from './menu';
 
-import Updates from '@kaetram/common/text/updates.json';
-import { Modules } from '@kaetram/common/network';
+import Updates from '@rusthorizons/common/text/updates.json';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Game from '../game';
 

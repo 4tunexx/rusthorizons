@@ -1,27 +1,25 @@
 {
-    "name": "Welcome to Kaetram",
-    "description": "Teaching you the very basics of Kaetram.|This tutorial will teach you how to move around, attack, interact with objects and use ranged weapons. Follow the arrows and talk to the NPCs if you are stuck.",
-    "rewards": ["Knowledge of the game :)"],
+    "name": "Awakening in the Wastes",
+    "description": "Survive the Ashfall Wastes and learn to operate as a Spark Seeker.|This tutorial will teach you how to move around, scavenge, harvest resources, and engage in combat. The wastes are unforgiving. Learn quickly.|Follow the guidance markers.",
+    "rewards": ["Survival Knowledge"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "coder",
             "text": [
-                "Oh, hello! Welcome! Click on me again!",
-                "You're getting the hang of it, keep clicking.",
-                "Perfect, seems like you get the gist of it.",
-                "I am the coder, I created this world, and, well, you.",
-                "Listen, to me you are just a more sophisticated AI.",
-                "So I'm gonna need you to get used to this world and help me out.",
-                "You see, I created these previous AIs, but they went rogue.",
-                "They are now trying to destroy this world.",
-                "So, I created you in order to stop them and save us all.",
-                "Before we get to any of that, we need to teach you some of the basics.",
-                "You can move around by clicking, or using WASD keys, or arrow keys.",
-                "Make sure you talk to everyone you meet fully, you never know what you might learn.",
-                "Whenever you feel like you're ready, head on outside and talk to the guard."
+                "Listen carefully. Your consciousness is fragmentary.",
+                "You're waking up... in the Ashfall Wastes. Focus.",
+                "I am The Archivist. What remains of the Elder Archive preserved in this Data-Pad.",
+                "Humanity's last hope rests with us now.",
+                "The Overmind detected your emergence. It sends Scavenger Bots to scour the wastes.",
+                "You must survive. You must learn.",
+                "The world you're awakening into is a hellscape of rust and ruin.",
+                "But there is hope. The Spark still flickers somewhere in The Citadel.",
+                "You can move by clicking, or using WASD keys, or arrow keys.",
+                "Pay attention to every survivor you meet. Knowledge is scarce now.",
+                "Head outside this shelter. A Guard awaits. They can teach you the ways of the wastes."
             ],
-            "completedText": ["Whenever you are ready, head outside and talk to the guard."],
+            "completedText": ["Go. The Guard will show you how to survive."],
             "pointer": {
                 "type": 0,
                 "x": 134,
@@ -42,16 +40,15 @@
             "task": "talk",
             "npc": "guard",
             "text": [
-                "Oh great anot- nevermind.",
-                "Welcome to the world of Kaetram.",
-                "I'm here to teach you about skills and combat.",
-                "Skills are activities that allow you to collect items and gain experience.",
-                "You can use the experience to discover new areas and engage in more complex tasks.",
-                "Before we get to any combat-related skills, I want you to cut two trees for me.",
-                "Here, take this axe, open your inventory, and equip it."
+                "Another survivor. Good.",
+                "I'm tasked with training Spark Seekers. You've got potential or you wouldn't be conscious.",
+                "Out here, survival means scavenging. Resources. Modules. Tech components.",
+                "First lesson: gathering. See those rusted metal frames? Harvest scrap metal from them.",
+                "Take this tool. Open your inventory with I. Equip it. Then harvest two piles of scrap.",
+                "This isn't a game, Seeker. Every resource matters. The Overmind has rendered this world barren."
             ],
 
-            "completedText": ["Go on, cut two trees for me."],
+            "completedText": ["Now teach yourself scavenging. Harvest two more scrap metal."],
 
             "itemRewards": [
                 {
@@ -78,11 +75,12 @@
             "npc": "guard",
 
             "text": [
-                "Okay perfect, you can use logs to make sticks.",
-                "Take this knife and use it to fletch some sticks.",
-                "Simply click on the item in your inventory and select the interact option."
+                "Listen, the scrap you collected... it's raw material.",
+                "In the broken industrial plants nearby, you'll find data cores and circuit fragments.",
+                "Use this extraction tool. Break them down into usable components.",
+                "This is how you survive. Deconstruct. Reconstruct. Survive."
             ],
-            "completedText": ["Go on, fletch the logs into sticks for me."],
+            "completedText": ["Practice your extraction skills. Gather more tech components."],
 
             "itemRewards": [
                 {
@@ -102,12 +100,14 @@
             "npc": "guard",
 
             "hasItemText": [
-                "Awesome, just bear with me a little longer.",
-                "I know it's boring but I am obligated to teach you this.",
-                "Now take this fishing pole and go catch two shrimps for me."
+                "Good. You're learning the fundamentals.",
+                "But survival means more than just gathering materials.",
+                "Scout the irradiated pools to the east. Harvesting rad-shards requires caution.",
+                "Use this container to collect them safely.",
+                "Don't linger too long—the radiation levels out there are elevated."
             ],
 
-            "completedText": ["Go on, catch two shrimps for me."],
+            "completedText": ["Gather rad-shards from the contaminated zones."],
 
             "itemRequirements": [
                 {
@@ -183,12 +183,13 @@
             "npc": "guard",
 
             "text": [
-                "Okay, now listen closely. Our budget is running low.",
-                "So we need to hurry this up. I have to teach you about combat.",
-                "Because of said budget, I can only give the very basics.",
-                "Here is a copper sword, I want you to slay 5 rats for me."
+                "Alright, Seeker. Time to learn combat.",
+                "The Overmind sends automated sentries to patrol the wastes.",
+                "Start with these Scavenger Bots. They're weak, but they WILL kill you if you're careless.",
+                "Take this plasma cutter. Disable 5 of them.",
+                "Aim for the optical sensors. It's the quickest way down."
             ],
-            "completedText": ["Go on, slay 3 rats for me."],
+            "completedText": ["Disable the Scavenger Bots. This is not optional."],
             "itemRewards": [
                 {
                     "key": "coppersword",
@@ -213,15 +214,14 @@
             "npc": "guard",
 
             "text": [
-                "Wow I actually didn't expect you to be competent.",
-                "You see how slow that was? That's because you don't have any fancy equipments.",
-                "Once you're out of here you'll be able to get better equipments.",
-                "Anyway, last thing I can teach you within my curriculum is archery.",
-                "For the sake of this tutorial, you will not need to equip any arrows.",
-                "Plus it saves us a ton of money for the arrows we don't have to give you.",
-                "So anyway, I want you to kill 2 crabs with this bow."
+                "Not bad, Seeker. You have the basics down.",
+                "But melee alone won't cut it out here. The mutated creatures are too fast.",
+                "I'm giving you a plasma rifle. Ranged weapons are essential for survival.",
+                "There are Rad-Crabs near the eastern ridge—they're aggressive and radioactive.",
+                "Use the rifle to take down 2 of them from distance.",
+                "Remember: stay mobile, conserve your drive, and never let them flank you."
             ],
-            "completedText": ["Go on, kill 2 crabs for me."],
+            "completedText": ["Eliminate the Rad-Crabs with the rifle."],
             "itemRewards": [
                 {
                     "key": "woodenbow",
@@ -246,12 +246,15 @@
             "npc": "guard",
 
             "text": [
-                "That will be all. The rest is up to you to discover.",
-                "You may leave the tutorial by going through the portal."
+                "You're ready, Spark Seeker. That training is all I can offer.",
+                "The Wastes beyond are harsh and unforgiving.",
+                "Find supplies, build your strength, and uncover the truth about Project Genesis.",
+                "The Overmind's reach grows every day. We're counting on you.",
+                "Now go. Step through the portal. Your real journey begins."
             ],
             "completedText": [
-                "That will be all. The rest is up to you to discover.",
-                "You may leave the tutorial by going through the portal."
+                "You're ready, Spark Seeker. That training is all I can offer.",
+                "The Wastes beyond are harsh and unforgiving. Now go. Your journey begins."
             ],
 
             "pointer": {

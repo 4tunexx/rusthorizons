@@ -1,9 +1,9 @@
 import Data from '../../../../../../data/abilities.json';
 
-import { Modules } from '@kaetram/common/network';
-import log from '@kaetram/common/util/log';
+import { Modules } from '@rusthorizons/common/network';
+import log from '@rusthorizons/common/util/log';
 
-import type { AbilityData, RawAbility, RawAbilityData } from '@kaetram/common/network/impl/ability';
+import type { AbilityData, RawAbility, RawAbilityData } from '@rusthorizons/common/network/impl/ability';
 import type Player from '../player';
 
 type DeactivateCallback = (player: Player) => void;
@@ -33,11 +33,11 @@ export default class Ability {
         // Passive abilities are not activated.
         if (this.data.type !== 'active' || !this.data.levels) return false;
 
-        let { cooldown, duration, mana } = this.data.levels[this.level];
+        let { cooldown, duration, drive } = this.data.levels[this.level];
 
-        // Someone somewhere forgot to specify a mana cost for the ability.
-        if (!mana) {
-            log.warning(`Ability ${this.key} has no mana cost.`);
+        // Someone somewhere forgot to specify a drive cost for the ability.
+        if (!drive) {
+            log.warning(`Ability ${this.key} has no drive cost.`);
             return false;
         }
 
@@ -47,9 +47,9 @@ export default class Ability {
             return false;
         }
 
-        // Player doesn't have enough mana.
-        if (player.mana.getMana() < mana) {
-            player.notify('misc:NOT_ENOUGH_MANA');
+        // Player doesn't have enough drive.
+        if (player.drive.getDrive() < drive) {
+            player.notify('misc:NOT_ENOUGH_DRIVE');
             return false;
         }
 
@@ -63,8 +63,8 @@ export default class Ability {
 
         player.abilities.toggleCallback?.(this.key);
 
-        // Remove the ability mana cost from the player.
-        player.mana.decrement(mana);
+        // Remove the ability drive cost from the player.
+        player.drive.decrement(drive);
 
         // Ability will deactivate and create a callback after `duration` milliseconds.
         setTimeout(() => {

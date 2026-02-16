@@ -1,14 +1,14 @@
 {
     "king": {
-        "name": "King",
+        "name": "Settlement Chief",
         "text": [
-            "Welcome to the kingdom of Kaetram!",
-            "You have travelled long and far, and for that you have my respect."
+            "Welcome to the Rust Horizons Free Zone.",
+            "You've crossed a lot of wasteland to get here, and that earns respect."
         ]
     },
 
     "king2": {
-        "name": "King"
+        "name": "Settlement Chief"
     },
 
     "prisoner": {
@@ -38,50 +38,50 @@
     },
 
     "villagegirl2": {
-        "name": "Village Girl",
-        "text": ["Hope you're having a good day!"]
+        "name": "Scrap Scavenger",
+        "text": ["Another day, another chem-storm survived!"]
     },
 
     "villagegirl3": {
-        "name": "Another Village Girl",
-        "text": ["How's yous doings?"]
+        "name": "Wastelander",
+        "text": ["Watch the radiation levels out there, yeah?"]
     },
 
     "villagegirl4": {
-        "name": "Another Village Girl",
-        "text": ["How's yous doings?"]
+        "name": "Rust Runner",
+        "text": ["Got any spare parts? Always looking to trade."]
     },
 
     "villagegirl5": {
-        "name": "Yet Another Village Girl",
-        "text": ["How's yous doings?"]
+        "name": "Dust Dweller",
+        "text": ["The wasteland's rough, but we survive."]
     },
 
     "villagegirl6": {
-        "name": "Just Village Girl",
-        "text": ["How's yous doings?"]
+        "name": "Zone Survivor",
+        "text": ["Keep your head down and your fusion cells loaded."]
     },
 
     "villagegirl7": {
-        "name": "Village Girl",
-        "text": ["How's yous doings?"]
+        "name": "Junktown Local",
+        "text": ["Welcome to Junktown, try not to get irradiated."]
     },
 
     "forestnpc": {
-        "name": "Forester",
+        "name": "Scavenger",
         "text": ["Good day to you!"],
         "store": "forester"
     },
 
     "miner": {
-        "name": "Miner",
-        "text": ["Leave me alone, I'm busy pretending to work!"],
+        "name": "Prospector",
+        "text": ["Back off! I'm extracting rare minerals from this irradiated hellhole!"],
         "store": "miner"
     },
 
     "miner2": {
-        "name": "Yet Another Miner",
-        "text": ["Leave me alone, I'm busy pretending to work!"],
+        "name": "Rock Breaker",
+        "text": ["Get lost! These tech-nodes won't extract themselves!"],
         "store": "miner"
     },
 
@@ -104,14 +104,17 @@
             "You see, this cave I am heavily guarding appears to be",
             "exhibiting a warm-hole like situation.",
             "Regardless, I feel its best to send a stup-",
-            "I mean, brave adventurer in there rather than me."
+            "I mean, a capable survivor in there rather than me."
         ]
     },
 
     "nyan": {
         "name": "Nyan Cat (Stale Meme)"
     },
-
+    "herbalist": {
+        "name": "Doc Salvage",
+        "text": ["Need meds, wastelander?", "I patch up survivors... for a price.", "Got any Rad-Away on ya?"]
+    },
     "rick": {
         "name": "Rick",
         "text": [
@@ -199,16 +202,16 @@
     },
 
     "priest": {
-        "name": "Priest"
+        "name": "Wasteland Preacher"
     },
 
     "guard": {
-        "name": "Guard",
-        "text": ["We're seriously busy at the moment."]
+        "name": "Zone Enforcer",
+        "text": ["We're seriously busy securing the perimeter."]
     },
 
     "guard2": {
-        "name": "Royal Guard",
+        "name": "Command Guard",
         "text": ["Any form of defiance will be met with death."]
     },
 
@@ -235,12 +238,12 @@
     },
 
     "vampire": {
-        "name": "Vampire"
+        "name": "Blood Raider"
     },
 
     "doctor": {
         "name": "Doctor",
-        "text": ["I'm a doctor, not a magician."]
+        "text": ["I'm a doctor, not a miracle worker."]
     },
 
     "oddeyecat": {
@@ -248,39 +251,41 @@
     },
 
     "sorcerer": {
-        "name": "Sorcerer",
+        "name": "Flux Technician",
         "store": "sorcerer"
     },
 
     "coder": {
-        "name": "Programmer",
+        "name": "The Archivist",
         "text": [
-            "Well well, hello there. Seems you managed to esca- I mean,",
-            "find your way out of that tutorial.",
-            "Listen, your first task should be to discover the world around you.",
-            "Why don't you go talk to the villagers for starters?",
-            "After that, maybe we can look into getting you some tasks to do."
+            "Well, well... A survivor with potential.",
+            "You've escaped the Ashfall Wastes. Congratulations.",
+            "Listen carefully. Your first task is to understand what remains of this world.",
+            "The data-logs scattered across the wasteland hold secrets.",
+            "Go. Scout the ruins. Talk to the survivors in Junktown.",
+            "Once you've gathered enough information, return to me.",
+            "We need to find The Spark before The Overmind consumes what's left."
         ]
     },
 
     "villager": {
-        "name": "Villager",
-        "text": ["Howdy!"]
+        "name": "Settler",
+        "text": ["Stay frosty, survivor!"]
     },
 
     "villager2": {
-        "name": "Villager",
-        "text": ["Howdy!"]
+        "name": "Wastelander",
+        "text": ["Watch for Raiders on the outskirts!"]
     },
 
     "villager3": {
-        "name": "Villager",
-        "text": ["Howdy!"]
+        "name": "Zone Dweller",
+        "text": ["Another day in the wasteland..."]
     },
 
     "villager4": {
-        "name": "Villager",
-        "text": ["Howdy!"]
+        "name": "Rust Walker",
+        "text": ["Tech-storms rolling in tonight. Stay inside!"]
     },
 
     "octocat": {
@@ -289,17 +294,17 @@
             "Hey there!",
             "I am the Octocat, the programmer and I",
             "are very well acquainted.",
-            "In case you did not know, Kaetram is completely open-source.",
-            "You can <a target=\"_blank\" href=\"https://github.com/Kaetram/Kaetram-Open\">check out the source on GitHub!</a>"
+            "In case you did not know, Rust Horizons is completely open-source.",
+            "You can <a target=\"_blank\" href=\"https://github.com/4tunexx/rusthorizons\">check out the source on GitHub!</a>"
         ]
     },
 
     "soldier": {
-        "name": "Soldier"
+        "name": "Wasteland Trooper"
     },
 
     "fisherman": {
-        "name": "Fisherman",
+        "name": "Toxic Angler",
         "store": "fishingstore"
     },
 
@@ -308,7 +313,7 @@
     },
 
     "mermaidnpc": {
-        "name": "Mermaid"
+        "name": "Aqua Mutant"
     },
 
     "sponge": {
@@ -316,11 +321,11 @@
     },
 
     "fairynpc": {
-        "name": "Fairy"
+        "name": "Glow Scout"
     },
 
     "shepherdboy": {
-        "name": "Shepherd Boy"
+        "name": "Brahmin Herder"
     },
 
     "zombiegf": {
@@ -328,8 +333,8 @@
     },
 
     "pirategirlnpc": {
-        "name": "Pirate Girl",
-        "text": ["Hi"]
+        "name": "Raider Captain",
+        "text": ["You looking for trouble, or just passing through?"]
     },
 
     "bluebikinigirlnpc": {
@@ -346,24 +351,24 @@
     },
 
     "iceelfnpc": {
-        "name": "Ice Elf"
+        "name": "Ice Scout"
     },
 
     "elfnpc": {
-        "name": "Elf"
+        "name": "Scout"
     },
 
     "snowshepherdboy": {
         "name": "Sherpa",
-        "text": ["Hello dear adventurer!", "Hope you're enjoying the beautiful sights!"]
+        "text": ["Hello, survivor!", "Hope the mountain route is treating you well!"]
     },
 
     "angelnpc": {
-        "name": "Angel"
+        "name": "Sky Sentinel"
     },
 
     "momangelnpc": {
-        "name": "Archangel"
+        "name": "High Sentinel"
     },
 
     "superiorangelnpc": {
@@ -371,11 +376,11 @@
     },
 
     "firstsonangelnpc": {
-        "name": "Angel"
+        "name": "Sky Sentinel"
     },
 
     "secondsonangelnpc": {
-        "name": "Superior Angel"
+        "name": "Senior Sentinel"
     },
 
     "mojojojonpc": {
@@ -383,7 +388,7 @@
     },
 
     "ancientmanumentnpc": {
-        "name": "Ancient Monument"
+        "name": "Old-World Monument"
     },
 
     "vendingmachine": {
@@ -407,17 +412,17 @@
     },
 
     "royalguard": {
-        "name": "Royal Guard",
+        "name": "Command Guard",
         "text": ["There shall be no trespassing!"]
     },
 
     "royalguard2": {
-        "name": "Royal Guard",
+        "name": "Command Guard",
         "text": ["There shall be no trespassing!"]
     },
 
     "royalguard3": {
-        "name": "Royal Guard",
+        "name": "Command Guard",
         "text": ["There shall be no trespassing!"]
     },
 
@@ -435,12 +440,12 @@
     },
 
     "oldlady": {
-        "name": "Old Lady",
-        "text": ["Hello there dear adventurer!", "Make sure you're careful on your adventures."]
+        "name": "Wasteland Elder",
+        "text": ["Hello there, survivor!", "Stay careful out there in the ruins."]
     },
 
     "oldlady2": {
-        "name": "Old Lady"
+        "name": "Wasteland Elder"
     },
 
     "ratnpc": {
@@ -449,19 +454,15 @@
     },
 
     "blacksmith": {
-        "name": "Blacksmith",
+        "name": "Forge Engineer",
         "text": ["Hi!"]
     },
 
     "blacksmith2": {
-        "name": "Blacksmith",
+        "name": "Forge Engineer",
         "text": ["Hi!"]
     },
 
-    "herbalist": {
-        "name": "Herby Mc. Herb",
-        "text": ["Hi!"]
-    },
     "rickgf": {
         "name": "Lena",
         "text": ["Oh, it's been so long since I've seen another soul.", "Have you seen my love, Rick?"]
@@ -507,7 +508,7 @@
         "name": "Kael",
         "text": [
             "Greetings, traveler. I am Kael, a keeper of the old knowledge.",
-            "My years have been spent in meditation and study of the ancient world.",
+            "My years have been spent in meditation and study of the old world.",
             "The Overmind fears what it does not understand, and the old world's wisdom is its greatest threat.",
             "I can teach you about the relics you'll find, the nature of The Citadel, and why The Spark matters.",
             "Many before you have sought The Spark. Few have returned.",

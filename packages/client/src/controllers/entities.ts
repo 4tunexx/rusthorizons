@@ -12,17 +12,17 @@ import Rock from '../entity/objects/resource/impl/rock';
 import FishSpot from '../entity/objects/resource/impl/fishspot';
 import Foraging from '../entity/objects/resource/impl/foraging';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Grids from '../map/grids';
 import type Game from '../game';
 import type Entity from '../entity/entity';
 import type SpritesController from './sprites';
 import type Character from '../entity/character/character';
-import type { PetData } from '@kaetram/common/types/pet';
-import type { PlayerData } from '@kaetram/common/network/impl/player';
-import type { EntityData, EntityDisplayInfo } from '@kaetram/common/types/entity';
-import type { ResourceEntityData } from '@kaetram/common/types/resource';
+import type { PetData } from '@rusthorizons/common/types/pet';
+import type { PlayerData } from '@rusthorizons/common/network/impl/player';
+import type { EntityData, EntityDisplayInfo } from '@rusthorizons/common/types/entity';
+import type { ResourceEntityData } from '@rusthorizons/common/types/resource';
 
 interface EntitiesCollection {
     [instance: string]: Entity;
@@ -231,7 +231,7 @@ export default class EntitiesController {
     private createMob(info: EntityData): Mob {
         let mob = new Mob(info.instance, this.game);
 
-        mob.setHitPoints(info.hitPoints!, info.maxHitPoints);
+        mob.setHitPoints(info.vitality!, info.maxVitality);
 
         // Apply the mob-specific properties
         mob.attackRange = info.attackRange!;

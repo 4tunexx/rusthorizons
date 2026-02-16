@@ -1,19 +1,19 @@
 import { exit } from 'node:process';
 
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import mobs from '@kaetram/server/data/mobs.json';
-import Database from '@kaetram/common/database/database';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import mobs from '@rusthorizons/server/data/mobs.json';
+import Database from '@rusthorizons/common/database/database';
 
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
-import type { RawMobData } from '@kaetram/common/types/mob';
-import type { Modules } from '@kaetram/common/network';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
+import type { RawMobData } from '@rusthorizons/common/types/mob';
+import type { Modules } from '@rusthorizons/common/network';
 import type {
     MobAggregate,
     PvpAggregate,
     SkillExperience,
     TotalExperience
-} from '@kaetram/common/types/leaderboards';
+} from '@rusthorizons/common/types/leaderboards';
 
 export default class Cache {
     /**

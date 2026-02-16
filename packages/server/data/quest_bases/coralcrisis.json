@@ -1,15 +1,15 @@
 {
     "name": "Coral Crisis",
-    "description": "Mirela, a concerned mermaid, needs your assistance.|The coral reefs in the underwater world are dying. Mirela believes a dark sorcerer is poisoning the waters and has sought your help to put an end to this malevolent act.",
+    "description": "Mirela, a concerned mermaid, needs your assistance.|The reefs are collapsing from toxic runoff. Mirela believes a dark warcaster is contaminating the waters and needs your help to stop it.",
     "rewards": ["1500 gold", "coralcrown"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "mirela",
             "text": [
-                "Adventurer! It's a relief to see you!",
+                "Survivor! It's a relief to see you!",
                 "The corals are dying and I believe it's no natural occurrence.",
-                "I suspect a dark sorcerer is poisoning the waters. Can you help?"
+                "I suspect a dark warcaster is poisoning the waters. Can you help?"
             ],
             "completedText": ["You must investigate the situation!"]
         },

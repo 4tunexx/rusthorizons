@@ -1,8 +1,8 @@
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
 
 import type { WebSocket } from 'uws';
-import type { ConnectionInfo, MessageCallback } from '@kaetram/common/types/network';
+import type { ConnectionInfo, MessageCallback } from '@rusthorizons/common/types/network';
 
 export interface HeaderWebSocket extends WebSocket<ConnectionInfo> {
     remoteAddress: string;

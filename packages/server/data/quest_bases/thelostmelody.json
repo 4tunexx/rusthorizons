@@ -1,6 +1,6 @@
 {
     "name": "The Lost Melody",
-    "description": "A forgotten song needs to be revived.|Ancient tales tell of a melody that could summon rains and heal the earth. The village bard believes the notes are scattered, waiting to be pieced together.",
+    "description": "A forgotten signal needs to be restored.|Old logs describe a melody that once coordinated rain towers and stabilized fields. The village bard believes the notes are scattered, waiting to be pieced together.",
     "rewards": ["ancientlute"],
     "stages": {
         "0": {
@@ -48,11 +48,11 @@
             ],
             "text": [
                 "Ah, these are the notes! Let me piece them together...",
-                "Marvelous! As thanks, please take this ancient lute."
+                "Marvelous! As thanks, please take this relic lute."
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have completed @crimson@The Lost Melody@green@. The village bard has gifted you an ancient lute!",
+                "text": "@green@You have completed @crimson@The Lost Melody@green@. The village bard has gifted you a relic lute!",
                 "colour": "#33cc33"
             }
         }

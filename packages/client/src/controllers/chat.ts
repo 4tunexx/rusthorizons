@@ -1,7 +1,7 @@
 import Util from '../utils/util';
 import { isMobile } from '../utils/detect';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
 import type Game from '../game';
 

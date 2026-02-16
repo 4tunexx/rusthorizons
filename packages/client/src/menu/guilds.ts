@@ -2,11 +2,11 @@ import Menu from './menu';
 
 import Util from '../utils/util';
 
-import { Modules, Packets, Opcodes } from '@kaetram/common/network';
+import { Modules, Packets, Opcodes } from '@rusthorizons/common/network';
 
 import type Game from '../game';
-import type { ListInfo, Member } from '@kaetram/common/network/impl/guild';
-import type { GuildPacketData } from '@kaetram/common/types/messages/outgoing';
+import type { ListInfo, Member } from '@rusthorizons/common/network/impl/guild';
+import type { GuildPacketData } from '@rusthorizons/common/types/messages/outgoing';
 
 export default class Guilds extends Menu {
     public override identifier: number = Modules.Interfaces.Guilds;
@@ -35,7 +35,7 @@ export default class Guilds extends Menu {
     private bannerColour: Modules.BannerColour = Modules.BannerColour.Grey;
     private bannerOutline: Modules.BannerOutline = Modules.BannerOutline.StyleOne;
     private bannerOutlineColour: Modules.BannerColour = Modules.BannerColour.GoldenYellow;
-    private bannerCrest: Modules.BannerCrests | undefined = Modules.BannerCrests.None;
+    private bannerCrest: Modules.BannerCrests = Modules.BannerCrests.None;
 
     // Buttons used for selecting which banner colours we're modifying (outline or banner).
     private bannerColourButton: HTMLElement = document.querySelector('#banner-colour-button')!;
@@ -322,7 +322,7 @@ export default class Guilds extends Menu {
         this.bannerOutline = info.decoration?.outline || Modules.BannerOutline.StyleOne;
         this.bannerOutlineColour =
             info.decoration?.outlineColour || Modules.BannerColour.GoldenYellow;
-        this.bannerCrest = info.decoration?.crest;
+        this.bannerCrest = info.decoration?.crest ?? Modules.BannerCrests.None;
 
         this.updateBanner();
 
@@ -756,7 +756,7 @@ export default class Guilds extends Menu {
 
     private createElement(
         list: HTMLUListElement,
-        type: Modules.GuildRank | 'guild',
+        type: number | 'guild',
         name: string,
         count = 0
     ): void {
@@ -814,7 +814,9 @@ export default class Guilds extends Menu {
 
             serverElement.className = `server ${isPlayer ? 'text-green' : 'text-red'}`;
 
-            serverElement.innerHTML = isPlayer ? `Kaetram ${this.game.player.serverId}` : 'Offline';
+            serverElement.innerHTML = isPlayer
+                ? `Rust Horizons ${this.game.player.serverId}`
+                : 'Offline';
 
             element.append(serverElement);
 
@@ -838,6 +840,7 @@ export default class Guilds extends Menu {
      */
 
     private cleanSelectedCrests(selectEmpty = false): void {
+        void selectEmpty;
         // for (let crest of this.bannerCrests.children) crest.classList.remove('active');
         // // Select the empty crest if specified.
         // if (selectEmpty) this.bannerCrests.children[0].classList.add('active');

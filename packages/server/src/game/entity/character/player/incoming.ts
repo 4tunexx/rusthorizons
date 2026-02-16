@@ -1,13 +1,13 @@
 import Commands from '../../../../controllers/commands';
 
 import sanitizer from 'sanitizer';
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import Filter from '@kaetram/common/util/filter';
-import Creator from '@kaetram/common/database/mongodb/creator';
-import { SpawnPacket, HandshakePacket as Handshake } from '@kaetram/common/network/impl';
-import { Opcodes, Packets } from '@kaetram/common/network';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import Filter from '@rusthorizons/common/util/filter';
+import Creator from '@rusthorizons/common/database/mongodb/creator';
+import { SpawnPacket, HandshakePacket as Handshake } from '@rusthorizons/common/network/impl';
+import { Opcodes, Packets } from '@rusthorizons/common/network';
 
 import type Player from './player';
 import type NPC from '../../npc/npc';
@@ -18,7 +18,7 @@ import type Chest from '../../objects/chest';
 import type LootBag from '../../objects/lootbag';
 import type Entities from '../../../../controllers/entities';
 import type Connection from '../../../../network/connection';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
 import type {
     AbilityPacket,
     ContainerPacket,
@@ -36,8 +36,8 @@ import type {
     CraftingPacket,
     PetPacket,
     LootBagPacket
-} from '@kaetram/common/types/messages/incoming';
-import type { QuestPacketData } from '@kaetram/common/network/impl/quest';
+} from '@rusthorizons/common/types/messages/incoming';
+import type { QuestPacketData } from '@rusthorizons/common/network/impl/quest';
 
 export default class Incoming {
     private world: World;
@@ -182,7 +182,7 @@ export default class Incoming {
     }
 
     /**
-     * Handles the login process for Kaetram.
+     * Handles the login process for Rust Horizons.
      * @param data The packet data for the login. Generally contains
      * username, password, (email if registering). If it's a guest login,
      * then we proceed with no username/password and no database saving.

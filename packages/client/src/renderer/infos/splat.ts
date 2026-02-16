@@ -1,5 +1,5 @@
-import { Modules } from '@kaetram/common/network';
-import { Hits } from '@kaetram/common/network/modules';
+import { Modules } from '@rusthorizons/common/network';
+import { Hits } from '@rusthorizons/common/network/modules';
 
 interface Colour {
     fill: string;
@@ -138,12 +138,12 @@ export default class Splat {
     }
 
     /**
-     * Separate the heal and mana types since their prefix is '++';
-     * @returns Whether the type equals the enum Heal or Mana.
+     * Separate the heal and drive types since their prefix is '++';
+     * @returns Whether the type equals the enum Heal or Drive.
      */
 
     private isPoints(): boolean {
-        return this.type === Modules.Hits.Heal || this.type === Modules.Hits.Mana;
+        return this.type === Modules.Hits.Heal || this.type === Modules.Hits.Drive;
     }
 
     /**

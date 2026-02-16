@@ -1,4 +1,4 @@
-import { Opcodes } from '@kaetram/common/network';
+import { Opcodes } from '@rusthorizons/common/network';
 
 import type Player from '../entity/character/player/player';
 

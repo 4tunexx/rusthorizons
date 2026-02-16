@@ -1,6 +1,6 @@
 {
-    "name": "The Grand Bowmaster's Request",
-    "description": "The Grand Bowmaster requires a special bow, one that's beyond ordinary. Help him craft the legendary Moonlit Bow.",
+    "name": "Ballistics Specialist Request",
+    "description": "The ballistics specialist requires a precision bow platform beyond standard issue. Help craft the Moonlit Bow prototype.",
     "rewards": ["Moonlit Bow Blueprint", "2500 Fletching experience"],
     "skillRequirements": {
         "fletching": 30
@@ -9,11 +9,8 @@
         "0": {
             "task": "talk",
             "npc": "bowmaster",
-            "text": [
-                "Adventurer! I need a bow made from the elusive Moonwood Tree.",
-                "Will you aid me in this endeavor?"
-            ],
-            "completedText": ["Seek the Moonwood Tree in the Midnight Grove."]
+            "text": ["Seeker! I need a bow frame made from Moonwood composite.", "Will you aid me in this endeavor?"],
+            "completedText": ["Seek the Moonwood Scrap in the Midnight Salvage Yard."]
         },
         "1": {
             "task": "collect",

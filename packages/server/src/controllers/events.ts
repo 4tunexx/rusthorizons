@@ -1,5 +1,5 @@
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 import type World from '../game/world';
 

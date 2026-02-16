@@ -1,13 +1,13 @@
 {
-    "name": "The Elemental Blade",
-    "description": "The world's elements seek a worthy bearer.|Legends speak of a blade that embodies the very essence of earth, fire, water, and air. Begin the journey to forge this elemental masterpiece and command its boundless power.",
+    "name": "Elemental Blade Protocol",
+    "description": "Four elemental systems await a worthy operator.|Records speak of a blade tuned to earth, fire, water, and air channels. Begin the forge protocol and claim its power.",
     "rewards": ["elementalsword"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "eldersmith",
             "text": [
-                "Ah, an adventurer! Have you heard of the Elemental Blade?",
+                "Ah, a survivor! Have you heard of the Elemental Blade?",
                 "It is a sword that channels the forces of nature.",
                 "To craft it, you must gather the four Elemental Shards from across the land."
             ],
@@ -55,7 +55,7 @@
             "npc": "flamespirit",
             "text": [
                 "You burn with determination. Take the Fire Shard.",
-                "Next, journey to the Water Temple for the Water Shard."
+                "Next, journey to the Water Facility for the Water Shard."
             ],
             "itemRewards": [
                 {
@@ -136,7 +136,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@The Elemental Blade@green@. You now wield the power of the elements!",
+                "text": "@green@You have just finished @crimson@Elemental Blade Protocol@green@. You now wield the power of the elements!",
                 "colour": "#33cc33"
             }
         }

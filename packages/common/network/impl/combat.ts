@@ -1,9 +1,9 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { HitData } from '@kaetram/common/types/info';
-import type { Opcodes } from '@kaetram/common/network';
+import type { HitData } from '@rusthorizons/common/types/info';
+import type { Opcodes } from '@rusthorizons/common/network';
 
 export interface CombatPacketData {
     instance: string; // The entity the combat packet revolves around.

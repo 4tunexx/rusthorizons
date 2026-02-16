@@ -1,9 +1,9 @@
 import Model from '.';
 
-import log from '@kaetram/common/util/log';
+import log from '@rusthorizons/common/util/log';
 
-import type { Packets } from '@kaetram/common/network';
-import type Packet from '@kaetram/common/network/packet';
+import type { Packets } from '@rusthorizons/common/network';
+import type Packet from '@rusthorizons/common/network/packet';
 
 export default class Admin extends Model {
     /**

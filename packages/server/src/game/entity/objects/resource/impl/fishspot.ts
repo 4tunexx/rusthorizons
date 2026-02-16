@@ -1,8 +1,8 @@
 import Resource from '../resource';
 import fishSpots from '../../../../../../data/fishing.json';
 
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 export default class FishSpot extends Resource {
     public constructor(key: string, x: number, y: number) {

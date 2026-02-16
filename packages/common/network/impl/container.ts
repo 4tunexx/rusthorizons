@@ -1,9 +1,9 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { Modules, Opcodes } from '@kaetram/common/network';
-import type { SerializedContainer, SlotData } from '@kaetram/common/types/slot';
+import type { Modules, Opcodes } from '@rusthorizons/common/network';
+import type { SerializedContainer, SlotData } from '@rusthorizons/common/types/slot';
 
 export interface ContainerPacketData {
     type: Modules.ContainerType;

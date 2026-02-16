@@ -1,27 +1,27 @@
 {
     "name": "Echoes of the Forge",
-    "description": "The Weapon of Legends has awoken ancient evils.|The forging of the mighty weapon has inadvertently unleashed old and powerful forces. They threaten the land, and only the combined effort of Thrain and the player can quell them.",
+    "description": "The prototype weapon has triggered dormant threats.|The forging process destabilized old containment zones. They now threaten the region, and only a coordinated response can lock them down.",
     "rewards": ["5000 gold", "legendaryarmorset"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "thrain",
             "text": [
-                "It seems the forging of the weapon has disturbed ancient powers.",
+                "It seems the forging process disturbed dormant threats.",
                 "Dark creatures have emerged, drawn to the weapon's energy.",
                 "We must find a way to contain this power before it's too late."
             ],
-            "completedText": ["Seek the wisdom of the Oracle to find a solution."]
+            "completedText": ["Seek tactical analysis to find a solution."]
         },
         "1": {
             "task": "talk",
             "npc": "oracle",
             "text": [
-                "The weapon you forged is both a blessing and a curse.",
+                "The weapon you forged is both an asset and a risk.",
                 "To contain its power, you must seek the Seals of Balance.",
-                "They are scattered in the three Temples of Equilibrium."
+                "They are scattered across three equilibrium sites."
             ],
-            "completedText": ["Retrieve the first Seal from the Temple of Earth."]
+            "completedText": ["Retrieve the first Seal from the Earth site."]
         },
         "2": {
             "task": "talk",
@@ -44,7 +44,7 @@
                     "count": 1
                 }
             ],
-            "completedText": ["Now head to the Temple of Water."]
+            "completedText": ["Now head to the Water site."]
         },
         "5": {
             "task": "talk",
@@ -62,7 +62,7 @@
                     "count": 1
                 }
             ],
-            "completedText": ["Finally, proceed to the Temple of Wind."]
+            "completedText": ["Finally, proceed to the Wind site."]
         },
         "7": {
             "task": "talk",
@@ -114,7 +114,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Echoes of the Forge@green@. You have gained 5000 gold and the Legendary Armor Set!",
+                "text": "@green@You have just finished @crimson@Echoes of the Forge@green@. You have gained 5000 gold and the Vanguard Armor Set!",
                 "colour": "#33cc33"
             }
         }

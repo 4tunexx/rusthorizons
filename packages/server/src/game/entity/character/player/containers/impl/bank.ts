@@ -1,7 +1,7 @@
 import Container from '../container';
 
-import BankEn from '@kaetram/common/text/en/bank';
-import { Modules } from '@kaetram/common/network';
+import BankEn from '@rusthorizons/common/text/en/bank';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Item from '../../../../objects/item';
 

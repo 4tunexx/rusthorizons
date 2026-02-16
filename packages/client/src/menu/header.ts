@@ -9,21 +9,22 @@ import type Player from '../entity/character/player/player';
 export default class Header {
     // Containers used for dimension calculations.
     private health: HTMLElement = document.querySelector('#health')!; // The health bar container element
-    private mana: HTMLElement = document.querySelector('#mana')!; // The mana bar container element
+    private drive: HTMLElement = document.querySelector('#drive')!; // The drive bar container element
 
-    // Masks used to display remaining hit points and mana.
+    // Masks used to display remaining hit points and drive.
     private healthMask: HTMLElement = document.querySelector('#health-mask')!; // The red element within the health bar.
-    private manaMask: HTMLElement = document.querySelector('#mana-mask')!;
+    private driveMask: HTMLElement = document.querySelector('#drive-mask')!;
 
-    // Text properties for the health and mana bars.
+    // Text properties for the health and drive bars.
     private healthText: HTMLElement = this.health.querySelector('.health-text')!; // Numerical value of the health bar.
-    private manaText: HTMLElement = this.mana.querySelector('.mana-text')!;
+    private driveText: HTMLElement = this.drive.querySelector('.drive-text')!;
 
     private hudLevel: HTMLElement | null = document.querySelector('#hud-level');
+    private hudRoot: HTMLElement | null = document.querySelector('#player-info');
 
     public constructor(private player: Player) {
         this.player.onHitPoints(this.handleHitPoints.bind(this));
-        this.player.onMana(this.handleMana.bind(this));
+        this.player.onDrive(this.handleDrive.bind(this));
         this.player.onPoison(this.handlePoison.bind(this));
         this.player.onSync(this.handleSync.bind(this));
 
@@ -35,9 +36,32 @@ export default class Header {
      */
 
     private handleSync(): void {
-        if (!this.hudLevel) return;
+        if (this.hudLevel) this.hudLevel.textContent = `${this.player.level}`;
 
-        this.hudLevel.textContent = `${this.player.level}`;
+        this.updateHudXp();
+    }
+
+    /**
+     * Updates the HUD XP ring using the average skill progress percentage.
+     */
+
+    public updateHudXp(): void {
+        if (!this.hudRoot) return;
+
+        let skills = Object.values(this.player.skills);
+        let total = 0;
+        let count = 0;
+
+        for (let skill of skills) {
+            if (typeof skill.percentage !== 'number') continue;
+            total += skill.percentage;
+            count++;
+        }
+
+        let average = count > 0 ? total / count : 0;
+        let clamped = Math.max(0, Math.min(1, average));
+
+        this.hudRoot.style.setProperty('--hud-xp', clamped.toString());
     }
 
     /**
@@ -59,13 +83,13 @@ export default class Header {
     }
 
     /**
-     * Updates the mana bar on the game screen.
-     * @param mana Current mana of the player.
-     * @param maxMana Maximum attainable mana (used to calcualte percentages).
+     * Updates the drive bar on the game screen.
+     * @param drive Current drive of the player.
+     * @param maxDrive Maximum attainable drive (used to calcualte percentages).
      */
 
-    public handleMana(mana: number, maxMana: number): void {
-        this.setPoints(this.mana, this.manaMask, this.manaText, mana, maxMana);
+    public handleDrive(drive: number, maxDrive: number): void {
+        this.setPoints(this.drive, this.driveMask, this.driveText, drive, maxDrive);
     }
 
     /**
@@ -84,7 +108,7 @@ export default class Header {
 
     public resize(): void {
         this.handleHitPoints(this.player.hitPoints, this.player.maxHitPoints);
-        this.handleMana(this.player.mana, this.player.maxMana);
+        this.handleDrive(this.player.drive, this.player.maxDrive);
     }
 
     /**

@@ -14,9 +14,9 @@ import { imageSize } from 'image-size';
 import { defineConfig } from 'astro/config';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
-import config, { exposedConfig } from '@kaetram/common/config';
+import config, { exposedConfig } from '@rusthorizons/common/config';
 import { i18n } from 'astro-i18n-aut/integration';
-import { locales, defaultLocale, dir, t, type Locale } from '@kaetram/common/i18n';
+import { locales, defaultLocale, dir, t, type Locale } from '@rusthorizons/common/i18n';
 
 export let env = exposedConfig('name', 'host', 'ssl', 'serverId', 'sentryDsn', 'acceptLicense');
 
@@ -112,7 +112,7 @@ if (import.meta.env.PROD)
 // https://astro.build/config
 export default defineConfig({
     srcDir: './',
-    site: 'https://kaetram.com/',
+    site: 'https://rusthorizons.com/',
     trailingSlash: 'always',
     integrations,
     server: { host: true, port: 9000 },

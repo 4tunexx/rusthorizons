@@ -19,7 +19,7 @@
             "task": "talk",
             "npc": "bluebikinigirlnpc",
             "hasItemText": [
-                "Oh no adventurer, I almost forgot!",
+                "Oh no, survivor, I almost forgot!",
                 "I don't actually need the clam chowder.",
                 "So you've probably heard this before but I'm too lazy",
                 "to come up with a better lie.",
@@ -47,7 +47,7 @@
                 "Oh hey there, how is your day going?",
                 "Oh you are looking for that girl's grandmother?",
                 "You know that's not actually her grandmother, she just likes",
-                "sending adventurers on redundant quests.",
+                "sending survivors on redundant errands.",
                 "Regardless, I can tell you where she was last seen",
                 "if you bring me 2 clam chowders."
             ],

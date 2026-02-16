@@ -1,6 +1,6 @@
 {
     "name": "Culinary Mysteries",
-    "description": "Chef Gustavo is known across the land for his delicious dishes. However, he's hit a roadblock trying to recreate a historic recipe. Can you help him solve this culinary conundrum?",
+    "description": "Chef Gustavo keeps a key settlement kitchen running. He's blocked on reconstructing an old survival recipe. Help him complete it.",
     "rewards": ["Chef's Special Apron", "2500 Cooking experience"],
     "skillRequirements": {
         "cooking": 20
@@ -10,7 +10,7 @@
             "task": "talk",
             "npc": "chefgustavo",
             "text": [
-                "Ah, a fellow cooking enthusiast! I've recently discovered an ancient recipe",
+                "Good, another capable cook. I've recovered an old ration recipe",
                 "that I've been trying to recreate. But it's missing some ingredients.",
                 "The recipe calls for a rare Moonlit Mushroom. Would you be able to fetch it for me?"
             ],
@@ -39,7 +39,7 @@
             "task": "talk",
             "npc": "snowyhermit",
             "text": [
-                "Ah, Chef Gustavo's 'secret spice'. It's not a spice at all!",
+                "Chef Gustavo's 'secret spice'? It's not a spice at all!",
                 "It's the dried petal of a Frozen Rose, found deep within these mountains.",
                 "Retrieve it, and the recipe will be complete."
             ],
@@ -51,7 +51,7 @@
             "hasItemText": [
                 "The Frozen Rose petal! The final ingredient!",
                 "Now, watch as I create culinary history...",
-                "Thank you, dear adventurer. For your help, I bestow upon you",
+                "Thank you, survivor. For your help, I grant you",
                 "the Chef's Special Apron. May it aid you in all your culinary endeavors!"
             ],
             "itemRequirements": [

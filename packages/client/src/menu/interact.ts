@@ -1,6 +1,6 @@
 import Menu from './menu';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Player from '../entity/character/player/player';
 import type Entity from '../entity/entity';

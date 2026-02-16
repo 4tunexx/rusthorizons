@@ -1,6 +1,6 @@
 import UWS from './sockets/uws';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Connection from './connection';
 

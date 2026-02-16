@@ -10,7 +10,7 @@
                 "So, remember that tiny mistake with the chickens?",
                 "It looks like when we fixed it, a new realm formed where chickens rule the land.",
                 "And they aren't happy about losing their status in our realm!",
-                "Can you venture in and negotiate peace with the Chicken King?"
+                "Can you venture in and negotiate peace with the Chicken Chief?"
             ],
             "completedText": ["Enter the Feathery Realm portal to the east."]
         },
@@ -18,16 +18,16 @@
             "task": "talk",
             "npc": "chickenking",
             "text": [
-                "Bawk! Bawk! Who dares enter the realm of the mighty Chicken King?",
+                "Bawk! Bawk! Who dares enter the territory of the mighty Chicken Chief?",
                 "Ah, you're from Keros' realm. We won't forget his... adjustments.",
                 "To prove you come in peace, I challenge you to a game of... Feathered Fetch!"
             ],
-            "completedText": ["Play Feathered Fetch with the Chicken King."]
+            "completedText": ["Play Feathered Fetch with the Chicken Chief."]
         },
         "2": {
             "task": "talk",
             "npc": "keros",
-            "text": ["You've played the game? That's great news!", "Did you manage to win the Chicken King's trust?"],
+            "text": ["You've played the game? That's great news!", "Did you manage to win the Chicken Chief's trust?"],
             "completedText": ["Share your experience with Keros."]
         },
         "3": {
@@ -50,7 +50,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You've bridged the gap between realms and earned the respect of the Chicken King. Wear your @crimson@feathered cape@green@ as a symbol of unity.",
+                "text": "@green@You've bridged the gap between realms and earned the respect of the Chicken Chief. Wear your @crimson@feathered cape@green@ as a symbol of unity.",
                 "colour": "#33cc33"
             }
         }

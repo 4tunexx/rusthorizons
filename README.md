@@ -1,29 +1,29 @@
 # rusthorizons
 
-[![Version](https://img.shields.io/github/package-json/v/Kaetram/Kaetram-Open)](https://github.com/Kaetram/Kaetram-Open/releases/latest 'Version')
-[![MPL-2.0 License](https://img.shields.io/github/license/Kaetram/Kaetram-Open)][license]
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fkaetram.com&style=flat)](https://kaetram.com 'Website')
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Kaetram/Kaetram-Open/build.yml?branch=develop&label=build)](https://github.com/Kaetram/Kaetram-Open/actions/workflows/build.yml 'Build Status')
-[![E2E Status](https://img.shields.io/github/actions/workflow/status/Kaetram/Kaetram-Open/e2e.yml?branch=develop&label=e2e)](https://github.com/Kaetram/Kaetram-Open/actions/workflows/e2e.yml 'E2E Status')
-[![Open Issues](https://img.shields.io/github/issues/Kaetram/Kaetram-Open)][issues]
+[![Version](https://img.shields.io/github/package-json/v/4tunexx/rusthorizons)](https://github.com/4tunexx/rusthorizons/releases/latest 'Version')
+[![MPL-2.0 License](https://img.shields.io/github/license/4tunexx/rusthorizons)][license]
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Frusthorizons.com&style=flat)](https://rusthorizons.com 'Website')
+[![Build Status](https://img.shields.io/github/actions/workflow/status/4tunexx/rusthorizons/build.yml?branch=main&label=build)](https://github.com/4tunexx/rusthorizons/actions/workflows/build.yml 'Build Status')
+[![E2E Status](https://img.shields.io/github/actions/workflow/status/4tunexx/rusthorizons/e2e.yml?branch=main&label=e2e)](https://github.com/4tunexx/rusthorizons/actions/workflows/e2e.yml 'E2E Status')
+[![Open Issues](https://img.shields.io/github/issues/4tunexx/rusthorizons)][issues]
 
-[![Watch](https://img.shields.io/github/watchers/Kaetram/Kaetram-Open?style=social&icon=github)](https://github.com/Kaetram/Kaetram-Open/subscription 'Watch')
-[![Stars](https://img.shields.io/github/stars/Kaetram/Kaetram-Open?style=social&icon=github)](https://github.com/Kaetram/Kaetram-Open/stargazers 'Stars')
-[![Fork](https://img.shields.io/github/forks/Kaetram/Kaetram-Open?style=social&icon=github)](https://github.com/Kaetram/Kaetram-Open/fork 'Fork')
+[![Watch](https://img.shields.io/github/watchers/4tunexx/rusthorizons?style=social&icon=github)](https://github.com/4tunexx/rusthorizons/subscription 'Watch')
+[![Stars](https://img.shields.io/github/stars/4tunexx/rusthorizons?style=social&icon=github)](https://github.com/4tunexx/rusthorizons/stargazers 'Stars')
+[![Fork](https://img.shields.io/github/forks/4tunexx/rusthorizons?style=social&icon=github)](https://github.com/4tunexx/rusthorizons/fork 'Fork')
 [![Discord](https://img.shields.io/discord/583033499741847574?logo=discord&color=5865f2&labelColor=fff&style=flat)][discord]
 [![YouTube](https://img.shields.io/badge/YouTube-white?logo=youtube&logoColor=f00)](https://www.youtube.com/channel/UC0atP4sQbb4LJd6y4jijOHg 'YouTube')
-[![Twitter](https://img.shields.io/twitter/follow/kaetramofficial?style=social)](https://twitter.com/kaetramofficial 'Twitter')
-[![Reddit](https://img.shields.io/reddit/subreddit-subscribers/kaetram?style=social)](https://reddit.com/r/kaetram 'Reddit')
+[![Twitter](https://img.shields.io/twitter/follow/rusthorizonsofficial?style=social)](https://twitter.com/rusthorizonsofficial 'Twitter')
+[![Reddit](https://img.shields.io/reddit/subreddit-subscribers/rusthorizons?style=social)](https://reddit.com/r/rusthorizons 'Reddit')
 
-Kaetram is an open-source 2D MMORPG that expands on the original idea created by Little Workshop's BrowserQuest (BQ).
+Rust Horizons is an open-source 2D MMORPG that expands on the original idea created by Little Workshop's BrowserQuest (BQ).
 We aim to provide a collaborative gaming experience as well as a game-engine for those interested in creating their
 own version. The game is still in early development stages and all help, suggestions, and bug reports are welcome.
 All of the assets are licensed under CC-BY-SA3.0 and we aim to hold onto the original BQ assets as well as expand
 upon them. The entire code-base has been re-written from scratch, optimized, and documented. Please see the GitHub
-wiki for information regarding development. Kaetram first started development in 2015 under the name of
-Tap Tap Adventure (TTA). In 2017, Kaetram was started as a complete re-write of the code which was formerly BQ-based.
+wiki for information regarding development. Rust Horizons first started development in 2015 under the name of
+Tap Tap Adventure (TTA). In 2017, Rust Horizons was started as a complete re-write of the code which was formerly BQ-based.
 
-Live Version &ndash; <https://kaetram.com>
+Live Version &ndash; <https://rusthorizons.com>
 
 Join us on Discord &ndash; <https://discord.gg/MmbGAaw>
 
@@ -44,7 +44,7 @@ Join us on Discord &ndash; <https://discord.gg/MmbGAaw>
 ## Technologies
 
 BQ was initially written as an HTML5 experiment showcasing the capabilities of web technologies
-back in 2012. Kaetram builds on top of the idea and uses modern standards to help facilitate
+back in 2012. Rust Horizons builds on top of the idea and uses modern standards to help facilitate
 readability, performance, and compatibility. Some of the many features are as follows:
 
 - Multiplayer using µWebSockets.
@@ -80,12 +80,12 @@ the server.
 
 > You need to use a Node.js version greater than or equal to `v16.17.1`, following the
 > [Long Term Support (LTS) schedule](https://nodejs.org/en/about/releases), to have the most stable
-> experience when developing/experimenting with Kaetram. Older versions would not work with our
+> experience when developing/experimenting with Rust Horizons. Older versions would not work with our
 > current dependencies and package manager.
 
 #### NOTE: MongoDB
 
-> MongoDB is not a requirement for Kaetram to run, but you can store and save user data if you
+> MongoDB is not a requirement for Rust Horizons to run, but you can store and save user data if you
 > install it and run an online environment with all the features enabled. To do this, see
 > [Configuration](#configuration), and set `SKIP_DATABASE=false`. _If you do choose to install
 > MongoDB, a user is not necessary, but you can enable authentication with the `MONGODB_AUTH`
@@ -183,11 +183,11 @@ In the future we plan to use this region system to create instanced versions of 
 instances at the same time.
 
 Video example showcasing region system using an exaggerated example:
-[![Kaetram Region System](https://img.youtube.com/vi/pt_CEgjfORE/0.jpg)](https://www.youtube.com/watch?v=pt_CEgjfORE)
+[![Rust Horizons Region System](https://img.youtube.com/vi/pt_CEgjfORE/0.jpg)](https://www.youtube.com/watch?v=pt_CEgjfORE)
 
 ### Tilemap
 
-Kaetram uses [Tiled Map Editor](https://www.mapeditor.org/) to create and modify the map. Our [map parsing](#map-parsing) tool
+Rust Horizons uses [Tiled Map Editor](https://www.mapeditor.org/) to create and modify the map. Our [map parsing](#map-parsing) tool
 is used to export a condesed version of the map data. The server receives the bulk of the information and uses it to calculate
 collisions, tile data information, and areas (pvp, music, etc). The client stores minimal data such as tile 'z-index' and animations.
 
@@ -209,7 +209,7 @@ To build the current game map, you can run
 yarn map
 ```
 
-### Kaetram Hub
+### Rust Horizons Hub
 
 The hub functions as a gateway between servers. Due to performance limitations of NodeJS it is more feasible
 to host multiple servers instead of one big one containing thousands of players. The hub does exactly that, once
@@ -227,8 +227,8 @@ HUB_ENABLED=true
 
 ## Roadmap
 
-Here we have [The Roadmap Project Board](https://github.com/Kaetram/Kaetram-Open/projects/1). This
-is the main board of the Kaetram-Open project. A kind of Kanban tasks board for tracking and
+Here we have [The Roadmap Project Board](https://github.com/Rust Horizons/Rust Horizons-Open/projects/1). This
+is the main board of the Rust Horizons-Open project. A kind of Kanban tasks board for tracking and
 presenting the progress to the community. Here we plan, prioritize and track our work.
 
 See also the [open issues][issues] for a list of proposed features (and known issues).
@@ -246,9 +246,9 @@ See also the [open issues][issues] for a list of proposed features (and known is
 
 ### Sponsor
 
-Patreon &ndash; <https://www.patreon.com/kaetram>
+Patreon &ndash; <https://www.patreon.com/rusthorizons>
 
-Open Collective &ndash; <https://opencollective.com/kaetram>
+Open Collective &ndash; <https://opencollective.com/rusthorizons>
 
 ### Crypto
 
@@ -262,15 +262,15 @@ Open Collective &ndash; <https://opencollective.com/kaetram>
 
 ## License & Commission
 
-Following the release of the beta, Kaetram-Open will only be updated once every 2-4 weeks. There will be no more updates to the sprite art, music, item/mob/npc/etc properties. This repository will provide you with the tools necessary to create your own version of Kaetram, there are plenty of assets included for that. Further modifications will primarily consist of game-engine improvements.
+Following the release of the beta, Rust Horizons-Open will only be updated once every 2-4 weeks. There will be no more updates to the sprite art, music, item/mob/npc/etc properties. This repository will provide you with the tools necessary to create your own version of Rust Horizons, there are plenty of assets included for that. Further modifications will primarily consist of game-engine improvements.
 
-For all inquiries about purchasing a different license, commission work, or purchasing access to our up-to-date version please contact **@kaetram** on [Discord][discord] or email admin@kaetram.com.
+For all inquiries about purchasing a different license, commission work, or purchasing access to our up-to-date version please contact **@rusthorizons** on [Discord][discord] or email admin@rusthorizons.com.
 
 This project is distributed under the **[Mozilla Public License Version 2.0](https://choosealicense.com/licenses/mpl-2.0/)**. See [`LICENSE`][license] for more information.
 
-Additionally, Kaetram is shipped with a secondary license, Omnia Public License (OPL):
+Additionally, Rust Horizons is shipped with a secondary license, Omnia Public License (OPL):
 
-- You MUST provide a direct link to Kaetram in the credits section.
+- You MUST provide a direct link to Rust Horizons in the credits section.
 - You MUST keep the code open-source and continue to do so.
 - You may NOT use this project or any parts therein for anything related to artifical intelligence, cryptocurrencies, or NFTs without direct permission from the creators.
 - You may NOT remove the credits section. It MUST remain visible on the front page of the website. It MUST be easily accessible to any user who accesses the project as per [W3C Accessibility Standards](https://www.w3.org/WAI/standards-guidelines/).
@@ -279,8 +279,8 @@ Additionally, Kaetram is shipped with a secondary license, Omnia Public License 
 - You may NOT use this project or any parts therein for any illicit activity.
 - You may NOT use this project or any parts therein to spread hate, racism, or any form of discriminatory behaviour.
 
-If you have any questions, contact @kaetram on [Discord][discord].
+If you have any questions, contact @rusthorizons on [Discord][discord].
 
 [license]: LICENSE 'Project License'
-[issues]: https://github.com/Kaetram/Kaetram-Open/issues 'Open Issues'
+[issues]: https://github.com/4tunexx/rusthorizons/issues 'Open Issues'
 [discord]: https://discord.gg/MmbGAaw 'Join Discord'

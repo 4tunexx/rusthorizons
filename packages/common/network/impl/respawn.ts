@@ -1,8 +1,8 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type Entity from '@kaetram/server/src/game/entity/entity';
+import type Entity from '@rusthorizons/server/src/game/entity/entity';
 
 export interface RespawnPacketData {
     x: number; // Spawn x coordinate

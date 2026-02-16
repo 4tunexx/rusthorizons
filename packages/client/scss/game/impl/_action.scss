@@ -10,9 +10,16 @@
 
     width: 8em;
     height: 10em;
-    padding-right: 0;
+    padding: 0.75em;
 
-    border-image-width: 1em 0 1em 1em;
+    background: rgba(22, 22, 22, 0.92);
+    border: 3px solid rgba(246, 166, 35, 0.8);
+    border-radius: 8px;
+    box-shadow:
+        0 0 20px rgba(246, 166, 35, 0.4),
+        0 5px 25px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
 }
 
 #action-page {

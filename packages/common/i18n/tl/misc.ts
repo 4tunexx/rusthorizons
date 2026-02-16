@@ -27,7 +27,8 @@ export default {
     CANNOT_TRADE_ITEM: 'Hindi ma aring i-trade ang item na ito.',
     CANNOT_TRADE_CHEATER: 'Paumanhi pero bawal mag trade ang mga cheaters.',
     CANNOT_TRADE_CHEATER_OTHER: 'Manloloko ang player na yan, baka bebentahan ka ng droga nyan!',
-    CANNOT_TRADE_ADMIN: 'Bilang isang admin, hindi mo maiimpluwensya ang ekonomiya ng Kaetram.',
+    CANNOT_TRADE_ADMIN:
+        'Bilang isang admin, hindi mo maiimpluwensya ang ekonomiya ng Rust Horizons.',
     CANNOT_TRADE_ADMIN_OTHER:
         'Ang Player na to ay isang admin at hindi maaring makapag trade sakanya.',
     DONT_THINK_GO_IN: 'Sa tingin ko, dapat di pa ako papasok diyan.',
@@ -56,7 +57,7 @@ export default {
     NO_SPACE_PET: 'Kulang ang espasyo ng iyong Pet Inventory.',
     NOT_IN_PVP_ZONE: 'Wala ka na sa PvP zone!',
     NOT_ONLINE: 'Player @aquamarine@{{username}}@crimson@ ay hindi online.',
-    NOT_ENOUGH_MANA: 'Kulang ang mana mo para gamitin ang abilidad na ito.',
+    NOT_ENOUGH_DRIVE: 'Kulang ang iyong enerhiya para gamitin ang abilidad na ito.',
     PLEASE_MAKE_ROOM_REWARD: 'Mag bigay ng puwang sa iyong imbentaryo upang ma tanggap ang reward',
     POISONED: 'Nalason ka!',
     POISON_WORN_OFF: 'Nawala na ang lason.',
@@ -75,11 +76,11 @@ export default {
     SKILL_LEVEL_UP_DESC: 'Congratulations, si {{name}} ay naging {{level}}!',
     JAILED: 'Ikaw ay nasa kulungan hanggang {{duration}}.',
     MUTED: 'Ikaw ay naka-mute.',
-    LOW_MANA: 'Mababa ang mana mo, ang iyong mga atake ay magiging mas mahina.',
+    LOW_DRIVE: 'Mababa ang iyong enerhiya, ang iyong mga atake ay magiging mas mahina.',
     TRADE_REQUEST: 'Humihiling kang makipag trade kay {{username}}.',
     TRADE_REQUEST_OTHER: 'Si {{username}} ay humihiling na makipag trade sa iyo.',
     TRADE_EMPTY: `Yo, Bakit wala kayong pinagpalit?`,
-    TRADE_COMPLETE: 'Salamat sa paggamit ng Trading System nang Kaetram!',
+    TRADE_COMPLETE: 'Salamat sa paggamit ng Trading System nang Rust Horizons!',
     WELCOME: 'Maligayang pagdating {{name}}!',
     WELCOME_BACK: 'Maligayang pag balik {{name}}!',
     WHY_GO_THERE: 'Teka lang, bakit ako pupunta diyan?'

@@ -1,13 +1,13 @@
 {
-    "name": "The Legacy Artifact",
-    "description": "In an ancient legend, an artifact of immense power was torn apart and scattered. The pieces, when brought together and reforged, promise unimaginable might. Take on this challenging quest, drawing upon a multitude of skills, to bring the artifact back to life.",
-    "rewards": ["Magic Lamp"],
+    "name": "Legacy Device",
+    "description": "A pre-collapse device of immense power was torn apart and scattered. Reforging its components demands multiple skills and precise execution.",
+    "rewards": ["Flux Lamp"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "elderMage",
             "text": [
-                "Greetings, adventurer. Legends speak of a powerful artifact,",
+                "Greetings, survivor. Records speak of a powerful device,",
                 "one that requires mastery of various skills to restore.",
                 "The first part is the Elemental Ore, a mineral buried deep within",
                 "the earth. Mine it so we can begin our journey."
@@ -37,7 +37,7 @@
                     "count": 1
                 }
             ],
-            "nextStage": "With the Elemental Blade Base crafted, it's time to move onto fletching. Craft an Elemental Bowstring using ancient woods.",
+            "nextStage": "With the Elemental Blade Base crafted, it's time to move onto fletching. Craft an Elemental Bowstring using reclaimed hardwood.",
             "popup": {
                 "title": "Stage completed!",
                 "text": "@green@You have smithed the @crimson@Elemental Blade Base@green@. Proceed to the next step to craft the bowstring.",
@@ -67,10 +67,10 @@
                     "count": 1
                 }
             ],
-            "nextStage": "With the Elemental Bow Frame in hand, the final step is to infuse it with magic using alchemy to unlock its true potential.",
+            "nextStage": "With the Elemental Bow Frame in hand, the final step is to infuse it with flux using alchemy to unlock its true potential.",
             "popup": {
                 "title": "Stage completed!",
-                "text": "@green@You have crafted the @crimson@Elemental Bow Frame@green@. Proceed to the final step to infuse it with magic.",
+                "text": "@green@You have crafted the @crimson@Elemental Bow Frame@green@. Proceed to the final step to infuse it with flux.",
                 "colour": "#33cc33"
             }
         },
@@ -84,7 +84,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@Congratulations! You have successfully combined all the components and crafted the @crimson@Legacy Artifact@green@. As a reward, you've been given a @crimson@Magic Lamp@green@!",
+                "text": "@green@Congratulations! You have successfully combined all the components and crafted the @crimson@Legacy Device@green@. As a reward, you've been given a @crimson@Flux Lamp@green@!",
                 "colour": "#33cc33"
             }
         }

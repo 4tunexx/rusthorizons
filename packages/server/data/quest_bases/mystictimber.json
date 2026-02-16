@@ -1,25 +1,25 @@
 {
-    "name": "Mystic Timber",
-    "description": "A legendary tree of magic awaits.|In the heart of the Enchanted Forest lies a tree said to hold boundless magical properties. Only those with pure intent can locate and harness its might.",
+    "name": "Reactor Core Salvage",
+    "description": "A high-risk bio-reactive debris field awaits.|Deep in the irradiated zone lies a collapsed reactor with unstable energy-rich material. Only disciplined operators can extract it safely.",
     "rewards": ["magicwood"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "oldlumberjack",
             "text": [
-                "Adventurer, have you heard tales of the Mystic Tree?",
-                "Its wood is said to possess incredible magical power.",
-                "If you wish to find it, you must first seek the Forest Guardian."
+                "Runner, have you heard of the Reactor Core ruins?",
+                "Its debris carries dangerous but valuable energy.",
+                "If you want to find it, seek the Zone Guardian first."
             ],
-            "completedText": ["Find the Forest Guardian."]
+            "completedText": ["Find the Zone Guardian."]
         },
         "1": {
             "task": "talk",
             "npc": "forestguardian",
             "text": [
-                "Seeker of the Mystic Tree, why do you desire its wood?",
-                "Only those with pure intent can find it.",
-                "To prove your worth, help me with a few tasks."
+                "Runner after the Reactor Core, why do you need its material?",
+                "Only stable hands should handle it.",
+                "Prove your control with a few field tasks."
             ],
             "completedText": ["What can you help with?"]
         },
@@ -27,11 +27,11 @@
             "task": "talk",
             "npc": "forestguardian",
             "text": [
-                "Firstly, the animals of this forest are restless.",
-                "Calm them by collecting the Tranquil Berries nearby.",
+                "Firstly, the mutants of this zone are restless.",
+                "Calm them by collecting the Rad-Away Serum nearby.",
                 "Bring me 5 of them, and I'll share the next step."
             ],
-            "completedText": ["Collect 5 Tranquil Berries."]
+            "completedText": ["Collect 5 Rad-Away Serums."]
         },
         "3": {
             "task": "talk",
@@ -43,8 +43,8 @@
                 }
             ],
             "text": [
-                "Well done! Now, there's a dark spirit that lurks in the forest.",
-                "Defeat it, and you'll prove your commitment to the balance of nature."
+                "Well done! Now clear a rogue threat lurking in this zone.",
+                "Defeat it, and you'll prove you can keep balance here."
             ],
             "completedText": ["Defeat the dark spirit."]
         },
@@ -57,20 +57,20 @@
             "task": "talk",
             "npc": "forestguardian",
             "text": [
-                "Impressive! Your intent seems pure.",
-                "To find the Mystic Tree, follow the path of glowing mushrooms.",
-                "But remember, respect the tree and only take what it willingly gives."
+                "Impressive. Your discipline holds.",
+                "To find the Reactor Core, follow the glowing radiation trail.",
+                "Take only what you need and leave the rest stable."
             ],
-            "completedText": ["Follow the path of glowing mushrooms."]
+            "completedText": ["Follow the path of radioactive markers."]
         },
         "6": {
             "task": "talk",
             "npc": "mystictree",
             "text": [
-                "You stand before me, adventurer. I sense your pure intent.",
-                "Cut a small piece of my wood, but promise to use its magic for good."
+                "You stand before me, Runner. Your intent is stable.",
+                "Take one small piece of my core, and use its power wisely."
             ],
-            "completedText": ["Cut the Mystic Tree."]
+            "completedText": ["Extract from the Reactor Core."]
         },
         "7": {
             "task": "talk",
@@ -82,12 +82,12 @@
                 }
             ],
             "text": [
-                "You've done it! The power of the Mystic Tree is now yours to wield.",
-                "Use it wisely, and always respect the balance of nature."
+                "You've done it! The Reactor Core's power is now yours to wield.",
+                "Use it wisely, and protect the balance of this sector."
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Mystic Timber@green@. The power of the Mystic Tree is now in your hands!",
+                "text": "@green@You have just finished @crimson@Reactor Core Salvage@green@. The power of the Reactor Core is now in your hands!",
                 "colour": "#33cc33"
             }
         }

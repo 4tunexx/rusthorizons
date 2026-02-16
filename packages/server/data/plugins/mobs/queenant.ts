@@ -2,12 +2,12 @@ import Default from './default';
 
 import Mobs from '../../mobs.json';
 
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
-import type Character from '@kaetram/server/src/game/entity/character/character';
-import type Mob from '@kaetram/server/src/game/entity/character/mob/mob';
-import type { RawMobData } from '@kaetram/common/types/mob';
+import type Character from '@rusthorizons/server/src/game/entity/character/character';
+import type Mob from '@rusthorizons/server/src/game/entity/character/mob/mob';
+import type { RawMobData } from '@rusthorizons/common/types/mob';
 
 export default class QueenAnt extends Default {
     private positions: Position[];

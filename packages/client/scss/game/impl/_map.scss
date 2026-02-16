@@ -1,6 +1,6 @@
 @use '../../abstracts/sprite';
 
-@include sprite.sheet($image: 'mapframe', $scale: 1.5, $selectors: #map-frame) {
+#map-frame {
     pointer-events: auto;
 
     position: absolute;
@@ -11,7 +11,22 @@
 
     margin: auto;
 
-    background-repeat: no-repeat;
+    // Borderlands-style beveled panel (no corner cutting)
+    background-image: none !important;
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    padding: 2em;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    width: 25.3125em;
+    height: 16.875em;
 }
 
 .map-button {
@@ -47,23 +62,23 @@
 }
 
 #warp1 {
-    top: 5.15625em;
-    left: 2.34375em;
+    top: 5.1563em;
+    left: 2.3438em;
 }
 
 #warp2 {
     top: 6.5625em;
-    left: 16.40625em;
+    left: 16.4063em;
 }
 
 #warp3 {
     top: 11.25em;
-    left: 12.65625em;
+    left: 12.6563em;
 }
 
 #warp4 {
     top: 11.25em;
-    left: 7.03125em;
+    left: 7.0313em;
 }
 
 #warp5 {

@@ -1,8 +1,8 @@
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Character from '../game/entity/character/character';
-import type { Stats } from '@kaetram/common/types/item';
+import type { Stats } from '@rusthorizons/common/types/item';
 
 export default {
     LevelExp: [] as number[],
@@ -367,12 +367,12 @@ export default {
     },
 
     /**
-     * Obtains the max mana given a level specified.
-     * @param level The level we are using to calculate max mana.
-     * @returns The max mana number value.
+     * Obtains the max drive given a level specified.
+     * @param level The level we are using to calculate max drive.
+     * @returns The max drive number value.
      */
 
-    getMaxMana(level: number): number {
+    getMaxDrive(level: number): number {
         return 20 + level * 24;
     },
 

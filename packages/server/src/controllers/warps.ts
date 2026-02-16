@@ -1,10 +1,10 @@
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
 
 import type World from '../game/world';
 import type Player from '../game/entity/character/player/player';
-import type { ProcessedArea } from '@kaetram/common/types/map';
+import type { ProcessedArea } from '@rusthorizons/common/types/map';
 
 export default class Warp {
     private warps: ProcessedArea[] = [];

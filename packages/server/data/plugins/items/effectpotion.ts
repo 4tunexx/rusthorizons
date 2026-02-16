@@ -1,8 +1,8 @@
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
-import type Player from '@kaetram/server/src/game/entity/character/player/player';
+import type Player from '@rusthorizons/server/src/game/entity/character/player/player';
 import type { Plugin } from '.';
-import type { ItemData } from '@kaetram/common/types/item';
+import type { ItemData } from '@rusthorizons/common/types/item';
 
 export default class EffectPotion implements Plugin {
     private effect = '';

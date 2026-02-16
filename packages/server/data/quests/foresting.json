@@ -1,30 +1,24 @@
 {
-    "name": "Foresting",
-    "description": "Help the forester with foresting stuff.|The forester needs your help with foresting-related things such as trees and axes and stuff like that. I don't know I'm just a quest description stop asking me questions.",
-    "rewards": ["A Rusted Axe", "Access to Forester's store"],
+    "name": "Scrap Runs",
+    "description": "Help the scavenger secure salvage.|A local scavenger is overloaded and needs reliable hands to haul usable scrap from nearby ruins.",
+    "rewards": ["A Rusted Axe", "Access to Scavenger's store"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "forestnpc",
             "text": [
-                "Greetings dear adventurer!",
-                "Please, you must help me.",
-                "I simply cannot take it much longer, I've been",
-                "cutting trees for the past few days.",
-                "I'm rather exhausted, would you be so kind as",
-                "to bring me 10 logs?"
+                "Seeker, I need a runner.",
+                "The outer ruins still have structural timber and scrap.",
+                "I'm burnt out from nonstop recovery trips.",
+                "Bring me 10 logs so I can reinforce camp walls."
             ],
-            "completedText": ["Please adventurer, bring me 10 logs.", "That's all I ask from you!"]
+            "completedText": ["Bring me 10 logs.", "We'll both sleep safer tonight."]
         },
         "1": {
             "task": "talk",
             "npc": "forestnpc",
-            "hasItemText": [
-                "Oh my, dear adventurer",
-                "These logs seem to have too many imperfections in them",
-                "Would you be so kind as to bring me another 10?"
-            ],
-            "completedText": ["Please adventurer, I beg of you, just 10 more logs."],
+            "hasItemText": ["Good haul, but we still need more material.", "Bring another 10 logs and we're set."],
+            "completedText": ["Just 10 more logs and the barricade is done."],
             "itemRequirements": [
                 {
                     "key": "logs",
@@ -36,8 +30,8 @@
             "task": "talk",
             "npc": "forestnpc",
             "hasItemText": [
-                "Ah yes, you see, these logs are suitable for my needs.",
-                "Thank you so much dear adventurer. Please take this reward!"
+                "Perfect. This is exactly what we needed.",
+                "Take this salvaged axe and keep moving, Seeker."
             ],
             "itemRequirements": [
                 {
@@ -53,7 +47,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Foresting@green@ quest. You have received a @crimson@Rusted Axe@green@!",
+                "text": "@green@You have just finished @crimson@Scrap Runs@green@ quest. You have received a @crimson@Rusted Axe@green@!",
                 "colour": "#33cc33"
             }
         }

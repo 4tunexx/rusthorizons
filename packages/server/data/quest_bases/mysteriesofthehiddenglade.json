@@ -1,14 +1,14 @@
 {
-    "name": "Mysteries of the Hidden Glade",
-    "description": "A sealed forest awaits.|Rumors speak of a sealed glade, hidden away from the world. Deep within, a creature of power guards a great treasure.",
+    "name": "Hidden Glade Incident",
+    "description": "A sealed forest sector awaits.|Rumors speak of a quarantined glade cut off from the world. Deep inside, a high-threat entity guards valuable tech.",
     "rewards": ["gladering"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "villagehistorian",
             "text": [
-                "Greetings, adventurer. Have you heard of the Hidden Glade?",
-                "It's a mystical forest sealed by our ancestors due to the danger within.",
+                "Greetings, survivor. Have you heard of the Hidden Glade?",
+                "It's a sealed forest sector quarantined long ago due to danger within.",
                 "Could you perhaps venture in and discover its secrets?"
             ],
             "completedText": ["Find the entrance to the Hidden Glade."]
@@ -17,7 +17,7 @@
             "task": "talk",
             "npc": "gladeentrance",
             "text": [
-                "A sealed gate stands before you, adorned with ancient symbols.",
+                "A sealed gate stands before you, covered in old-world warning marks.",
                 "By solving a riddle, the gate slowly opens, revealing the glade within."
             ],
             "completedText": ["Enter the Hidden Glade."]
@@ -57,7 +57,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have completed @crimson@Mysteries of the Hidden Glade@green@. The glade's treasure, the Glade Ring, is now yours!",
+                "text": "@green@You have completed @crimson@Hidden Glade Incident@green@. The glade's treasure, the Glade Ring, is now yours!",
                 "colour": "#33cc33"
             }
         }

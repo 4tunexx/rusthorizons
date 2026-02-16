@@ -1,5 +1,5 @@
-import { Opcodes } from '@kaetram/common/network';
-import { BubblePacket } from '@kaetram/common/network/impl';
+import { Opcodes } from '@rusthorizons/common/network';
+import { BubblePacket } from '@rusthorizons/common/network/impl';
 
 import type Player from '../../entity/character/player/player';
 

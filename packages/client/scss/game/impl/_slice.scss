@@ -1,44 +1,115 @@
+@use '../../abstracts/media';
+
+$panel-bg: rgba(34, 34, 34, 0.93);
+$panel-bg-strong: rgba(22, 22, 22, 0.96);
+$panel-stroke: rgba(96, 96, 96, 0.95);
+$panel-glow: rgba(246, 166, 35, 0.28);
+$line-accent: rgba(246, 166, 35, 0.84);
+$item-bg: rgba(58, 58, 58, 0.92);
+$item-bg-hover: rgba(78, 78, 78, 0.95);
+$item-border: rgba(116, 116, 116, 0.78);
+$item-border-hover: rgba(246, 166, 35, 0.9);
+$focus-amber: rgba(248, 190, 82, 0.9);
+$text-main: #efefef;
+$text-title: #ffd58c;
+
+@mixin panel-shape($cut: 1em) {
+    clip-path: polygon(
+        $cut 0,
+        calc(100% - $cut) 0,
+        100% $cut,
+        100% calc(100% - $cut),
+        calc(100% - $cut) 100%,
+        $cut 100%,
+        0 calc(100% - $cut),
+        0 $cut
+    );
+}
+
+@mixin panel-core($cut: 1em) {
+    position: relative;
+    color: $text-main;
+    background: linear-gradient(180deg, rgba(255, 194, 102, 0.08), transparent 26%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 4px),
+        linear-gradient(165deg, $panel-bg 0%, $panel-bg-strong 100%);
+    border: 2px solid $panel-stroke;
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.96),
+        0 0 24px $panel-glow,
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    @include panel-shape($cut);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0.24em;
+        pointer-events: none;
+        border: 1px solid rgba(138, 138, 138, 0.5);
+        opacity: 0.9;
+        @include panel-shape(max(0.35em, calc($cut - 0.34em)));
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 1.1em;
+        right: 1.1em;
+        top: 0.5em;
+        height: 0.2em;
+        pointer-events: none;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            $line-accent 10%,
+            rgba(255, 224, 160, 0.88) 50%,
+            $line-accent 90%,
+            transparent
+        );
+        opacity: 0.78;
+        border-radius: 999px;
+    }
+}
+
 .slice-menu {
     position: absolute;
     inset: 0;
-
     box-sizing: border-box;
     margin: auto;
-
-    color: #eee;
-
-    border-image: url('/img/interface/slices/menu.png') 44% fill/ 1em / 0 stretch;
+    @include panel-core(0.95em);
 }
 
 .slice-menu-fancy {
     position: absolute;
     inset: 0;
-
     box-sizing: border-box;
     margin: auto;
-
-    color: #eee;
-
-    border-image: url('/img/interface/slices/menu-fancy.png') 44% fill/ 4em / 0 stretch;
+    @include panel-core(1.35em);
 }
 
 .slice-container {
     position: absolute;
     inset: 0;
-
     display: none;
     flex-direction: row;
     gap: 0.5em;
-
     box-sizing: border-box;
     width: 32em;
     height: 16em;
     margin: auto;
     padding: 1em;
 
-    color: #eee;
-
-    border-image: url('/img/interface/slices/container.png') 44% fill/ 1em / 0 stretch;
+    // Borderlands-style beveled panel (no corner cutting)
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #efefef;
 
     @media (--portrait) {
         flex-direction: column;
@@ -50,20 +121,15 @@
 .slice-container-fancy {
     position: absolute;
     inset: 0;
-
     display: none;
     flex-direction: row;
     gap: 0.5em;
-
     box-sizing: border-box;
     width: 32em;
     height: 16em;
     margin: auto;
     padding: 1em;
-
-    color: #eee;
-
-    border-image: url('/img/interface/slices/container-fancy.png') 44% fill/ 4.75em / 0 stretch;
+    @include panel-core(1.35em);
 
     @media (--portrait) {
         flex-direction: column;
@@ -75,36 +141,56 @@
 .slice-inner-container {
     overflow: auto;
     flex: 1;
-
     box-sizing: border-box;
     padding: 0.75em;
-
-    border-image: url('/img/interface/slices/inner-container.png') 42% fill / 2em / 0 stretch;
+    background: linear-gradient(180deg, rgba(56, 56, 56, 0.8), rgba(33, 33, 33, 0.9));
+    border: 1px solid rgba(120, 120, 120, 0.75);
+    box-shadow:
+        inset 0 0 0 1px rgba(12, 12, 12, 0.95),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    @include panel-shape(0.45em);
 }
 
 .slice-list {
     overflow: auto;
     box-sizing: border-box;
     padding: 0.5em;
-    border-image: url('/img/interface/slices/list.png') 44% fill / 1em / 0 stretch;
-
-    // &:hover {
-    //     border-image-source: url('/img/interface/slices/list-hover.png');
-    // }
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0.84), rgba(30, 30, 30, 0.9));
+    border: 1px solid rgba(116, 116, 116, 0.68);
+    box-shadow: inset 0 0 0 1px rgba(10, 10, 10, 0.95);
+    @include panel-shape(0.4em);
 }
 
 .slice-list-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     box-sizing: border-box;
+    margin-bottom: 0.25em;
     padding: 0.5em;
+    color: $text-main;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: linear-gradient(180deg, $item-bg 0%, rgba(36, 36, 36, 0.96) 100%);
+    border: 1px solid $item-border;
+    box-shadow: inset 0 0 0 1px rgba(8, 14, 24, 0.95);
+    transition:
+        transform 0.14s ease,
+        border-color 0.14s ease,
+        box-shadow 0.14s ease,
+        background 0.14s ease;
+    @include panel-shape(0.35em);
 
-    border-image: url('/img/interface/slices/list-item.png') 44% fill / 0.5em / 0 stretch;
-
-    &:hover {
-        border-image-source: url('/img/interface/slices/list-item-hover.png');
+    &:hover,
+    &:focus,
+    &.active,
+    &[aria-selected='true'] {
+        transform: translateX(-1px);
+        background: linear-gradient(180deg, $item-bg-hover 0%, rgba(44, 44, 44, 0.98) 100%);
+        border-color: $item-border-hover;
+        box-shadow:
+            inset 0 0 0 1px rgba(12, 12, 12, 0.96),
+            0 0 14px rgba(246, 166, 35, 0.28);
     }
 }
 
@@ -113,64 +199,93 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     box-sizing: border-box;
     padding: 0.25em;
-
-    border-image: url('/img/interface/slices/item-slot.png') 44% fill / 0.5em / 0 stretch;
-}
-
-.slice-button {
-    box-sizing: border-box;
-    padding: 0.5em 1em;
-
-    font-size: 1em;
-    color: #eee;
-    text-align: center;
-
-    background-color: transparent;
-    border-image: url('/img/interface/slices/button.png') 44% fill/ 1em / 0 stretch;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.86), rgba(40, 40, 40, 0.92));
+    border: 1px solid rgba(124, 124, 124, 0.74);
+    box-shadow: inset 0 0 0 1px rgba(12, 12, 12, 0.95);
+    transition:
+        border-color 0.14s ease,
+        box-shadow 0.14s ease,
+        transform 0.14s ease;
+    @include panel-shape(0.32em);
 
     &:hover {
-        border-image-source: url('/img/interface/slices/button-hover.png');
-    }
-
-    &:active {
-        border-image-source: url('/img/interface/slices/button-active.png');
+        transform: translateY(-1px);
+        border-color: rgba(246, 166, 35, 0.9);
+        box-shadow:
+            inset 0 0 0 1px rgba(10, 10, 10, 0.95),
+            0 0 10px rgba(246, 166, 35, 0.3);
     }
 }
 
+.slice-button,
 .slice-button-green {
+    position: relative;
     box-sizing: border-box;
     padding: 0.5em 1em;
-
     font-size: 1em;
-    color: #eee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $text-main;
     text-align: center;
+    cursor: pointer;
+    border: 1px solid $item-border;
+    box-shadow:
+        inset 0 0 0 1px rgba(12, 12, 12, 0.95),
+        0 2px 8px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(180deg, rgba(92, 92, 92, 0.95), rgba(56, 56, 56, 0.96));
+    transition:
+        transform 0.14s ease,
+        border-color 0.14s ease,
+        box-shadow 0.14s ease,
+        filter 0.14s ease;
+    @include panel-shape(0.45em);
 
-    background-color: transparent;
-    border-image: url('/img/interface/slices/button-green.png') 44% fill/ 1em / 0 stretch;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0.5em;
+        right: 0.5em;
+        top: 0.22em;
+        height: 0.13em;
+        pointer-events: none;
+        background: linear-gradient(90deg, transparent, rgba(255, 208, 128, 0.95), transparent);
+        opacity: 0.9;
+        border-radius: 999px;
+    }
 
-    &:hover {
-        border-image-source: url('/img/interface/slices/button-green-hover.png');
+    &:hover,
+    &:focus {
+        transform: translateY(-1px);
+        border-color: $item-border-hover;
+        box-shadow:
+            inset 0 0 0 1px rgba(12, 12, 12, 0.95),
+            0 0 14px rgba(248, 190, 82, 0.35);
     }
 
     &:active {
-        border-image-source: url('/img/interface/slices/button-green-active.png');
+        transform: translateY(0);
+        filter: brightness(0.94);
     }
+}
+
+.slice-button-green:hover,
+.slice-button-green:focus {
+    border-color: $focus-amber;
+    box-shadow:
+        inset 0 0 0 1px rgba(10, 10, 10, 0.95),
+        0 0 14px rgba(248, 190, 82, 0.35);
 }
 
 .slice-dialog {
     position: absolute;
-
     display: none;
-
     box-sizing: border-box;
     margin: auto;
     padding: 1em 0.675em 0.675em;
-
-    background: transparent;
-    border-image: url('/img/interface/slices/dialog.png') 42% fill / 1em / 0 stretch;
+    @include panel-core(0.9em);
 }
 
 .slice-input {
@@ -178,39 +293,135 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     box-sizing: border-box;
     padding: 0.625em 0.75em;
-
     font-size: 0.875em;
-    color: #eee;
-
-    background-color: transparent;
-    border-image: url('/img/interface/slices/input.png') 25% fill / 0.5em / 0 stretch;
+    color: $text-main;
+    background: linear-gradient(180deg, rgba(58, 58, 58, 0.88), rgba(38, 38, 38, 0.93));
+    border: 1px solid rgba(118, 118, 118, 0.74);
+    box-shadow: inset 0 0 0 1px rgba(12, 12, 12, 0.95);
+    transition:
+        border-color 0.14s ease,
+        box-shadow 0.14s ease;
+    @include panel-shape(0.28em);
 
     &:focus,
     &:active {
-        border-image-source: url('/img/interface/slices/input-active.png');
+        border-color: rgba(246, 190, 86, 0.94);
+        box-shadow:
+            inset 0 0 0 1px rgba(12, 12, 12, 0.95),
+            0 0 10px rgba(248, 190, 82, 0.3);
+        outline: none;
     }
 
     &.field-error {
-        border-image-source: url('/img/interface/slices/input-error.png');
+        border-color: rgba(239, 126, 113, 0.92);
+        box-shadow:
+            inset 0 0 0 1px rgba(10, 10, 10, 0.95),
+            0 0 10px rgba(241, 112, 112, 0.26);
     }
 }
 
 .slice-tab {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     box-sizing: border-box;
-    padding: 0.5em 0.5em 0;
+    padding: 0.46em 0.66em 0.22em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: linear-gradient(180deg, rgba(90, 90, 90, 0.95), rgba(54, 54, 54, 0.98));
+    border: 1px solid rgba(120, 120, 120, 0.78);
+    border-bottom: none;
+    box-shadow: inset 0 0 0 1px rgba(8, 14, 24, 0.95);
+    transition:
+        border-color 0.14s ease,
+        box-shadow 0.14s ease;
+    @include panel-shape(0.35em);
 
-    background-color: transparent;
-    border-image: url('/img/interface/slices/tab.png') 44% fill/ 1em / 0 stretch;
-
-    &:focus {
-        border-image-source: url('/img/interface/slices/tab-active.png');
+    &:focus,
+    &:hover {
+        border-color: rgba(246, 166, 35, 0.9);
+        box-shadow:
+            inset 0 0 0 1px rgba(10, 10, 10, 0.95),
+            0 0 10px rgba(246, 166, 35, 0.28);
     }
+}
+
+.slice-title,
+.dialog-title,
+h1,
+h2,
+h3 {
+    color: $text-title;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-shadow:
+        0 2px 0 rgba(0, 0, 0, 0.95),
+        0 0 10px rgba(248, 190, 82, 0.3);
+}
+
+.slice-inner-container::-webkit-scrollbar,
+.slice-list::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(18, 18, 18, 0.86);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(118, 118, 118, 0.92), rgba(80, 80, 80, 0.95));
+    border: 1px solid rgba(22, 22, 22, 0.95);
+
+    &:hover {
+        background: linear-gradient(180deg, rgba(246, 190, 86, 0.95), rgba(198, 132, 28, 0.98));
+    }
+}
+
+.close-container,
+.close-container-fancy {
+    cursor: pointer;
+    transition:
+        transform 0.14s ease,
+        filter 0.14s ease;
+
+    &:hover {
+        transform: scale(1.08);
+        filter: brightness(1.12) drop-shadow(0 0 8px rgba(246, 166, 35, 0.46));
+    }
+}
+
+#welcome,
+#quest,
+#in-app-store,
+#settings-page,
+#friends-container,
+#profile-container,
+#trade,
+#store,
+#leaderboards,
+#achievements,
+#quests,
+#guilds,
+#equipments,
+#bank,
+#inventory {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.slice-page .slice-dialog,
+.slice-container .slice-dialog {
+    top: 1em;
+    right: 1em;
+    left: auto;
+    bottom: auto;
+    margin: 0;
 }

@@ -1,21 +1,21 @@
 {
-    "name": "Arts and Crafts",
-    "description": "Help the old lady on the great mountai with her crafts.|The old lady on the great mountain is very cold and needs a brave adventurer to run errands for her. In exchange you will be taught how to start crafting items.",
+    "name": "Workshop Basics",
+    "description": "Help the elder mechanic on the mountain with fabrication work.|A veteran crafter needs supply runs completed. In return, you'll be taught how to use crafting benches.",
     "rewards": ["Access to crafting benches"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "iamverycoldnpc",
             "text": [
-                "Hello there young one...",
-                "Would you be interested in learning how to craft things?",
+                "Hey there, rookie...",
+                "Interested in learning fabrication?",
                 "I can teach you, but you'll need to bring me some materials first.",
-                "I'm gonna teach you how to make pendants.",
+                "I'll teach you how to make starter gear.",
                 "First bring me some string, you can craft it by finding blue lilies.",
                 "Secondly I will need some beryl, you can find it in various caves.",
                 "You can use the crafting table to make a Beryl Pendant."
             ],
-            "completedText": ["Bring me some string and some beryl gemstone and use it to make a pendant."]
+            "completedText": ["Bring string and beryl, then craft a pendant."]
         },
         "1": {
             "task": "talk",
@@ -36,7 +36,7 @@
             "task": "talk",
             "npc": "iamverycoldnpc",
             "hasItemText": [
-                "Perfect, I'm gonna take that bowl just to annoy you. Go make another",
+                "Perfect, I'm taking that bowl for testing. Go make another",
                 "one and use this tomato to make a stew using the cauldron.",
                 "You may need to go find the rest of the ingredients, I'm getting old."
             ],
@@ -66,7 +66,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Arts and Craft@green@ quest.",
+                "text": "@green@You have just finished @crimson@Workshop Basics@green@ quest.",
                 "colour": "#33cc33"
             }
         }

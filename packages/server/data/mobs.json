@@ -1,7 +1,7 @@
 {
     "rat": {
-        "name": "Rat",
-        "description": "Ah yes, this rat is made out of rat.",
+        "name": "Rad-Rat",
+        "description": "Mutated by years of radiation exposure. Aggressive and diseased.",
         "drops": [
             {
                 "key": "petrat",
@@ -45,8 +45,8 @@
     },
 
     "bat": {
-        "name": "Batterfly",
-        "description": "A bat that is also a butterfly, what a strange creature.",
+        "name": "Rad-Bat",
+        "description": "A bat mutated by toxic waste. It doesn't know when to die.",
         "dropTables": ["ordinary"],
         "hitPoints": 65,
         "level": 4,
@@ -78,8 +78,8 @@
     },
 
     "crab": {
-        "name": "Crab",
-        "description": "I wonder if I can eat this.",
+        "name": "Toxic Crab",
+        "description": "Irradiated crustacean. Meat probably glows in the dark.",
         "dropTables": ["ordinary"],
         "hitPoints": 15,
         "level": 1,
@@ -110,8 +110,8 @@
     },
 
     "wizard": {
-        "name": "Wizard",
-        "description": "Why does every MMORPG have one of these things?",
+        "name": "Warcaster",
+        "description": "Every wasteland somehow spawns one of these signal freaks.",
         "drops": [
             {
                 "key": "wizardhatblack",
@@ -191,8 +191,8 @@
     },
 
     "goblin": {
-        "name": "Goblin",
-        "description": "Didn't I see this same style of goblin in RuneScape?",
+        "name": "Scrap Bandit",
+        "description": "Desperate wasteland raider. Will kill for spare parts.",
         "drops": [
             {
                 "key": "tinsword",
@@ -237,8 +237,8 @@
     },
 
     "skeleton": {
-        "name": "Spooky Skeleton",
-        "description": "I wonder if this skeleton is made out of bones.",
+        "name": "Rad-Ghoul",
+        "description": "Humanoid figure consumed by radiation. Barely alive, totally hostile.",
         "drops": [
             {
                 "key": "bronzespear",
@@ -286,8 +286,8 @@
     },
 
     "ogre": {
-        "name": "Ogre",
-        "description": "I really feel like the developers had to include generic fantasy creatures.",
+        "name": "Mutant Brute",
+        "description": "Radiation exposure created this hulking monstrosity. Extremely hostile.",
         "drops": [
             {
                 "key": "ironspear",
@@ -333,8 +333,8 @@
     },
 
     "skeleton2": {
-        "name": "Scary Skeleton",
-        "description": "Ah yes, it's not spooky, this one is scary.",
+        "name": "Armored Ghoul",
+        "description": "This one's got scrap armor bolted to its irradiated bones. Nasty.",
         "drops": [
             {
                 "key": "bronzespear",
@@ -380,8 +380,8 @@
     },
 
     "snek": {
-        "name": "Snek",
-        "description": "Snek, where you going? Snek, stahp!",
+        "name": "Venom Serpent",
+        "description": "Toxic-mutated snake. One bite and you're done for.",
         "dropTables": ["ordinary"],
         "hitPoints": 85,
         "level": 16,
@@ -414,8 +414,8 @@
     },
 
     "spectre": {
-        "name": "Spectre",
-        "description": "Has a scythe and looks like it's floating.",
+        "name": "Energy Wraith",
+        "description": "Plasma-based lifeform. Born from corrupted energy cores.",
         "drops": [
             {
                 "key": "ironscythe",
@@ -457,8 +457,8 @@
     },
 
     "lavaslime": {
-        "name": "Lava Slime",
-        "description": "A cute little slime made out of molten rock.",
+        "name": "Magma Aberration",
+        "description": "Living molten mass expelled from underground reactors.",
         "dropTables": ["ordinary", "shards"],
         "hitPoints": 270,
         "level": 32,
@@ -531,8 +531,8 @@
     },
 
     "deathknight": {
-        "name": "Death Knight",
-        "description": "Seriously, who comes up with the names for these things?",
+        "name": "Doom Trooper",
+        "description": "Heavy combat cyborg. Relentless and armored to the teeth.",
         "dropTables": ["ordinary", "unusual", "shards"],
         "hitPoints": 185,
         "level": 40,
@@ -564,8 +564,8 @@
     },
 
     "adherer": {
-        "name": "Dark Mage",
-        "description": "I heard that these things drop roses that I can then use to hit things with.",
+        "name": "Flux Caster",
+        "description": "Psionic mutant wielding corrupted energy. Extremely dangerous.",
         "drops": [
             {
                 "key": "darkmagehood",
@@ -644,8 +644,8 @@
     },
 
     "angel": {
-        "name": "Angel",
-        "description": "Holy moly, this is nothing like how they're described in the bible.",
+        "name": "Sky Sentinel",
+        "description": "Nothing holy here—just a hostile high-altitude enforcer.",
         "hitPoints": 1200,
         "level": 98,
         "aggroRange": 6,
@@ -1047,7 +1047,7 @@
     },
 
     "blackwizard": {
-        "name": "Dark Wizard",
+        "name": "Dark Warcaster",
         "description": "They don't look all that different from the other ones.",
         "dropTables": ["ordinary", "shards", "unusual"],
         "hitPoints": 170,
@@ -1082,8 +1082,8 @@
     },
 
     "icewizard": {
-        "name": "Ice Wizard",
-        "description": "It's like similar to some other type of wizard I've encountered before.",
+        "name": "Cryo Warcaster",
+        "description": "A cold-variant warcaster with the same hostile core patterns.",
         "drops": [
             {
                 "key": "bluemoonstaff",
@@ -1773,7 +1773,7 @@
     },
 
     "flaredanceknight": {
-        "name": "Cursed Knight",
+        "name": "Corrupted Enforcer",
         "dropTables": ["ordinary", "shards", "unusual"],
         "hitPoints": 1000,
         "level": 65,
@@ -1843,7 +1843,7 @@
     },
 
     "ghostrider": {
-        "name": "Skeleton Knight",
+        "name": "Bone Rider",
         "hitPoints": 700,
         "level": 19,
         "aggroRange": 1,
@@ -2165,7 +2165,7 @@
     },
 
     "iceknight": {
-        "name": "Ice Knight",
+        "name": "Cryo Enforcer",
         "dropTables": ["ordinary", "shards", "unusual", "arrows"],
         "hitPoints": 550,
         "level": 37,
@@ -2429,7 +2429,7 @@
     },
 
     "miniiceknight1": {
-        "name": "Mini Ice Knight",
+        "name": "Cryo Drone",
         "description": "It's a little teeny tiny knight in a little teeny tiny suit of armor.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 1100,
@@ -2462,7 +2462,7 @@
     },
 
     "miniiceknight2": {
-        "name": "Mini Ice Knight",
+        "name": "Cryo Drone",
         "description": "It's a little teeny tiny knight in a little teeny tiny suit of armor.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 1100,
@@ -2495,7 +2495,7 @@
     },
 
     "miniiceknight3": {
-        "name": "Mini Ice Knight",
+        "name": "Cryo Drone",
         "description": "It's a little teeny tiny knight in a little teeny tiny suit of armor.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 1100,
@@ -2528,7 +2528,7 @@
     },
 
     "miniiceknight4": {
-        "name": "Mini Ice Knight",
+        "name": "Cryo Drone",
         "description": "It's a little teeny tiny knight in a little teeny tiny suit of armor.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 1100,
@@ -2561,7 +2561,7 @@
     },
 
     "miniiceknight5": {
-        "name": "Mini Ice Knight",
+        "name": "Cryo Drone",
         "description": "It's a little teeny tiny knight in a little teeny tiny suit of armor.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 1100,
@@ -2594,8 +2594,8 @@
     },
 
     "miniknight1": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2627,8 +2627,8 @@
     },
 
     "miniknight2": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2660,8 +2660,8 @@
     },
 
     "miniknight3": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2693,8 +2693,8 @@
     },
 
     "miniknight4": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2726,8 +2726,8 @@
     },
 
     "miniknight5": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2759,8 +2759,8 @@
     },
 
     "miniknight6": {
-        "name": "Mini Knight",
-        "description": "A little ferocious tiny knight that might actually hurt me.",
+        "name": "Combat Drone",
+        "description": "Automated combat unit. Small but deadly.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 950,
         "level": 116,
@@ -2792,7 +2792,7 @@
     },
 
     "miniemperor": {
-        "name": "Mini Emperor",
+        "name": "Command Unit",
         "description": "It looks like the leader of this band of mini knights.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 3950,
@@ -2859,7 +2859,7 @@
     },
 
     "orc": {
-        "name": "Orc",
+        "name": "Marauder",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 275,
         "level": 47,
@@ -2985,8 +2985,8 @@
     },
 
     "pinkelf": {
-        "name": "Pink Elf",
-        "description": "A pink elf, it's pink, what else do you want to know.",
+        "name": "Pink Scout",
+        "description": "A pink scout unit. Colorful, fast, and surprisingly hostile.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 925,
         "level": 123,
@@ -3145,8 +3145,8 @@
     },
 
     "redelf": {
-        "name": "Red Elf",
-        "description": "It's an elf, and it is red, kinda looks like the developer ran out of assets.",
+        "name": "Red Scout",
+        "description": "A red scout unit patrolling the wasteland perimeter.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "mushrooms", "fruits", "vegetables"],
         "hitPoints": 850,
         "level": 110,
@@ -3368,7 +3368,7 @@
     },
 
     "santaelf": {
-        "name": "Santa's Elf",
+        "name": "Winter Raider",
         "dropTables": ["ordinary", "shards", "unusual", "arrows"],
         "hitPoints": 610,
         "level": 136,
@@ -3432,8 +3432,8 @@
     },
 
     "skyelf": {
-        "name": "Sky Elf",
-        "description": "An elf that lives in the sky... What is it doing here?",
+        "name": "Sky Scout",
+        "description": "A sky scout from high-altitude sectors. Not usually seen this far out.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows"],
         "hitPoints": 1000,
         "level": 134,
@@ -3533,8 +3533,8 @@
     },
 
     "snowelf": {
-        "name": "Snow Elf",
-        "description": "A magical tiny elf from the snow realm.",
+        "name": "Frost Scout",
+        "description": "A small but lethal scout adapted to frozen sectors.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows"],
         "hitPoints": 920,
         "level": 99,
@@ -3567,7 +3567,7 @@
 
     "snowman": {
         "name": "Snowman",
-        "description": "A magical snowman from the snow realm.",
+        "description": "A frozen construct roaming the snow sector.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows"],
         "hitPoints": 750,
         "level": 43,
@@ -4379,7 +4379,7 @@
     },
 
     "skeletonking": {
-        "name": "Skeleton King",
+        "name": "Skeleton Chief",
         "description": "Here he is, the chad of r/neverbrokeabone.",
         "drops": [
             {
@@ -4433,7 +4433,7 @@
     },
 
     "ogrelord": {
-        "name": "Ogre Lord",
+        "name": "Ogre Chief",
         "description": "I better keep a distance before this thing turns me into a stew!",
         "drops": [
             {
@@ -4705,8 +4705,8 @@
     },
 
     "miniseadragon": {
-        "name": "Mini Sea Dragon",
-        "description": "Aww it's a little version of something that's gonna stomp me later!",
+        "name": "Mini Leviathan",
+        "description": "Juvenile bio-weapon. If this is the baby, you don't want to meet mom.",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "vegetables", "fruits", "mushrooms"],
         "hitPoints": 1200,
         "level": 52,
@@ -4745,8 +4745,8 @@
     },
 
     "forestdragon": {
-        "name": "Forest Dragon",
-        "description": "Keros' favourite pet!",
+        "name": "Apex Predator",
+        "description": "Bio-engineered killing machine. The wasteland's nightmare.",
         "drops": [
             {
                 "key": "dragonscale",
@@ -4828,7 +4828,7 @@
     },
 
     "seadragon": {
-        "name": "Sea Dragon",
+        "name": "Aquatic Leviathan",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "vegetables", "fruits", "mushrooms"],
         "hitPoints": 100,
         "level": 485,
@@ -4860,7 +4860,7 @@
     },
 
     "minidragon": {
-        "name": "Mini Dragon",
+        "name": "Mini Wyrm",
         "dropTables": ["ordinary", "shards", "unusual", "arrows", "vegetables", "fruits", "mushrooms"],
         "hitPoints": 380,
         "level": 77,
@@ -4894,7 +4894,7 @@
     },
 
     "queenant": {
-        "name": "Queen Ant",
+        "name": "Alpha Ant",
         "drops": [
             {
                 "key": "helmofliberty",
@@ -5031,7 +5031,7 @@
     },
 
     "snowlady": {
-        "name": "Queen of Snow",
+        "name": "Snow Matriarch",
         "drops": [
             {
                 "key": "swashbuckler",
@@ -5076,7 +5076,7 @@
     },
 
     "frostqueen": {
-        "name": "Frost Queen",
+        "name": "Frost Matriarch",
         "drops": [
             {
                 "key": "timelessglaive",

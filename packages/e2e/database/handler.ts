@@ -2,9 +2,9 @@
  * The handler class file for the Mob object. We use this to better
  * organize callbacks and events instead of clumping them all.
  */
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
-import MongoDB from '@kaetram/e2e/database/mongodb';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
+import MongoDB from '@rusthorizons/e2e/database/mongodb';
 
 import type { AnyError } from 'mongodb';
 

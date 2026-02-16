@@ -1,4 +1,4 @@
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
 import type App from '../app';
 import type {
@@ -51,8 +51,8 @@ import type {
     TradePacketCallback,
     UpdatePacketCallback,
     WelcomePacketCallback
-} from '@kaetram/common/types/messages/outgoing';
-import type { ConnectedPacketCallback } from '@kaetram/common/network/impl/connected';
+} from '@rusthorizons/common/types/messages/outgoing';
+import type { ConnectedPacketCallback } from '@rusthorizons/common/network/impl/connected';
 
 export default class Messages {
     private messages: (() => ((...data: never[]) => void) | undefined)[] = [];
@@ -235,7 +235,7 @@ export default class Messages {
             }
 
             case 'maintenance': {
-                this.app.sendError('Kaetram is currently under maintenance.');
+                this.app.sendError('Rust Horizons is currently under maintenance.');
                 break;
             }
 

@@ -1,9 +1,9 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { Opcodes } from '@kaetram/common/network';
-import type { SlotData } from '@kaetram/common/types/slot';
+import type { Opcodes } from '@rusthorizons/common/network';
+import type { SlotData } from '@rusthorizons/common/types/slot';
 
 export interface NPCData {
     name?: string;

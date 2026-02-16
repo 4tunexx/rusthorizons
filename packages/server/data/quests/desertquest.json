@@ -1,6 +1,6 @@
 {
-    "name": "Desert Quest",
-    "description": "Help the dying adventurer send a letter to his wife.|The adventurer is dying and is in dire need of your help with super important matters prior to his death. You can find him in the desert.",
+    "name": "Last Transmission",
+    "description": "Help a dying drifter deliver his final message.|A wounded survivor in the dunes needs someone to carry his last data disc to his partner before he flatlines.",
     "rewards": ["Secret Reward"],
     "hideNPCs": {
         "lavanpc": "after"
@@ -10,17 +10,14 @@
             "task": "talk",
             "npc": "lavanpc",
             "text": [
-                "Please dear adventurer, beware of what lies ahead.",
-                "I am no longer able to carry on forth.",
-                "Would you please be so kind as to aid me?",
-                "I must tell my wife I will no longer be coming home.",
-                "Could you deliver this CD for me?",
-                "She lives south of the desert."
+                "Seeker... watch the ridge ahead.",
+                "I'm done for. Can't make it another kilometer.",
+                "I need one favor before I black out.",
+                "Take this data disc to my partner.",
+                "Tell her I won't be coming back.",
+                "She lives south of the dunes."
             ],
-            "completedText": [
-                "Please adventurer, deliver the CD.",
-                "It's my new Demo Tape, I must ensure she hears it."
-            ],
+            "completedText": ["Please deliver the disc.", "It contains my final transmission."],
             "itemRewards": [
                 {
                     "key": "cd",
@@ -55,14 +52,14 @@
             "task": "talk",
             "npc": "lavanpc",
             "text": [
-                "Well? Did you tell her? Was she super happy?",
-                "Oh she said she'll take it?",
-                "Well, at least I can die knowing I was unloved."
+                "Well? Did she get the disc?",
+                "She said she'd keep it? Good...",
+                "At least my signal reached home before shutdown."
             ],
-            "completedText": ["Farewell adventurer, this may be the last time we meet."],
+            "completedText": ["Farewell, Seeker. This is the end of my route."],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Desert Quest@green@. You have gained nothing out of that!",
+                "text": "@green@You have just finished @crimson@Last Transmission@green@. You have gained nothing out of that!",
                 "colour": "#33cc33"
             }
         }

@@ -1,15 +1,15 @@
 import rawData from '../../../../data/items.json';
 import Entity from '../entity';
 
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import PluginIndex from '@kaetram/server/data/plugins/items';
-import { Modules } from '@kaetram/common/network';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import PluginIndex from '@rusthorizons/server/data/plugins/items';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Player from '../character/player/player';
-import type { EntityData } from '@kaetram/common/types/entity';
-import type { Plugin } from '@kaetram/server/data/plugins/items';
-import type { Bonuses, Enchantments, ItemData, Light, Stats } from '@kaetram/common/types/item';
+import type { EntityData } from '@rusthorizons/common/types/entity';
+import type { Plugin } from '@rusthorizons/server/data/plugins/items';
+import type { Bonuses, Enchantments, ItemData, Light, Stats } from '@rusthorizons/common/types/item';
 
 interface RawData {
     [key: string]: ItemData;
@@ -37,7 +37,7 @@ export default class Item extends Entity {
     private quest = '';
 
     // Points usage
-    public manaCost = 0;
+    public driveCost = 0;
 
     // Pet information
     public pet = '';
@@ -142,7 +142,7 @@ export default class Item extends Entity {
         this.attackRange = this.data.attackRange || this.getDefaultAttackRange();
         this.projectileName = this.data.projectileName || this.projectileName;
         this.description = this.data.description || this.description;
-        this.manaCost = this.data.manaCost || this.manaCost;
+        this.driveCost = this.data.driveCost || this.driveCost;
         this.weaponType = this.data.weaponType || this.weaponType;
         this.smallBowl = this.data.smallBowl || this.smallBowl;
         this.mediumBowl = this.data.mediumBowl || this.mediumBowl;

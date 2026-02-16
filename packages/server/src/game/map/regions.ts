@@ -4,10 +4,10 @@ import Region from './region';
 
 import Character from '../entity/character/character';
 
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { ListPacket, MapPacket, SpawnPacket, UpdatePacket } from '@kaetram/common/network/impl';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { ListPacket, MapPacket, SpawnPacket, UpdatePacket } from '@rusthorizons/common/network/impl';
 
 import type Map from './map';
 import type World from '../world';
@@ -15,8 +15,8 @@ import type Area from './areas/area';
 import type Entity from '../entity/entity';
 import type Dynamic from './areas/impl/dynamic';
 import type Player from '../entity/character/player/player';
-import type { EntityDisplayInfo } from '@kaetram/common/types/entity';
-import type { RegionCache, RegionData, RegionTileData, Tile } from '@kaetram/common/types/map';
+import type { EntityDisplayInfo } from '@rusthorizons/common/types/entity';
+import type { RegionCache, RegionData, RegionTileData, Tile } from '@rusthorizons/common/types/map';
 
 /**
  * Class responsible for chunking up the map.

@@ -4,7 +4,7 @@ import Utils from '../utils/util';
 import Character from '../entity/character/character';
 import { isMobile, isTablet } from '../utils/detect';
 
-import { Modules, Opcodes } from '@kaetram/common/network';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
 import { DarkMask, Vec2, Lamp, Lighting } from 'illuminated';
 
 import type Minigame from './minigame';
@@ -21,9 +21,9 @@ import type Item from '../entity/objects/item';
 import type Player from '../entity/character/player/player';
 import type Tree from '../entity/objects/resource/impl/tree';
 import type Grids from '../map/grids';
-import type { LampData } from '@kaetram/common/types/item';
-import type { ClientTile } from '@kaetram/common/types/map';
-import type { SerializedLight } from '@kaetram/common/network/impl/overlay';
+import type { LampData } from '@rusthorizons/common/types/item';
+import type { ClientTile } from '@rusthorizons/common/types/map';
+import type { SerializedLight } from '@rusthorizons/common/network/impl/overlay';
 
 interface Light extends Lamp {
     originalX: number;
@@ -61,6 +61,18 @@ export default class Renderer {
     protected entitiesFore = document.querySelector<HTMLCanvasElement>('#entities-fore')!;
     protected cursor = document.querySelector<HTMLCanvasElement>('#cursor')!;
     protected entitiesMask = document.querySelector<HTMLCanvasElement>('#entities-mask')!;
+    private minimap = document.querySelector<HTMLCanvasElement>('#minimap')!;
+    private compassTrack = document.querySelector<HTMLElement>('#compass-track');
+    private compassMapName = document.querySelector<HTMLElement>('#compass-map-name');
+    private compassMarkers = document.querySelector<HTMLElement>('#compass-markers');
+    private compassCoordX = document.querySelector<HTMLElement>('#compass-coord-x');
+    private compassCoordY = document.querySelector<HTMLElement>('#compass-coord-y');
+    private compassStrip = document.querySelector<HTMLElement>('#compass-strip');
+    private compassHover = document.querySelector<HTMLElement>('#compass-hover');
+    private compassInfo = document.querySelector<HTMLElement>('#compass-info');
+    private lastCompassMarkersUpdate = 0;
+
+    private lastMinimapUpdate = 0;
 
     // Store all canvases for easy iteration
     protected canvases: HTMLCanvasElement[] = [
@@ -81,6 +93,7 @@ export default class Renderer {
     protected textContext: CanvasRenderingContext2D = this.textCanvas.getContext('2d')!;
     protected cursorContext: CanvasRenderingContext2D = this.cursor.getContext('2d')!;
     protected entitiesMaskContext: CanvasRenderingContext2D = this.entitiesMask.getContext('2d')!;
+    private minimapContext: CanvasRenderingContext2D = this.minimap.getContext('2d')!;
 
     protected allContexts = [
         this.entitiesContext,
@@ -274,7 +287,217 @@ export default class Renderer {
 
         this.drawMinigameGUI();
 
+        this.updateCompass();
+
+        this.updateMinimap();
+
         this.restore();
+    }
+
+    private updateCompass(): void {
+        if (!this.compassTrack) return;
+
+        let shift = 0;
+
+        switch (this.game.player.orientation) {
+            case Modules.Orientation.Up: {
+                shift = 0;
+                break;
+            }
+            case Modules.Orientation.Right: {
+                shift = 1;
+                break;
+            }
+            case Modules.Orientation.Down: {
+                shift = 2;
+                break;
+            }
+            case Modules.Orientation.Left: {
+                shift = 3;
+                break;
+            }
+        }
+
+        this.compassTrack.style.setProperty('--compass-shift', shift.toString());
+
+        if (this.compassMapName && !this.compassMapName.textContent) {
+            let serverId = this.game.player.serverId;
+            this.compassMapName.textContent = serverId === -1 ? 'Unknown' : `World ${serverId}`;
+        }
+
+        if (this.compassCoordX) this.compassCoordX.textContent = this.game.player.gridX.toString();
+        if (this.compassCoordY) this.compassCoordY.textContent = this.game.player.gridY.toString();
+
+        if (this.compassStrip && this.compassHover && this.compassInfo) {
+            let hovered = this.game.input.entity;
+
+            if (hovered?.name) {
+                this.compassStrip.style.display = 'none';
+                this.compassInfo.style.display = 'none';
+                if (this.compassCoordX) this.compassCoordX.style.display = 'none';
+                if (this.compassCoordY) this.compassCoordY.style.display = 'none';
+                this.compassHover.textContent = hovered.name;
+                this.compassHover.style.display = 'block';
+            } else {
+                this.compassStrip.style.display = '';
+                this.compassInfo.style.display = '';
+                if (this.compassCoordX) this.compassCoordX.style.display = '';
+                if (this.compassCoordY) this.compassCoordY.style.display = '';
+                this.compassHover.textContent = '';
+                this.compassHover.style.display = 'none';
+            }
+        }
+
+        if (this.game.time - this.lastCompassMarkersUpdate > 200) {
+            this.updateCompassMarkers();
+            this.lastCompassMarkersUpdate = this.game.time;
+        }
+    }
+
+    private updateCompassMarkers(): void {
+        const compassMarkers = this.compassMarkers;
+        if (!compassMarkers) return;
+
+        const player = this.game.player;
+        const facing = this.getFacingAngle(player.orientation);
+        const maxDistance = 50;
+
+        compassMarkers.innerHTML = '';
+
+        this.game.entities.forEachEntity((entity: Entity) => {
+            if (entity.instance === player.instance) return;
+            if (!entity.isPlayer() && !entity.isMob() && !entity.isNPC()) return;
+
+            const dx = entity.gridX - player.gridX;
+            const dy = entity.gridY - player.gridY;
+            const distance = Math.hypot(dx, dy);
+
+            if (distance > maxDistance || distance === 0) return;
+
+            const bearing = (Math.atan2(dx, -dy) * 180) / Math.PI;
+            let relative = bearing - facing;
+
+            if (relative > 180) relative -= 360;
+            if (relative < -180) relative += 360;
+
+            const left = ((relative + 180) / 360) * 100;
+            const marker = document.createElement('div');
+
+            marker.classList.add('compass-marker-dot');
+
+            if (entity.isPlayer()) marker.classList.add('compass-marker-player');
+            else if (entity.isMob()) marker.classList.add('compass-marker-mob');
+            else marker.classList.add('compass-marker-npc');
+
+            marker.style.left = `${left}%`;
+
+            compassMarkers.appendChild(marker);
+        });
+    }
+
+    private getFacingAngle(orientation: Modules.Orientation): number {
+        switch (orientation) {
+            case Modules.Orientation.Up:
+                return 0;
+            case Modules.Orientation.Right:
+                return 90;
+            case Modules.Orientation.Down:
+                return 180;
+            case Modules.Orientation.Left:
+                return 270;
+        }
+    }
+
+    private updateMinimap(): void {
+        // Throttle minimap updates – rendering full tile windows is more expensive than the compass.
+        if (this.game.time - this.lastMinimapUpdate < 100) return;
+        this.lastMinimapUpdate = this.game.time;
+
+        if (!this.minimap || !this.minimapContext) return;
+
+        const rect = this.minimap.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        const canvasWidth = Math.max(1, Math.round(rect.width * dpr));
+        const canvasHeight = Math.max(1, Math.round(rect.height * dpr));
+
+        if (this.minimap.width !== canvasWidth) this.minimap.width = canvasWidth;
+        if (this.minimap.height !== canvasHeight) this.minimap.height = canvasHeight;
+
+        const context = this.minimapContext;
+        context.setTransform(1, 0, 0, 1, 0, 0);
+        context.imageSmoothingEnabled = false;
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        const player = this.game.player;
+        const map = this.game.map;
+
+        // Tile radius around the player.
+        const radius = 18;
+        const tilesAcross = radius * 2 + 1;
+
+        // Fit the tile grid into the minimap canvas.
+        const tileSize = Math.min(canvasWidth / tilesAcross, canvasHeight / tilesAcross);
+        const originX = (canvasWidth - tileSize * tilesAcross) / 2;
+        const originY = (canvasHeight - tileSize * tilesAcross) / 2;
+
+        const isWalkableColour = 'rgba(255, 255, 255, 0.10)';
+        const isBlockedColour = 'rgba(0, 0, 0, 0.35)';
+        const isVoidColour = 'rgba(0, 0, 0, 0.55)';
+
+        for (let dy = -radius; dy <= radius; dy++) {
+            for (let dx = -radius; dx <= radius; dx++) {
+                const gridX = player.gridX + dx;
+                const gridY = player.gridY + dy;
+
+                let fill = isWalkableColour;
+
+                // Void / unknown tiles.
+                if (
+                    map.isOutOfBounds(gridX, gridY) ||
+                    (map.data[map.coordToIndex(gridX, gridY)] as number) < 1
+                )
+                    fill = isVoidColour;
+                else if (map.isColliding(gridX, gridY, true)) fill = isBlockedColour;
+
+                context.fillStyle = fill;
+                context.fillRect(
+                    originX + (dx + radius) * tileSize,
+                    originY + (dy + radius) * tileSize,
+                    Math.ceil(tileSize),
+                    Math.ceil(tileSize)
+                );
+            }
+        }
+
+        const centerX = originX + (radius + 0.5) * tileSize;
+        const centerY = originY + (radius + 0.5) * tileSize;
+
+        const dotSize = Math.max(2, Math.min(5, tileSize * 0.45));
+
+        const drawDot = (x: number, y: number, colour: string, size: number) => {
+            context.fillStyle = colour;
+            context.beginPath();
+            context.arc(x, y, size / 2, 0, Math.PI * 2);
+            context.fill();
+        };
+
+        // Entities.
+        this.game.entities.forEachEntity((entity: Entity) => {
+            const dx = entity.gridX - player.gridX;
+            const dy = entity.gridY - player.gridY;
+            if (Math.abs(dx) > radius || Math.abs(dy) > radius) return;
+            if (entity.instance === player.instance) return;
+
+            let colour = 'rgba(255, 255, 255, 0.7)';
+            if (entity.isPlayer()) colour = 'rgba(125, 215, 255, 0.8)';
+            else if (entity.isMob()) colour = 'rgba(255, 120, 120, 0.8)';
+            else if (entity.isNPC()) colour = 'rgba(255, 230, 120, 0.8)';
+
+            drawDot(centerX + dx * tileSize, centerY + dy * tileSize, colour, dotSize);
+        });
+
+        // Player (draw last so it stays on top).
+        drawDot(centerX, centerY, 'rgba(255, 255, 255, 0.95)', Math.max(dotSize + 1, 3));
     }
 
     // -------------- Drawing Functions --------------

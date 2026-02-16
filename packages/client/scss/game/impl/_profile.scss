@@ -12,12 +12,17 @@
 #attack-style-list {
     display: flex;
     flex-direction: row;
-    gap: 0.75em;
+    gap: 0.5em;
     justify-content: space-evenly;
 
     height: 3em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.4em;
+    background: rgba(34, 34, 34, 0.5);
+    border: 1px solid rgba(246, 166, 35, 0.3);
+    border-radius: 5px;
+    list-style: none;
 }
 
 #state-page,
@@ -28,25 +33,36 @@
 
     display: none;
     flex-direction: row;
-    gap: 0.5em;
-    align-items: center;
+    gap: 1.2em;
+    align-items: flex-start;
 
     box-sizing: border-box;
     height: 12em;
-    padding: 1.5em 1em 0.5em;
+    padding: 1.8em 1.2em 1em;
 }
 
 #profile-stats {
     display: flex;
     flex: 1;
-    gap: 0.5em;
-    align-items: center;
-    justify-content: space-between;
+    gap: 0.8em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0.8em 1em;
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0.3), transparent);
+    border-radius: 5px;
 
     #profile-level,
     #profile-experience,
     span {
         font-size: 1.1em;
+        color: #e8e8e8;
+        line-height: 1.4;
+    }
+
+    strong {
+        color: rgba(246, 166, 35, 1);
+        font-weight: 700;
     }
 
     .button-row {
@@ -63,12 +79,27 @@
     position: relative;
     width: 10em;
     height: 9.5em;
+    padding: 0.3em;
+    background: rgba(34, 34, 34, 0.3);
+    border: 1px solid rgba(246, 166, 35, 0.2);
+    border-radius: 5px;
 
     .equipment-slot {
         position: absolute;
-        width: 2em;
-        height: 2em;
-        padding: 0.25em;
+        width: 2.2em;
+        height: 2.2em;
+        padding: 0.2em;
+        background: rgba(34, 34, 34, 0.8);
+        border: 2px solid rgba(122, 122, 122, 0.6);
+        border-radius: 4px;
+        transition: all 0.15s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(42, 42, 42, 0.9);
+            border-color: rgba(246, 166, 35, 1);
+            transform: scale(1.08);
+        }
 
         &-image {
             width: 100%;
@@ -155,6 +186,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 0.5em;
 
     width: 100%;
 }
@@ -175,6 +207,21 @@
     flex-direction: row;
     justify-content: center;
     padding-top: 0.875em;
+    background-image: none !important;
+    background: rgba(34, 34, 34, 0.7);
+    border: 2px solid rgba(122, 122, 122, 0.5);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(42, 42, 42, 0.85) !important;
+        border-color: rgba(246, 166, 35, 0.9);
+    }
+
+    &:active {
+        background: rgba(246, 166, 35, 0.15) !important;
+        border-color: rgba(246, 166, 35, 1);
+    }
 }
 
 @include sprite.sheet(

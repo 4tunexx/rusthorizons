@@ -8,7 +8,7 @@
             "npc": "oldscholar",
             "text": [
                 "Ah, young traveler! I've found this old scroll, but I can't seem to decode its message.",
-                "It might lead to an ancient treasure. Will you assist me?"
+                "It might lead to an old-world cache. Will you assist me?"
             ],
             "completedText": ["Please decipher the coded scroll.", "I believe it hides a clue."]
         },

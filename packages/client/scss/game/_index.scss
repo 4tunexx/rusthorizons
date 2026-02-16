@@ -8,6 +8,7 @@
 @use 'impl/buttons';
 @use 'impl/chat';
 @use 'impl/container';
+@use 'impl/compass';
 @use 'impl/crafting';
 @use 'impl/dialog';
 @use 'impl/enchant';
@@ -20,6 +21,7 @@
 @use 'impl/leaderboards';
 @use 'impl/lootbag';
 @use 'impl/map';
+@use 'impl/minimap';
 @use 'impl/notifications';
 @use 'impl/page';
 @use 'impl/player';
@@ -34,6 +36,7 @@
 @use 'impl/zoom';
 @use 'impl/quest';
 @use 'impl/inappstore';
+@use 'impl/lucide-ui';
 
 body.game {
     background: #000;

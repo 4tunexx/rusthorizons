@@ -11,17 +11,17 @@ import Statistics from './statistics';
 import Trade from './trade';
 import Incoming from './incoming';
 
-import Mana from '../points/mana';
+import Drive from '../points/mana';
 import Character from '../character';
 import Item from '../../objects/item';
 import Formulas from '../../../../info/formulas';
 
-import Utils from '@kaetram/common/util/utils';
-import log from '@kaetram/common/util/log';
-import config from '@kaetram/common/config';
-import { PacketType } from '@kaetram/common/network/modules';
-import { Opcodes, Modules } from '@kaetram/common/network';
-import { Team } from '@kaetram/common/api/minigame';
+import Utils from '@rusthorizons/common/util/utils';
+import log from '@rusthorizons/common/util/log';
+import config from '@rusthorizons/common/config';
+import { PacketType } from '@rusthorizons/common/network/modules';
+import { Opcodes, Modules } from '@rusthorizons/common/network';
+import { Team } from '@rusthorizons/common/api/minigame';
 import {
     CameraPacket,
     ChatPacket,
@@ -42,7 +42,7 @@ import {
     SyncPacket,
     TeleportPacket,
     WelcomePacket
-} from '@kaetram/common/network/impl';
+} from '@rusthorizons/common/network/impl';
 
 import type Pet from '../pet/pet';
 import type NPC from '../../npc/npc';
@@ -54,14 +54,14 @@ import type Regions from '../../../map/regions';
 import type Connection from '../../../../network/connection';
 import type Minigame from '../../../minigames/minigame';
 import type Entities from '../../../../controllers/entities';
-import type Packet from '@kaetram/common/network/packet';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
-import type { EntityDisplayInfo } from '@kaetram/common/types/entity';
-import type { Bonuses, Stats } from '@kaetram/common/types/item';
-import type { ProcessedDoor } from '@kaetram/common/types/map';
-import type { PlayerData } from '@kaetram/common/network/impl/player';
-import type { PointerData } from '@kaetram/common/network/impl/pointer';
-import type { PlayerInfo } from '@kaetram/common/database/mongodb/creator';
+import type Packet from '@rusthorizons/common/network/packet';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
+import type { EntityDisplayInfo } from '@rusthorizons/common/types/entity';
+import type { Bonuses, Stats } from '@rusthorizons/common/types/item';
+import type { ProcessedDoor } from '@rusthorizons/common/types/map';
+import type { PlayerData } from '@rusthorizons/common/network/impl/player';
+import type { PointerData } from '@rusthorizons/common/network/impl/pointer';
+import type { PlayerInfo } from '@rusthorizons/common/database/mongodb/creator';
 
 type KillCallback = (character: Character) => void;
 type NPCTalkCallback = (npc: NPC) => void;
@@ -95,7 +95,7 @@ export default class Player extends Character {
     public achievements: Achievements;
     public skills: Skills;
     public equipment: Equipments;
-    public mana: Mana;
+    public drive: Drive;
     public statistics: Statistics;
     public friends: Friends;
     public trade: Trade;
@@ -110,7 +110,7 @@ export default class Player extends Character {
     public questsLoaded = false;
     public invalidateMovement = false;
     public achievementsLoaded = false;
-    public displayedManaWarning = false;
+    public displayedDriveWarning = false;
     public bypassAntiCheat = false;
     public pickingUpPet = false; // Used to doubly ensure the player is not spamming the pickup button.
     public requestedPing = false;
@@ -209,7 +209,7 @@ export default class Player extends Character {
         this.achievements = new Achievements(this);
         this.skills = new Skills(this);
         this.equipment = new Equipments(this);
-        this.mana = new Mana(Formulas.getMaxMana(this.level));
+        this.drive = new Drive(Formulas.getMaxDrive(this.level));
         this.statistics = new Statistics(this);
         this.friends = new Friends(this);
         this.trade = new Trade(this);
@@ -255,8 +255,8 @@ export default class Player extends Character {
         this.setPoison(data.poison.type, Date.now() - data.poison.remaining);
         this.setLastWarp(data.lastWarp);
 
-        this.hitPoints.updateHitPoints(data.hitPoints);
-        this.mana.updateMana(data.mana);
+        this.hitPoints.updateHitPoints(data.vitality);
+        this.drive.updateDrive(data.drive);
 
         this.friends.load(data.friends);
 
@@ -412,7 +412,7 @@ export default class Player extends Character {
 
     /**
      * Handle the actual player login. Check if the user is banned,
-     * update hitPoints and mana, and send the player information
+     * update hitPoints and drive, and send the player information
      * to the client.
      */
 
@@ -421,8 +421,8 @@ export default class Player extends Character {
         if (this.hitPoints.getHitPoints() < 0)
             this.hitPoints.setHitPoints(this.hitPoints.getMaxHitPoints());
 
-        // Reset mana if it is unitialized.
-        if (this.mana.getMana() < 0) this.mana.setMana(this.mana.getMaxMana());
+        // Reset drive if it is unitialized.
+        if (this.drive.getDrive() < 0) this.drive.setDrive(this.drive.getMaxDrive());
 
         // Update the player's timeout based on their rank.
         if (this.rank !== Modules.Ranks.None)
@@ -460,7 +460,7 @@ export default class Player extends Character {
         this.send(new RespawnPacket(this));
 
         this.hitPoints.reset();
-        this.mana.reset();
+        this.drive.reset();
 
         this.sync();
     }
@@ -495,18 +495,18 @@ export default class Player extends Character {
 
     /**
      * Override of the heal superclass function. Heals by a specified amount, and givne the
-     * type, we will heal only the hitpoints or the mana with a special effect associated. If no
-     * type is specified, then it proceeds to heal both hitpoints and mana.
+     * type, we will heal only the hitpoints or the drive with a special effect associated. If no
+     * type is specified, then it proceeds to heal both hitpoints and drive.
      * @param amount The amount we are healing by.
-     * @param type The type of heal we are performing ('passive' | 'hitpoints' | 'mana');
+     * @param type The type of heal we are performing ('passive' | 'hitpoints' | 'drive');
      */
 
     public override heal(amount = 1, type: Modules.HealTypes = 'passive'): void {
         switch (type) {
             case 'passive': {
-                // Increment mana by 1% of the max mana.
-                if (!this.mana.isFull())
-                    this.mana.increment(Math.floor(this.mana.getMaxMana() * 0.01));
+                // Increment drive by 1% of the max drive.
+                if (!this.drive.isFull())
+                    this.drive.increment(Math.floor(this.drive.getMaxDrive() * 0.01));
 
                 // Base healing amount by 0.5% of the max hitpoints.
                 let healAmount = this.hitPoints.getMaxHitPoints() * 0.005;
@@ -520,11 +520,11 @@ export default class Player extends Character {
             }
 
             case 'hitpoints':
-            case 'mana': {
+            case 'drive': {
                 if (this.isCheater()) this.notify(`Healing is disabled for cheaters, sorry.`);
 
                 if (type === 'hitpoints') this.hitPoints.increment(amount);
-                else if (type === 'mana') this.mana.increment(amount);
+                else if (type === 'drive') this.drive.increment(amount);
 
                 this.sendToRegions(
                     new HealPacket({
@@ -999,7 +999,7 @@ export default class Player extends Character {
          * We make the experience half of what it would normally be.
          */
 
-        if (!this.hasManaForAttack()) experience = Math.floor(experience / 2);
+        if (!this.hasDriveForAttack()) experience = Math.floor(experience / 2);
 
         /**
          * Since there are four combat skills, we evenly distribute the experience between them.
@@ -1697,8 +1697,8 @@ export default class Player extends Character {
      * @returns Whether or not the player has enough mana to attack.
      */
 
-    public hasManaForAttack(): boolean {
-        return this.mana.getMana() >= this.equipment.getWeapon().manaCost;
+    public hasDriveForAttack(): boolean {
+        return this.drive.getDrive() >= this.equipment.getWeapon().driveCost;
     }
 
     /**
@@ -2200,7 +2200,7 @@ export default class Player extends Character {
 
     /**
      * Function to be used for syncing up health,
-     * mana, exp, and other variables.
+     * drive, exp, and other variables.
      */
 
     public sync(): void {
@@ -2382,8 +2382,8 @@ export default class Player extends Character {
         data.name = Utils.formatName(this.username);
         data.rank = this.rank;
         data.level = this.skills.getCombatLevel();
-        data.hitPoints = this.hitPoints.getHitPoints();
-        data.maxHitPoints = this.hitPoints.getMaxHitPoints();
+        data.vitality = this.hitPoints.getHitPoints();
+        data.maxVitality = this.hitPoints.getMaxHitPoints();
         data.attackRange = this.attackRange;
         data.movementSpeed = this.getMovementSpeed();
 
@@ -2395,8 +2395,8 @@ export default class Player extends Character {
         if (withExperience) data.experience = this.getTotalExperience();
 
         if (withMana) {
-            data.mana = this.mana.getMana();
-            data.maxMana = this.mana.getMaxMana();
+            data.drive = this.drive.getDrive();
+            data.maxDrive = this.drive.getMaxDrive();
         }
 
         return data;
@@ -2510,7 +2510,7 @@ export default class Player extends Character {
         // Handle magic bonuses
         if (this.isMagic()) {
             // If the player does not have enough mana for the attack decrease the damage.
-            if (!this.hasManaForAttack()) return -3;
+            if (!this.hasDriveForAttack()) return -3;
 
             // Return the total magic bonus.
             return this.getBonuses().magic;

@@ -5,9 +5,9 @@ import path from 'node:path';
 
 import Parser from './parser';
 
-import log from '@kaetram/common/util/log';
+import log from '@rusthorizons/common/util/log';
 
-import type { ProcessedTileset } from '@kaetram/common/types/map';
+import type { ProcessedTileset } from '@rusthorizons/common/types/map';
 
 let resolve = (dir: string): URL => new URL(dir, import.meta.url),
     relative = (dir: string): string => path.relative('../../../', dir),

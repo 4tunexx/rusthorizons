@@ -1,14 +1,14 @@
 import Player from '../game/entity/character/player/player';
 
-import config from '@kaetram/common/config';
-import { HandshakePacket } from '@kaetram/common/network/impl';
+import config from '@rusthorizons/common/config';
+import { HandshakePacket } from '@rusthorizons/common/network/impl';
 
 import type World from '../game/world';
 import type Connection from './connection';
 import type Regions from '../game/map/regions';
 import type SocketHandler from './sockethandler';
-import type Packet from '@kaetram/common/network/packet';
-import type MongoDB from '@kaetram/common/database/mongodb/mongodb';
+import type Packet from '@rusthorizons/common/network/packet';
+import type MongoDB from '@rusthorizons/common/database/mongodb/mongodb';
 
 export default class Network {
     private database: MongoDB;

@@ -1,32 +1,26 @@
 {
-    "name": "Sorcery and Stuff",
-    "description": "Learn the basics to sorcery|The sorcerer needs your help to re-assemble a long-lost magic staff that he lost on the beach. Help him out and perhaps he may teach you a thing or two about sorcery and stuff.",
-    "rewards": ["A Magic Staff", "Access to Sorcerer's store"],
+    "name": "Flux Systems",
+    "description": "Learn the basics of flux modules|The technician needs your help rebuilding a lost flux conduit that was scattered near the coast. Recover the components and earn access to advanced module gear.",
+    "rewards": ["A Flux Staff", "Access to Technician's store"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "sorcerer",
             "text": [
-                "Oh dear adventurer, it's you! One of the thousands",
-                "I've trained and definitely not someone I don't remember.",
-                "Listen, I'm on vacation here and was relaxing on the beach",
-                "when all of the sudden I lost my entire magic contrband!",
-                "I can't run a business if I don't have my equipment.",
-                "Tell you what, if you bring me back 3 magic beads, I'll",
-                "grant you access to my shop!",
-                "You'll be taught how to",
-                "craft your own magic staffs!"
+                "Seeker, perfect timing.",
+                "A scavenger raid hit my cache and stole core flux parts.",
+                "Without them, I can't calibrate module weapons for anyone.",
+                "Bring me 3 flux beads from the coastal cave and",
+                "I'll open my workshop to you.",
+                "You will learn how to build",
+                "your own flux staffs."
             ],
-            "completedText": [
-                "Please bring me 3 magic beads.",
-                "If I recall correctly, some big macho crab took it",
-                "and then retreated in a cave west of here."
-            ]
+            "completedText": ["Bring me 3 flux beads.", "Last scan showed the target retreating into a western cave."]
         },
         "1": {
             "task": "talk",
             "npc": "sorcerer",
-            "hasItemText": ["Perfect, just perfect. These will surely be great."],
+            "hasItemText": ["Excellent. These cores will restore the whole rig."],
             "itemRequirements": [
                 {
                     "key": "bead",
@@ -41,7 +35,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Sorcery and Stuff@green@ quest. You have received a @crimson@Magic Staff@green@!",
+                "text": "@green@You have just finished @crimson@Flux Systems@green@ quest. You have received a @crimson@Flux Staff@green@!",
                 "colour": "#33cc33"
             }
         }

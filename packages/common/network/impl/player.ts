@@ -1,10 +1,10 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { Opcodes, Modules } from '@kaetram/common/network';
-import type { EntityData } from '@kaetram/common/types/entity';
-import type { EquipmentData } from '@kaetram/common/network/impl/equipment';
+import type { Opcodes, Modules } from '@rusthorizons/common/network';
+import type { EntityData } from '@rusthorizons/common/types/entity';
+import type { EquipmentData } from '@rusthorizons/common/network/impl/equipment';
 
 export interface PlayerPacketData {
     username: string;
@@ -21,8 +21,8 @@ export interface PlayerData extends EntityData {
     nextExperience?: number;
     prevExperience?: number;
 
-    mana?: number;
-    maxMana?: number;
+    drive?: number;
+    maxDrive?: number;
 
     equipments: EquipmentData[];
 }

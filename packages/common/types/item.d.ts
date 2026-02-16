@@ -68,7 +68,7 @@ export interface ItemData {
     fishing?: number;
     healAmount?: number;
     healPercent?: number;
-    manaAmount?: number;
+    driveAmount?: number;
     spriteName?: string;
     bonuses?: Bonuses;
     attackStats?: Stats;
@@ -78,7 +78,7 @@ export interface ItemData {
     attackRange?: number;
     projectileName?: string;
     description?: string;
-    manaCost?: number;
+    driveCost?: number;
     weaponType?: string;
     smallBowl?: boolean;
     mediumBowl?: boolean;

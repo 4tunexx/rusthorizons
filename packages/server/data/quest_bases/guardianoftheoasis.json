@@ -1,6 +1,6 @@
 {
     "name": "Guardian of the Oasis",
-    "description": "Desert secrets await your discovery.|Legends speak of a hidden oasis, guarded by a majestic creature. Villagers are running out of water, and only the oasis can save them now.",
+    "description": "Desert secrets await your discovery.|Scouts report a hidden oasis guarded by a powerful creature. Villagers are running out of water, and only the oasis can save them now.",
     "rewards": ["elixiroflife"],
     "stages": {
         "0": {
@@ -60,11 +60,11 @@
             ],
             "text": [
                 "You've returned! And with the oasis water!",
-                "Our village is saved. As a token of our gratitude, take this Elixir of Life."
+                "Our village is saved. As a token of our gratitude, take this Life Compound."
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have completed @crimson@Guardian of the Oasis@green@. The villagers have gifted you the Elixir of Life!",
+                "text": "@green@You have completed @crimson@Guardian of the Oasis@green@. The villagers have gifted you the Life Compound!",
                 "colour": "#33cc33"
             }
         }

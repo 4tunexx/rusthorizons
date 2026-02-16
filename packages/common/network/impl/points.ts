@@ -1,13 +1,13 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
 export interface PointsPacketData {
     instance: string;
-    hitPoints?: number;
-    maxHitPoints?: number;
-    mana?: number;
-    maxMana?: number;
+    vitality?: number;
+    maxVitality?: number;
+    drive?: number;
+    maxDrive?: number;
 }
 
 export type PointsPacketCallback = (info: PointsPacketData) => void;

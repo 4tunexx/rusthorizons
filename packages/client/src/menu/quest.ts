@@ -2,10 +2,10 @@ import Menu from './menu';
 
 import log from '../lib/log';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 import type Player from '../entity/character/player/player';
-import type { QuestPacketData } from '@kaetram/common/network/impl/quest';
+import type { QuestPacketData } from '@rusthorizons/common/network/impl/quest';
 
 export type AcceptCallback = (key: string) => void;
 

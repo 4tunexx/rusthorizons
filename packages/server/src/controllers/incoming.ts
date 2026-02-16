@@ -1,21 +1,24 @@
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import { Packets, Opcodes } from '@kaetram/common/network';
-import { GuildPacket } from '@kaetram/common/network/impl';
-import Packet from '@kaetram/common/network/packet';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { Packets, Opcodes } from '@rusthorizons/common/network';
+import { GuildPacket } from '@rusthorizons/common/network/impl';
+import Packet from '@rusthorizons/common/network/packet';
 
 import type World from '../game/world';
-import type { GuildPacketData, PlayerPacketData } from '@kaetram/common/types/messages/outgoing';
+import type {
+    GuildPacketData,
+    PlayerPacketData
+} from '@rusthorizons/common/types/messages/outgoing';
 import type {
     ChatPacketData,
     FriendsPacketData,
     RelayPacketData
-} from '@kaetram/common/types/messages/hub';
+} from '@rusthorizons/common/types/messages/hub';
 
 /**
  * This incoming is the global incoming controller. This is responsible for
  * communication between the server and the client. If you are an active developer
- * of Kaetram you'll find yourself confused as to why there are two incoming
+ * of Rust Horizons you'll find yourself confused as to why there are two incoming
  * controllers. The player-based one was relocated in the player directory.
  * Coming up with names for network handlers is hard and more confusing than it's worth.
  */

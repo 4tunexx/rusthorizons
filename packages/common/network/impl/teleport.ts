@@ -1,6 +1,6 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
 export interface TeleportPacketData {
     instance: string; // Main entity involved in the teleportation.

@@ -1,8 +1,8 @@
 import Packet from '../packet';
 
-import { Packets } from '@kaetram/common/network';
+import { Packets } from '@rusthorizons/common/network';
 
-import type { Modules } from '@kaetram/common/network';
+import type { Modules } from '@rusthorizons/common/network';
 
 export type RankPacketCallback = (rank: Modules.Ranks) => void;
 

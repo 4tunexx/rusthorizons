@@ -111,6 +111,10 @@ export function onDragDrop(
             // Create a clone of the item element.
             dragClone = element.cloneNode(true) as HTMLElement;
 
+            // Freeze the clone size to the original element size.
+            dragClone.style.width = `${element.clientWidth}px`;
+            dragClone.style.height = `${element.clientHeight}px`;
+
             dragClone.style.position = 'absolute';
             dragClone.style.opacity = '0.75';
             dragClone.style.top = `${-element.clientHeight}px`;

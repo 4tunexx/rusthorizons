@@ -1,8 +1,8 @@
 import Item from '../../objects/item';
 
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import { Modules, Opcodes } from '@kaetram/common/network';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
 import {
     AbilityPacket,
     AchievementPacket,
@@ -18,7 +18,7 @@ import {
     QuestPacket,
     SkillPacket,
     TradePacketPacket
-} from '@kaetram/common/network/impl';
+} from '@rusthorizons/common/network/impl';
 
 import type Player from './player';
 import type NPC from '../../npc/npc';
@@ -31,8 +31,8 @@ import type Ability from './ability/ability';
 import type Equipment from './equipment/equipment';
 import type Areas from '../../../map/areas/areas';
 import type Light from '../../../globals/impl/light';
-import type { Enchantments } from '@kaetram/common/types/item';
-import type { ProcessedDoor } from '@kaetram/common/types/map';
+import type { Enchantments } from '@rusthorizons/common/types/item';
+import type { ProcessedDoor } from '@rusthorizons/common/types/map';
 
 export default class Handler {
     private world: World;
@@ -114,8 +114,8 @@ export default class Handler {
         // Cheat-score callback
         this.player.onCheatScore(this.handleCheatScore.bind(this));
 
-        // Mana callback
-        this.player.mana.onMana(this.handleMana.bind(this));
+        // Drive callback
+        this.player.drive.onDrive(this.handleDrive.bind(this));
     }
 
     /**
@@ -218,21 +218,21 @@ export default class Handler {
 
     private handleAttack(): void {
         if (this.player.isMagic()) {
-            let { manaCost } = this.player.equipment.getWeapon();
+            let { driveCost } = this.player.equipment.getWeapon();
 
-            // If the player doesn't have enough mana to attack.
-            if (!this.player.hasManaForAttack()) {
-                // Warn the player once if they don't have enough mana.
-                if (!this.player.displayedManaWarning) this.player.notify('misc:LOW_MANA');
+            // If the player doesn't have enough drive to attack.
+            if (!this.player.hasDriveForAttack()) {
+                // Warn the player once if they don't have enough drive.
+                if (!this.player.displayedDriveWarning) this.player.notify('misc:LOW_DRIVE');
 
-                this.player.displayedManaWarning = true;
+                this.player.displayedDriveWarning = true;
 
                 return;
             }
 
-            this.player.displayedManaWarning = false;
+            this.player.displayedDriveWarning = false;
 
-            this.player.mana.decrement(manaCost);
+            this.player.drive.decrement(driveCost);
         }
 
         if (this.player.isArcher()) {
@@ -816,15 +816,15 @@ export default class Handler {
     }
 
     /**
-     * Callback for when a change in player's mana has occurred.
+     * Callback for when a change in player's drive has occurred.
      */
 
-    private handleMana(): void {
-        this.player.send(
+    private handleDrive(): void {
+        this.player.sendToRegions(
             new PointsPacket({
                 instance: this.player.instance,
-                mana: this.player.mana.getMana(),
-                maxMana: this.player.mana.getMaxMana()
+                drive: this.player.drive.getDrive(),
+                maxDrive: this.player.drive.getMaxDrive()
             })
         );
     }

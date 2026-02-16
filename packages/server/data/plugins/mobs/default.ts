@@ -1,11 +1,11 @@
-import { Modules } from '@kaetram/common/network';
-import { SpawnPacket } from '@kaetram/common/network/impl';
-import Formulas from '@kaetram/server/src/info/formulas';
-import Hit from '@kaetram/server/src/game/entity/character/combat/hit';
-import Handler from '@kaetram/server/src/game/entity/character/mob/handler';
+import { Modules } from '@rusthorizons/common/network';
+import { SpawnPacket } from '@rusthorizons/common/network/impl';
+import Formulas from '@rusthorizons/server/src/info/formulas';
+import Hit from '@rusthorizons/server/src/game/entity/character/combat/hit';
+import Handler from '@rusthorizons/server/src/game/entity/character/mob/handler';
 
-import type Mob from '@kaetram/server/src/game/entity/character/mob/mob';
-import type Character from '@kaetram/server/src/game/entity/character/character';
+import type Mob from '@rusthorizons/server/src/game/entity/character/mob/mob';
+import type Character from '@rusthorizons/server/src/game/entity/character/character';
 
 /**
  * Default handler plugin for the mob. When a mob has a plugin associated

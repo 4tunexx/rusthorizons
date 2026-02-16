@@ -3,9 +3,9 @@ import Menu from './menu';
 import log from '../lib/log';
 import Util from '../utils/util';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
-import type { Bonuses, Stats } from '@kaetram/common/types/item';
+import type { Bonuses, Stats } from '@rusthorizons/common/types/item';
 import type SpritesController from '../controllers/sprites';
 import type Player from '../entity/character/player/player';
 import type Equipment from '../entity/character/player/equipment';

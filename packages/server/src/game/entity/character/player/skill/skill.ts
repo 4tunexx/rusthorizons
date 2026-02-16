@@ -1,8 +1,8 @@
 import Formulas from '../../../../../info/formulas';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
-import type { SkillData } from '@kaetram/common/network/impl/skill';
+import type { SkillData } from '@rusthorizons/common/network/impl/skill';
 
 type ExperienceCallback = (
     type: Modules.Skills,

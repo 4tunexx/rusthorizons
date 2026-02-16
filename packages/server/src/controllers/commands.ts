@@ -3,17 +3,17 @@ import Item from '../game/entity/objects/item';
 import Character from '../game/entity/character/character';
 import Items from '../../data/items.json';
 
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import Filter from '@kaetram/common/util/filter';
-import { Modules, Opcodes } from '@kaetram/common/network';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import Filter from '@rusthorizons/common/util/filter';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
 import {
     CommandPacket,
     DespawnPacket,
     NPCPacket,
     SpawnPacket,
     StorePacket
-} from '@kaetram/common/network/impl';
+} from '@rusthorizons/common/network/impl';
 
 import type Region from '../game/map/region';
 import type Entity from '../game/entity/entity';

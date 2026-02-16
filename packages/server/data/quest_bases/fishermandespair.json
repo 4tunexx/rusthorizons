@@ -8,12 +8,12 @@
             "npc": "fisher",
             "text": [
                 "Ahoy there, traveler. Ever heard of the golden fish?",
-                "Legends say it grants wishes to those who catch it.",
+                "Dock rumors say whoever catches it turns their luck around.",
                 "I've spent half my life in pursuit but never even got a glimpse.",
                 "Could you perhaps try your hand at it? If you bring me the",
                 "golden fish, I'll share with you a secret of the seas!"
             ],
-            "completedText": ["Any luck finding the golden fish?", "Remember, it's just a legend. Or is it?"]
+            "completedText": ["Any luck finding the golden fish?", "Remember, it's probably just dock talk. Or is it?"]
         },
         "1": {
             "task": "talk",

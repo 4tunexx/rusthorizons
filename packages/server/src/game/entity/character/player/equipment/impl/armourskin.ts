@@ -1,6 +1,6 @@
 import Equipment from '../equipment';
 
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
 export default class ArmourSkin extends Equipment {
     public constructor(key = '', count = -1) {

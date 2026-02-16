@@ -1,7 +1,7 @@
 {
-    "name": "Royal Drama",
-    "description": "The king of Kaetram is in need of your help.|The king of Kaetram is missing and no one knows about his whereabouts. Perhaps you should go speak to the guards and see what they might not know about him.",
-    "rewards": ["Access to the castle"],
+    "name": "Command Disappearance",
+    "description": "Settlement command is missing and needs extraction.|The chief vanished during relocation. Track leads in the sewer network and recover him.",
+    "rewards": ["Access to the command center"],
     "hideNPCs": {
         "king": "before",
         "king2": "after",
@@ -12,39 +12,34 @@
             "task": "talk",
             "npc": "royalguard2",
             "text": [
-                "Sir, please, you must help us.",
-                "We were moving the king around to this new and improved castle",
-                "and then we lost him.",
-                "We were walking over the local sewers",
-                "and I think he may have fallen off into the sewers.",
-                "We didn't notice until we got here, honest to god!",
-                "You should try searching the sewers and see if you can find any clues."
+                "Seeker, we need immediate assistance.",
+                "We were escorting command to the new bunker.",
+                "Somewhere over the sewer crossings, we lost him.",
+                "He likely fell through into the maintenance tunnels.",
+                "Search the network and bring back intel."
             ],
-            "completedText": [
-                "Please, you must help us find the king.",
-                "Look into the sewers and see if you can find any clues."
-            ]
+            "completedText": ["Find command.", "Start in the sewer tunnels and follow any trace."]
         },
         "1": {
             "task": "talk",
             "npc": "ratnpc",
             "text": [
-                "No please don't hit me.",
-                "Listen I'll tell you everything I know about the king.",
-                "I saw him fall into the sewers, and he went into one of these pipes.",
-                "I know there should be a way to get deeper into the sewers from here.",
-                "That's all I know I swear!"
+                "Don't shoot! I'll talk.",
+                "I saw command drop into the tunnels.",
+                "He disappeared into one of the larger drainage pipes.",
+                "There's a route deeper below from here.",
+                "That's all I've got."
             ],
-            "completedText": ["I'm telling you everything I know about the king!", "Just look deeper into the sewer."]
+            "completedText": ["I told you everything I saw.", "Go deeper into the sewer grid."]
         },
         "2": {
             "task": "talk",
             "npc": "king2",
             "text": [
-                "Oh dear adventurer, thank you so much for finding me.",
-                "Those filthy guards threw me in the sewers and didn't look back.",
-                "I will reward you greatly for your help.",
-                "Now I have to go back to the castle and get my affairs in order."
+                "You found me... good work, Seeker.",
+                "Escort detail failed and left me for dead.",
+                "You'll be rewarded for this extraction.",
+                "I'm returning to the bunker to reassert control."
             ],
             "itemRewards": [
                 {
@@ -54,7 +49,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Royal Drama@green@. You have gained 10000 gold!",
+                "text": "@green@You have just finished @crimson@Command Disappearance@green@. You have gained 10000 gold!",
                 "colour": "#33cc33"
             }
         }

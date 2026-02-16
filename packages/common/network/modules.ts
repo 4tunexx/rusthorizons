@@ -75,7 +75,7 @@ export enum AbilityType {
     Passive
 }
 
-export type HealTypes = 'passive' | 'hitpoints' | 'mana';
+export type HealTypes = 'passive' | 'hitpoints' | 'drive';
 
 /**
  * Enumeration of special states that an entity could be. For example,
@@ -117,7 +117,7 @@ export enum Hits {
     Normal,
     Poison,
     Heal,
-    Mana,
+    Drive,
     Experience,
     LevelUp,
     Critical,
@@ -425,7 +425,7 @@ export let DamageColours = {
         stroke: 'rgb(50, 120, 50)'
     },
 
-    [Hits.Mana]: {
+    [Hits.Drive]: {
         fill: 'rgb(73, 94, 228)',
         stroke: 'rgb(56, 63, 133)'
     },

@@ -1,10 +1,10 @@
-import Utils from '@kaetram/common/util/utils';
-import { Modules } from '@kaetram/common/network';
-import log from '@kaetram/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules } from '@rusthorizons/common/network';
+import log from '@rusthorizons/common/util/log';
 
 import type Item from '../../../objects/item';
-import type { SlotData } from '@kaetram/common/types/slot';
-import type { Bonuses, Enchantments, Stats } from '@kaetram/common/types/item';
+import type { SlotData } from '@rusthorizons/common/types/slot';
+import type { Bonuses, Enchantments, Stats } from '@rusthorizons/common/types/item';
 
 export default class Slot {
     public edible = false;

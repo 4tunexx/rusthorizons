@@ -1,13 +1,13 @@
 import Entity from '../entity';
 
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { LootBagPacket } from '@kaetram/common/network/impl';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { LootBagPacket } from '@rusthorizons/common/network/impl';
 
 import type Item from './item';
 import type Player from '../character/player/player';
-import type { SlotData } from '@kaetram/common/types/slot';
+import type { SlotData } from '@rusthorizons/common/types/slot';
 import type World from '../../world';
 
 /**

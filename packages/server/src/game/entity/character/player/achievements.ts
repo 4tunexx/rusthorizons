@@ -3,15 +3,15 @@ import Achievement from './achievement/achievement';
 import achievements from '../../../../../data/achievements.json';
 import Item from '../../objects/item';
 
-import { Opcodes } from '@kaetram/common/network';
-import { AchievementPacket } from '@kaetram/common/network/impl';
+import { Opcodes } from '@rusthorizons/common/network';
+import { AchievementPacket } from '@rusthorizons/common/network/impl';
 
-import type { Modules } from '@kaetram/common/network';
+import type { Modules } from '@rusthorizons/common/network';
 import type {
     AchievementData,
     SerializedAchievement
-} from '@kaetram/common/network/impl/achievement';
-import type { PopupData } from '@kaetram/common/types/popup';
+} from '@rusthorizons/common/network/impl/achievement';
+import type { PopupData } from '@rusthorizons/common/types/popup';
 import type NPC from '../../npc/npc';
 import type Mob from '../mob/mob';
 import type Player from './player';

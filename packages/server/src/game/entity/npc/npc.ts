@@ -1,15 +1,15 @@
 import rawData from '../../../../data/npcs.json';
 import Entity from '../entity';
 
-import log from '@kaetram/common/util/log';
-import Utils from '@kaetram/common/util/utils';
-import { NPCPacket } from '@kaetram/common/network/impl';
-import { Modules, Opcodes } from '@kaetram/common/network';
-import { SpecialEntityTypes } from '@kaetram/common/network/modules';
+import log from '@rusthorizons/common/util/log';
+import Utils from '@rusthorizons/common/util/utils';
+import { NPCPacket } from '@rusthorizons/common/network/impl';
+import { Modules, Opcodes } from '@rusthorizons/common/network';
+import { SpecialEntityTypes } from '@rusthorizons/common/network/modules';
 
 import type Player from '../character/player/player';
-import type { NPCData } from '@kaetram/common/network/impl/npc';
-import type { EntityDisplayInfo } from '@kaetram/common/types/entity';
+import type { NPCData } from '@rusthorizons/common/network/impl/npc';
+import type { EntityDisplayInfo } from '@rusthorizons/common/types/entity';
 
 interface RawNPCData {
     [key: string]: NPCData;

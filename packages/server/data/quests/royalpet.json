@@ -1,23 +1,19 @@
 {
-    "name": "Royal Pet",
-    "description": "The king needs your help with distributing the good news to the people of Kaetram.|The king has asked you personally, yes, you, to run a couple errands for him. You must deliver some stuff and whatnot. Actually why don't you go talk to him instead of reading this description and spoiling the surprise. By surprise I mean you have to run around the place doing stupid stuff, but whatever, who cares, that's why you signed up on this game didn't you. Or was it because you wanted to grind but your addiction to being a completionist leads you to complete these useless quests. Oh well, this description is long enough.",
-    "rewards": ["A cute little pet kitty"],
+    "name": "Broadcast Duty",
+    "description": "The settlement chief needs help distributing public bulletins.|Carry survival manuals and bulletin packets to key residents across town and swamp outposts.",
+    "rewards": ["A scout cat companion"],
     "questRequirements": ["royaldrama"],
     "stages": {
         "0": {
             "task": "talk",
             "npc": "king",
             "text": [
-                "Hello fellow idiot, I mean adventurer.",
-                "I must distribute the good news to the residents of Kaetram",
-                "I have all these books that I must hand out. Would you be so kind",
-                "as to deliver these to some of Kaetram's residents.",
-                "There should be a couple located throughout the city and in the swamp."
+                "Seeker, I need a courier for settlement broadcasts.",
+                "These manuals must reach residents before nightfall.",
+                "Deliver the packets across town and swamp sectors.",
+                "No delays, no detours."
             ],
-            "completedText": [
-                "Please deliver the books to residents of Kaetram. They're located",
-                "throughout the city and in the swamp."
-            ],
+            "completedText": ["Deliver the manuals to assigned residents.", "Targets are in town and swamp sectors."],
             "itemRewards": [
                 {
                     "key": "book",
@@ -31,14 +27,14 @@
                 {
                     "task": "talk",
                     "npc": "shepherdboy",
-                    "text": ["Oh hello there adventurer!"],
+                    "text": ["Hey, survivor."],
                     "hasItemText": [
-                        "Hello there adventurer!",
-                        "Oh, you have a book from the king?",
-                        "Is he hiring random people to hand out pamphlets again?",
-                        "Oh well, I'll take it I guess."
+                        "Hey, survivor.",
+                        "A bulletin from command?",
+                        "Copy that, I'll pin it to the board.",
+                        "Thanks for the delivery."
                     ],
-                    "completedText": ["Thank you for the book I guess."],
+                    "completedText": ["Manual received."],
                     "itemRequirements": [
                         {
                             "key": "book",
@@ -51,11 +47,11 @@
                     "npc": "redbikinigirlnpc",
                     "text": ["Oh hello!"],
                     "hasItemText": [
-                        "Oh, hello there, what are you doing here?",
-                        "Oh, you have more propagan- I mean, news from the king?",
-                        "Okay well thank you I guess..."
+                        "You made good time.",
+                        "Another command bulletin?",
+                        "I'll read it once shift ends."
                     ],
-                    "completedText": ["Oh hello adventurer."],
+                    "completedText": ["Stay safe out there."],
                     "itemRequirements": [
                         {
                             "key": "book",
@@ -66,13 +62,9 @@
                 {
                     "task": "talk",
                     "npc": "fisherman",
-                    "text": ["Oh hello there adventurer!"],
-                    "hasItemText": [
-                        "Oh, hello there, what are you doing here?",
-                        "Oh, you have more propagan- I mean, news from the king?",
-                        "Okay well thank you I guess..."
-                    ],
-                    "completedText": ["Oh hello adventurer."],
+                    "text": ["Hey there, runner."],
+                    "hasItemText": ["Another bulletin drop?", "Good, we were missing this update.", "Thanks, courier."],
+                    "completedText": ["Signal stays stable with info like this."],
                     "itemRequirements": [
                         {
                             "key": "book",
@@ -86,10 +78,10 @@
             "task": "talk",
             "npc": "king",
             "text": [
-                "Thank you for delivering the books adventurer.",
-                "I have a special reward for you.",
-                "I have this cute little kitty that I want to give to you.",
-                "I hope you enjoy it."
+                "Excellent work, Seeker.",
+                "All sectors received the broadcast.",
+                "Take this scout cat unit as your reward.",
+                "It tracks movement better than most drones."
             ],
             "itemRewards": [
                 {
@@ -99,7 +91,7 @@
             ],
             "popup": {
                 "title": "Quest completed!",
-                "text": "@green@You have just finished @crimson@Royal Pet@green@. You have gained a cute little pet kitty!",
+                "text": "@green@You have just finished @crimson@Broadcast Duty@green@. You have gained a scout cat companion!",
                 "colour": "#33cc33"
             }
         }

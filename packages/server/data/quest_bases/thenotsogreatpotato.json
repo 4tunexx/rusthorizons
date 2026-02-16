@@ -1,6 +1,6 @@
 {
     "name": "The Not-So-Great Potato",
-    "description": "Root of all humor.|The potato king insists he's a tomato. Help him come to terms with his tuber truth.",
+    "description": "Root of all humor.|The self-appointed potato boss insists he's a tomato. Help him come to terms with his tuber truth.",
     "rewards": ["potato"],
     "stages": {
         "0": {

@@ -1,24 +1,24 @@
-import sorcery from './sorcery';
 import tutorial from './tutorial';
-import foresting from './foresting';
-import desertquest from './desertquest';
-import seaactivities from './seaactivities';
-import ancientlands from './ancientlands';
-import minersquest from './minersquest';
-import evilsanta from './evilsanta';
-import artsandcrafts from './artsandcrafts';
-import scavenger from './scavenger';
-import minersquest2 from './minersquest2';
-import royaldrama from './royaldrama';
-import clamchowder from './clamchowder';
-import royalpet from './royalpet';
-import scientistspotion from './scientistspotion';
-import anvilsechoes from './anvilsechoes.ts';
-import herbalistdesperation from './herbalistdesperation';
-import ricksroll from './ricksroll';
-import codersglitch from './codersglitch';
-import codersglitch2 from './codersglitch2';
-import codersfallacy from './codersfallacy';
+import sorcery from './sorcery'; // Wasteland Tech-Shaman quest
+import foresting from './foresting'; // Scrap Salvaging quest
+import desertquest from './desertquest'; // Toxic Wastes expedition
+import seaactivities from './seaactivities'; // Sunken Depths exploration
+import ancientlands from './ancientlands'; // Old World Ruins quest
+import minersquest from './minersquest'; // Rad-Mine excavation
+import evilsanta from './evilsanta'; // Raider Boss encounter
+import artsandcrafts from './artsandcrafts'; // Tech Crafting quest
+import scavenger from './scavenger'; // Wasteland Scavenging
+import minersquest2 from './minersquest2'; // Deep Mine quest
+import royaldrama from './royaldrama'; // Citadel Politics quest
+import clamchowder from './clamchowder'; // Survivor's Stew quest
+import royalpet from './royalpet'; // Mutant Companion quest
+import scientistspotion from './scientistspotion'; // Chem Lab quest
+import anvilsechoes from './anvilsechoes.ts'; // Forge Master quest
+import herbalistdesperation from './herbalistdesperation'; // Medic's Cure quest
+import ricksroll from './ricksroll'; // Lost Survivor quest
+import codersglitch from './codersglitch'; // AI Terminal quest
+import codersglitch2 from './codersglitch2'; // System Override quest
+import codersfallacy from './codersfallacy'; // Data Recovery quest
 
 export default {
     tutorial,

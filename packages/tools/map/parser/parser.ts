@@ -1,9 +1,9 @@
 import zlib from 'node:zlib';
 
-import { Modules } from '@kaetram/common/network';
-import log from '@kaetram/common/util/log';
+import { Modules } from '@rusthorizons/common/network';
+import log from '@rusthorizons/common/util/log';
 
-import type { ProcessedAnimation, ProcessedMap, ProcessedTileset } from '@kaetram/common/types/map';
+import type { ProcessedAnimation, ProcessedMap, ProcessedTileset } from '@rusthorizons/common/types/map';
 import type { Animation, Layer, LayerObject, MapData, Property, Tileset } from './mapdata';
 
 export default class ProcessMap {

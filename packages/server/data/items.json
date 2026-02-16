@@ -1,7 +1,7 @@
 {
     "coppersword": {
         "type": "weapon",
-        "name": "Copper Sword",
+        "name": "Scrap Blade",
         "weaponType": "sword",
         "attackStats": {
             "crush": 2,
@@ -26,7 +26,7 @@
     },
     "tinsword": {
         "type": "weapon",
-        "name": "Tin Sword",
+        "name": "Rusty Cutter",
         "weaponType": "sword",
         "attackStats": {
             "crush": 1,
@@ -51,7 +51,7 @@
     },
     "bronzesword": {
         "type": "weapon",
-        "name": "Bronze Sword",
+        "name": "Salvaged Cleaver",
         "weaponType": "sword",
         "skill": "accuracy",
         "level": 5,
@@ -78,7 +78,7 @@
     },
     "ironsword": {
         "type": "weapon",
-        "name": "Iron Sword",
+        "name": "Iron Ripper",
         "weaponType": "sword",
         "skill": "accuracy",
         "level": 10,
@@ -105,7 +105,7 @@
     },
     "goldsword": {
         "type": "weapon",
-        "name": "Gold Sword",
+        "name": "Gilded Edge",
         "weaponType": "sword",
         "skill": "accuracy",
         "level": 20,
@@ -348,7 +348,7 @@
     },
     "bronzespear": {
         "type": "weapon",
-        "name": "Bronze Spear",
+        "name": "Scrap Spear",
         "weaponType": "spear",
         "skill": "accuracy",
         "level": 5,
@@ -375,7 +375,7 @@
     },
     "ironspear": {
         "type": "weapon",
-        "name": "Iron Spear",
+        "name": "Iron Pike",
         "weaponType": "spear",
         "skill": "accuracy",
         "level": 10,
@@ -403,7 +403,7 @@
 
     "goldspear": {
         "type": "weapon",
-        "name": "Gold Spear",
+        "name": "Gilded Lance",
         "weaponType": "spear",
         "skill": "accuracy",
         "level": 20,
@@ -567,7 +567,7 @@
     },
     "bronzepickaxe": {
         "type": "weapon",
-        "name": "Bronze Pickaxe",
+        "name": "Scrap Breaker",
         "weaponType": "pickaxe",
         "mining": 1,
         "price": 100,
@@ -594,7 +594,7 @@
     },
     "ironpickaxe": {
         "type": "weapon",
-        "name": "Iron Pickaxe",
+        "name": "Iron Breaker",
         "weaponType": "pickaxe",
         "mining": 10,
         "price": 200,
@@ -621,7 +621,7 @@
     },
     "goldpickaxe": {
         "type": "weapon",
-        "name": "Gold Pickaxe",
+        "name": "Gilded Breaker",
         "weaponType": "pickaxe",
         "mining": 20,
         "price": 400,
@@ -649,7 +649,7 @@
 
     "cobaltpickaxe": {
         "type": "weapon",
-        "name": "Cobalt Pickaxe",
+        "name": "Tech Breaker",
         "weaponType": "pickaxe",
         "mining": 15,
         "price": 800,
@@ -788,7 +788,7 @@
     },
     "bronzeaxe": {
         "type": "weapon",
-        "name": "Bronze Axe",
+        "name": "Salvaged Chopper",
         "weaponType": "axe",
         "lumberjacking": 1,
         "price": 100,
@@ -815,7 +815,7 @@
     },
     "ironaxe": {
         "type": "weapon",
-        "name": "Iron Axe",
+        "name": "Iron Cleaver",
         "weaponType": "axe",
         "lumberjacking": 1,
         "price": 100,
@@ -844,7 +844,7 @@
     },
     "cobaltaxe": {
         "type": "weapon",
-        "name": "Cobalt Axe",
+        "name": "Tech Chopper",
         "weaponType": "axe",
         "skill": "strength",
         "level": 15,
@@ -873,7 +873,7 @@
     },
     "goldaxe": {
         "type": "weapon",
-        "name": "Gold Axe",
+        "name": "Gilded Splitter",
         "weaponType": "axe",
         "lumberjacking": 5,
         "price": 400,
@@ -987,7 +987,7 @@
     },
     "ancientshovel": {
         "type": "weapon",
-        "name": "Ancient Shovel",
+        "name": "Relic Shovel",
         "weaponType": "sword",
         "price": 5000,
         "skill": "strength",
@@ -1015,7 +1015,7 @@
     },
     "angelicblade": {
         "type": "weapon",
-        "name": "Angelic Blade",
+        "name": "Sentinel Blade",
         "weaponType": "sword",
         "price": 5000,
         "skill": "strength",
@@ -1631,7 +1631,7 @@
     },
     "royalrapier": {
         "type": "weapon",
-        "name": "Royal Rapier",
+        "name": "Command Rapier",
         "weaponType": "sword",
         "price": 5000,
         "skill": "strength",
@@ -2103,7 +2103,7 @@
     },
     "copperhelmet": {
         "type": "helmet",
-        "name": "Copper Helmet",
+        "name": "Scrap Helmet",
         "price": 100,
         "attackStats": {
             "crush": 1,
@@ -2153,7 +2153,7 @@
     },
     "bronzehelmet": {
         "type": "helmet",
-        "name": "Bronze Helmet",
+        "name": "Salvaged Helm",
         "price": 100,
         "skill": "defense",
         "level": 5,
@@ -2180,7 +2180,7 @@
     },
     "ironhelmet": {
         "type": "helmet",
-        "name": "Iron Helmet",
+        "name": "Iron Visor",
         "price": 100,
         "skill": "defense",
         "level": 10,
@@ -2207,7 +2207,7 @@
     },
     "goldhelmet": {
         "type": "helmet",
-        "name": "Gold Helmet",
+        "name": "Gilded Helm",
         "price": 100,
         "skill": "defense",
         "level": 20,
@@ -2667,7 +2667,7 @@
     },
     "wizardhatblue": {
         "type": "helmet",
-        "name": "Blue Wizard Hat",
+        "name": "Azure Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1,
@@ -2694,70 +2694,70 @@
     },
     "wizardhatblack": {
         "type": "helmet",
-        "name": "Black Wizard Hat",
+        "name": "Carbon Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatcrimson": {
         "type": "helmet",
-        "name": "Crimson Wizard Hat",
+        "name": "Crimson Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatdarkblue": {
         "type": "helmet",
-        "name": "Dark Blue Wizard Hat",
+        "name": "Midnight Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatgreen": {
         "type": "helmet",
-        "name": "Green Wizard Hat",
+        "name": "Toxic Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatpink": {
         "type": "helmet",
-        "name": "Pink Wizard Hat",
+        "name": "Rust Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatpurple": {
         "type": "helmet",
-        "name": "Purple Wizard Hat",
+        "name": "Neural Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatred": {
         "type": "helmet",
-        "name": "Red Wizard Hat",
+        "name": "Plasma Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatturquoise": {
         "type": "helmet",
-        "name": "Turquoise Wizard Hat",
+        "name": "Quantum Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatwhite": {
         "type": "helmet",
-        "name": "White Wizard Hat",
+        "name": "Pristine Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
     },
     "wizardhatyellow": {
         "type": "helmet",
-        "name": "Yellow Wizard Hat",
+        "name": "Thermal Data-Helm",
         "price": 1000,
         "skill": "magic",
         "level": 1
@@ -2818,7 +2818,7 @@
     },
     "witchhat": {
         "type": "helmet",
-        "name": "Witch Hat",
+        "name": "Flux Hat",
         "price": 1000,
         "skill": "magic",
         "level": 15,
@@ -2845,7 +2845,7 @@
     },
     "witchhatblue": {
         "type": "helmet",
-        "name": "Blue Witch Hat",
+        "name": "Blue Flux Hat",
         "price": 1000,
         "skill": "magic",
         "level": 25,
@@ -3331,7 +3331,7 @@
     },
     "jesterhat": {
         "type": "helmet",
-        "name": "Jester Hat",
+        "name": "Performer Hat",
         "price": 100,
         "skill": "defense",
         "level": 1,
@@ -3547,7 +3547,7 @@
     },
     "slimekinghelmet": {
         "type": "helmet",
-        "name": "Slime King Helmet",
+        "name": "Slime Tyrant Helmet",
         "price": 100,
         "skill": "archery",
         "level": 1,
@@ -3574,7 +3574,7 @@
     },
     "slimekingrarehelmet": {
         "type": "helmet",
-        "name": "Rare Slime King Helmet",
+        "name": "Rare Slime Tyrant Helmet",
         "price": 100,
         "skill": "archery",
         "level": 1,
@@ -3844,7 +3844,7 @@
     },
     "elfhelmet": {
         "type": "helmet",
-        "name": "Elf Helmet",
+        "name": "Scout Helmet",
         "price": 100,
         "skill": "archery",
         "level": 40,
@@ -3871,7 +3871,7 @@
     },
     "elfhelmetgrown": {
         "type": "helmet",
-        "name": "Grown Elf Helmet",
+        "name": "Veteran Scout Helmet",
         "price": 100,
         "skill": "magic",
         "level": 40,
@@ -3948,7 +3948,7 @@
     },
     "mysticchest": {
         "type": "chestplate",
-        "name": "Mystic Chestpiece",
+        "name": "Reactive Chestpiece",
         "price": 100,
         "attackStats": {
             "crush": 2,
@@ -3973,7 +3973,7 @@
     },
     "bluemysticchest": {
         "type": "chestplate",
-        "name": "Blue Mystic Chestpiece",
+        "name": "Blue Reactive Chestpiece",
         "price": 100,
         "skill": "magic",
         "level": 5,
@@ -4000,7 +4000,7 @@
     },
     "greenmysticchest": {
         "type": "chestplate",
-        "name": "Green Mystic Chestpiece",
+        "name": "Green Reactive Chestpiece",
         "price": 100,
         "skill": "magic",
         "level": 10,
@@ -4028,7 +4028,7 @@
 
     "copperchestplate": {
         "type": "chestplate",
-        "name": "Copper Chestplate",
+        "name": "Scrap Plating",
         "price": 100,
         "attackStats": {
             "crush": 1,
@@ -4053,7 +4053,7 @@
     },
     "tinchestplate": {
         "type": "chestplate",
-        "name": "Tin Chestplate",
+        "name": "Rusty Plating",
         "price": 100,
         "attackStats": {
             "crush": 1,
@@ -4078,7 +4078,7 @@
     },
     "bronzechestplate": {
         "type": "chestplate",
-        "name": "Bronze Chestplate",
+        "name": "Salvaged Armor",
         "price": 100,
         "skill": "defense",
         "level": 5,
@@ -4105,7 +4105,7 @@
     },
     "ironchestplate": {
         "type": "chestplate",
-        "name": "Iron Chestplate",
+        "name": "Iron Plating",
         "price": 100,
         "skill": "defense",
         "level": 10,
@@ -4132,7 +4132,7 @@
     },
     "goldchestplate": {
         "type": "chestplate",
-        "name": "Gold Chestplate",
+        "name": "Gilded Armor",
         "price": 100,
         "skill": "defense",
         "level": 20,
@@ -5099,7 +5099,7 @@
     },
     "bronzeboots": {
         "type": "boots",
-        "name": "Bronze Boots",
+        "name": "Salvaged Boots",
         "skill": "defense",
         "level": 5,
         "price": 100,
@@ -5126,7 +5126,7 @@
     },
     "ironboots": {
         "type": "boots",
-        "name": "Iron Boots",
+        "name": "Iron Treads",
         "skill": "defense",
         "level": 10,
         "price": 100,
@@ -5153,7 +5153,7 @@
     },
     "goldboots": {
         "type": "boots",
-        "name": "Golden Boots",
+        "name": "Gilded Treads",
         "skill": "defense",
         "level": 20,
         "price": 200,
@@ -5205,7 +5205,7 @@
     },
     "steelboots": {
         "type": "boots",
-        "name": "Steel Boots",
+        "name": "Enforcer Boots",
         "price": 3500,
         "attackStats": {
             "crush": 6,
@@ -6872,14 +6872,14 @@
     },
     "bowmagiccool": {
         "type": "weaponarcher",
-        "name": "Cool Magic Bow",
+        "name": "Cryo Tech Bow",
         "weaponType": "bow",
         "twoHanded": true,
         "price": 100
     },
     "bowmagichot": {
         "type": "weaponarcher",
-        "name": "Hot Magic Bow",
+        "name": "Thermal Tech Bow",
         "weaponType": "bow",
         "twoHanded": true,
         "price": 100
@@ -6935,7 +6935,7 @@
     },
     "magichamberge": {
         "type": "weaponmagic",
-        "name": "Magic Hamberge",
+        "name": "Flux Hamberge",
         "skill": "magic",
         "level": 20,
         "price": 200,
@@ -6966,7 +6966,7 @@
         "name": "Aqua Staff",
         "weaponType": "staff",
         "price": 1500,
-        "manaCost": 2,
+        "driveCost": 2,
         "attackStats": {
             "crush": 2,
             "slash": 4,
@@ -6989,7 +6989,7 @@
         "weaponType": "staff",
         "skill": "magic",
         "price": 7500,
-        "manaCost": 4,
+        "driveCost": 4,
         "level": 10,
         "attackStats": {
             "crush": 2,
@@ -7013,7 +7013,7 @@
         "weaponType": "staff",
         "skill": "magic",
         "price": 12500,
-        "manaCost": 6,
+        "driveCost": 6,
         "level": 17,
         "attackStats": {
             "crush": 2,
@@ -7037,7 +7037,7 @@
         "weaponType": "staff",
         "skill": "magic",
         "price": 22500,
-        "manaCost": 7,
+        "driveCost": 7,
         "level": 25,
         "attackStats": {
             "crush": 2,
@@ -7061,7 +7061,7 @@
         "weaponType": "staff",
         "skill": "magic",
         "price": 40000,
-        "manaCost": 9,
+        "driveCost": 9,
         "level": 35,
         "attackStats": {
             "crush": 2,
@@ -7165,7 +7165,7 @@
     },
     "witchsstaffancient": {
         "type": "weapon",
-        "name": "Ancient Witch's Staff",
+        "name": "Relic Flux Staff",
         "weaponType": "staff",
         "price": 5000,
         "skill": "magic",
@@ -7195,7 +7195,7 @@
     },
     "witchsstaffblood": {
         "type": "weapon",
-        "name": "Witch's Staff of Blood",
+        "name": "Flux Staff of Blood",
         "weaponType": "staff",
         "price": 5000,
         "skill": "magic",
@@ -7225,7 +7225,7 @@
     },
     "witchsstaffdemonic": {
         "type": "weapon",
-        "name": "Demonic Witch's Staff",
+        "name": "Anomaly Flux Staff",
         "weaponType": "staff",
         "price": 5000,
         "skill": "magic",
@@ -7255,7 +7255,7 @@
     },
     "witchsstaffmoon": {
         "type": "weapon",
-        "name": "Witch's Staff of the Moon",
+        "name": "Flux Staff of the Moon",
         "weaponType": "staff",
         "price": 5000,
         "skill": "magic",
@@ -7285,7 +7285,7 @@
     },
     "witchsstaffsunshine": {
         "type": "weapon",
-        "name": "Witch's Staff of Sunshine",
+        "name": "Flux Staff of Sunshine",
         "weaponType": "staff",
         "price": 5000,
         "skill": "magic",
@@ -7343,7 +7343,7 @@
     },
     "ancientstaff": {
         "type": "weapon",
-        "name": "Ancient Staff",
+        "name": "Relic Staff",
         "weaponType": "sword",
         "price": 5000,
         "skill": "strength",
@@ -8230,8 +8230,8 @@
     },
     "flask": {
         "type": "object",
-        "name": "Flask",
-        "description": "A flask used to increment your health from one point to another. How much does it increment it by? +100 HP!",
+        "name": "Stim Pack",
+        "description": "Emergency bio-stabilizer. Patches wounds and reinforces damaged tissues. Restores hull integrity! +100 Hull!",
         "storeCount": 10,
         "price": 40,
         "stackable": true,
@@ -8260,20 +8260,20 @@
     },
     "manaflask": {
         "type": "object",
-        "name": "Mana Flask",
-        "description": "A refreshing drink for those a little bit low on mana! +35 MP!",
+        "name": "Drive Injector",
+        "description": "Cryo-sealed canister of refined energy concentrate. Restores drive reserves for your modules. +35 Energy!",
         "storeCount": 10,
         "price": 200,
         "stackable": true,
         "edible": true,
         "maxStackSize": 30,
         "plugin": "healingitem",
-        "manaAmount": 35
+        "driveAmount": 35
     },
     "burger": {
         "type": "object",
-        "name": "Burger",
-        "description": "How did a burger make its way into a fantasy world? Who knows, but it's delicious! +200 HP!",
+        "name": "Synth-Meat Ration",
+        "description": "Pre-war synthetic protein compound. Nutrient-dense and surprisingly edible. Restores hull integrity! +200 Hull!",
         "storeCount": 10,
         "price": 350,
         "stackable": true,
@@ -8284,8 +8284,8 @@
     },
     "bigflask": {
         "type": "object",
-        "name": "Big Flask",
-        "description": "It's like the other flask, except it's bigger, so obviously it must heal more! +250 HP!",
+        "name": "Vitality Medkit",
+        "description": "Military-grade medical compound. Bandages and stimulants in one. Rapid tissue regeneration! +250 Hull!",
         "storeCount": 10,
         "price": 600,
         "stackable": true,
@@ -8296,22 +8296,22 @@
     },
     "bigmanaflask": {
         "type": "object",
-        "name": "Big Mana Flask",
-        "description": "For those seriously thirsty for some mana! +95 MP!",
+        "name": "Heavy-Duty Drive Injector",
+        "description": "Industrial-grade energy concentrate canister. Built for extended operations in the wastes. +95 Energy!",
         "storeCount": 10,
         "price": 600,
         "stackable": true,
         "edible": true,
         "maxStackSize": 10,
         "plugin": "healingitem",
-        "manaAmount": 95
+        "driveAmount": 95
     },
     "firepotion": {
         "type": "object",
-        "name": "Fire Potion",
+        "name": "Thermal Amplifier",
         "price": 250,
         "maxStackSize": 3,
-        "description": "Feeling a little hot? Have you been burnt to a crisp and can't seem to shake off that burning sensation? The fire potion is the answer to your ailments!",
+        "description": "Unstable thermal enhancement serum. Activates offensive thermal protocols for a short duration.",
         "edible": true,
         "plugin": "firepotion"
     },
@@ -8332,9 +8332,9 @@
     },
     "snowpotion": {
         "type": "object",
-        "name": "Snow Potion",
+        "name": "Snow Compound",
         "price": 25,
-        "description": "A magical potion received by some weird monument. It temporarily prevents the player from taking damage from the cold.",
+        "description": "A cold-shield compound recovered from an old-world monument. It temporarily prevents damage from freezing conditions.",
         "stackable": true,
         "maxStackSize": 3,
         "respawnDelay": 120000,
@@ -8343,11 +8343,11 @@
     },
     "royalazalea": {
         "type": "object",
-        "name": "Royal Azalea"
+        "name": "Command Azalea"
     },
     "blackpotion": {
         "type": "object",
-        "name": "Black Potion",
+        "name": "Dark Serum",
         "price": 100,
         "description": "This potion is not at all suspicious. Drink up, it's really yummy!",
         "plugin": "blackpotion",
@@ -8470,7 +8470,7 @@
     "hammer": {
         "type": "object",
         "name": "Hammer",
-        "description": "This looks like a mystical hammer from some blacksmith or something.",
+        "description": "A reinforced forge hammer used for field repairs and scrap fabrication.",
         "price": 5
     },
     "string": {
@@ -8482,69 +8482,69 @@
     },
     "logs": {
         "type": "object",
-        "name": "Logs",
-        "description": "Ah yes, the classic logs. Looking at them I can see that they're made out of wood.",
+        "name": "Scrap Metal",
+        "description": "Twisted metal bars salvaged from the ruins. Rusty but still useful for crafting.",
         "price": 65
     },
     "palmlogs": {
         "type": "object",
-        "name": "Palm Logs",
-        "description": "Funny enough, these logs are made out of palm wood. Which is not the same as the other kinds of wood.",
+        "name": "Corroded Pipes",
+        "description": "Old industrial piping, corroded but still structurally sound. Different composition than standard scrap.",
         "price": 75
     },
     "pinelogs": {
         "type": "object",
-        "name": "Pine Logs",
-        "description": "I think I found these when I accidentally swung my axe at a tree repeatedly until it fell down.",
+        "name": "Steel Beams",
+        "description": "Salvaged structural beams from collapsed buildings. Heavy duty scrap perfect for reinforcement.",
         "price": 88
     },
     "icelogs": {
         "type": "object",
-        "name": "Ice Logs",
+        "name": "Cryo-Scrap",
         "price": 65,
-        "description": "These logs are made out of ice. They're very cold to the touch. No matter what, they will not thaw. I wonder what happens when you put it in fire."
+        "description": "Metal fragments fused with cryogenic compounds. Freezing cold to touch and won't thaw. Unstable if heated."
     },
     "icepalmlogs": {
         "type": "object",
-        "name": "Ice Palm Logs",
+        "name": "Frozen Conduit",
         "price": 50,
-        "description": "These logs are made out of ice and palm wood. They're very cold to the touch."
+        "description": "Hollow piping filled with frozen coolant. Perpetually cold. Strange composite material."
     },
     "icepinelogs": {
         "type": "object",
-        "name": "Ice Pine Logs",
-        "description": "I think I found these when I accidentally swung my axe at a tree repeatedly until it fell down.",
+        "name": "Frozen Beams",
+        "description": "Structural beams coated in permafrost. Extracted from cryo-facility ruins after repeated strikes.",
         "price": 85
     },
     "aquasilliuslogs": {
         "type": "object",
-        "name": "Aquasillius Logs",
+        "name": "Aquasillius Composite",
         "price": 350,
-        "description": "Mystical logs found in the forests of Kaetram. Can be used to craft powerful bows, granted that you have the requirements I guess."
+        "description": "Rare reinforced material salvaged from Rust Horizons wild sectors. Can be used to craft high-performance bows if you meet requirements."
     },
     "alkythnlogs": {
         "type": "object",
-        "name": "Alkythn Logs",
+        "name": "Alkythn Composite",
         "price": 350,
-        "description": "Mystical logs found in the forests of Kaetram. Can be used to craft powerful bows, granted that you have the requirements I guess."
+        "description": "Rare reinforced material salvaged from Rust Horizons wild sectors. Can be used to craft high-performance bows if you meet requirements."
     },
     "heliphatitlogs": {
         "type": "object",
-        "name": "Heliphatit Logs",
+        "name": "Heliphatit Composite",
         "price": 350,
-        "description": "Mystical logs found in the forests of Kaetram. Can be used to craft powerful bows, granted that you have the requirements I guess."
+        "description": "Rare reinforced material salvaged from Rust Horizons wild sectors. Can be used to craft high-performance bows if you meet requirements."
     },
     "zoncillogs": {
         "type": "object",
-        "name": "Zoncil Logs",
+        "name": "Zoncil Composite",
         "price": 350,
-        "description": "Mystical logs found in the forests of Kaetram. Can be used to craft powerful bows, granted that you have the requirements I guess."
+        "description": "Rare reinforced material salvaged from Rust Horizons wild sectors. Can be used to craft high-performance bows if you meet requirements."
     },
     "zondullogs": {
         "type": "object",
         "name": "Zondul Logs",
         "price": 350,
-        "description": "Mystical logs found in the forests of Kaetram. Can be used to craft powerful bows, granted that you have the requirements I guess."
+        "description": "Rare logs recovered from Rust Horizons wild sectors. Can be used to craft high-performance bows if you meet requirements."
     },
     "bloodwoodlogs": {
         "type": "object",
@@ -8555,7 +8555,7 @@
     "nisocore": {
         "type": "object",
         "name": "Nisoc Ore",
-        "description": "An ancient rock forming in volcanic areas. Generally used for crafting pendants and rings, and perhaps other things.",
+        "description": "An old-world rock forming in volcanic areas. Generally used for crafting pendants and rings, and perhaps other things.",
         "price": 250
     },
     "cinnabarore": {
@@ -8567,7 +8567,7 @@
     "pytharore": {
         "type": "object",
         "name": "Pythar Ore",
-        "description": "A purple crystal with magical properties.",
+        "description": "A purple crystal with volatile energy properties.",
         "price": 500
     },
     "goldnugget": {
@@ -8590,31 +8590,31 @@
     },
     "bead": {
         "type": "object",
-        "name": "Magic Bead",
+        "name": "Flux Bead",
         "price": 10,
         "stackable": true,
         "maxStackSize": 3,
-        "description": "A bead that emanates magical properties. Can be used in conjunction with other items to create magical items."
+        "description": "A bead emitting unstable flux energy. Can be combined with other components to craft advanced gear."
     },
     "lightningbead": {
         "type": "object",
         "name": "Lightning Bead",
-        "description": "A magical bead imbued with lightning properties. Can be used to craft magical items."
+        "description": "A flux bead charged with electrical properties. Can be used to craft advanced gear."
     },
     "naturebead": {
         "type": "object",
-        "name": "Magic Bead",
-        "description": "A magical bead imbued with the power of nature. Can be used to craft magical items."
+        "name": "Flux Bead",
+        "description": "A flux bead tuned to bio-reactive energy. Can be used to craft advanced gear."
     },
     "firebead": {
         "type": "object",
-        "name": "Magic Bead",
-        "description": "A magical bead imbued with fire. Can be used to craft magical items."
+        "name": "Flux Bead",
+        "description": "A flux bead tuned to thermal output. Can be used to craft advanced gear."
     },
     "icebead": {
         "type": "object",
-        "name": "Magic Bead",
-        "description": "A strong magical bead perpetually frozen. Can be used to craft magical items."
+        "name": "Flux Bead",
+        "description": "A high-density flux bead locked in cryo state. Can be used to craft advanced gear."
     },
     "stick": {
         "type": "object",
@@ -8630,15 +8630,9 @@
         "price": 50,
         "description": "A feather, I think it came off of a bird or something. You could make arrows with this thing."
     },
-    "candykey": {
-        "type": "object",
-        "name": "Candy Key",
-        "price": 50,
-        "description": "A key that allows entrance into Santa's secret chamber. Crumbles upon entering."
-    },
     "speedpotion": {
         "type": "object",
-        "name": "Speed Potion",
+        "name": "Velocity Booster",
         "price": 2500,
         "description": "Drinking this will probably speed up your attack rate for a short period of time. I think.",
         "edible": true,
@@ -8646,7 +8640,7 @@
     },
     "accuracypotion": {
         "type": "object",
-        "name": "Accuracy Potion",
+        "name": "Precision Chem",
         "price": 1000,
         "description": "If there's one thing I know is that potions in this world are always sketchy and do something else from what their name implies. I hope that's not the case here.",
         "edible": true,
@@ -8656,7 +8650,7 @@
     },
     "defensepotion": {
         "type": "object",
-        "name": "Defence Potion",
+        "name": "Shield Booster",
         "price": 1000,
         "description": "Drinking this will make give you some serious defense for a short period of time.",
         "edible": true,
@@ -8666,7 +8660,7 @@
     },
     "strengthpotion": {
         "type": "object",
-        "name": "Strength Potion",
+        "name": "Power Stim",
         "price": 1000,
         "description": "Do you wanna partake in maximum damage contests? This potion is probably your best friend.",
         "edible": true,
@@ -8690,13 +8684,19 @@
     },
     "clamchowder": {
         "type": "object",
-        "name": "Clam Chowder",
+        "name": "Survivor's Stew",
         "price": 1000,
-        "description": "A delicious soup made from clams. It's a bit salty though.",
+        "description": "A hearty wasteland stew made from scavenged ingredients. Fills the belly and heals wounds.",
         "edible": true,
         "smallBowl": true,
         "plugin": "healingitem",
         "healAmount": 750
+    },
+    "candykey": {
+        "type": "object",
+        "name": "Raider Keycard",
+        "price": 0,
+        "description": "A bloodstained keycard taken from a raider boss. Opens restricted areas in their stronghold."
     },
     "rawshrimp": {
         "type": "object",
@@ -9006,7 +9006,7 @@
     "mustardplant": {
         "type": "object",
         "name": "Mustard",
-        "description": "A plant found throughout the kingdom of Kaetram. Might be good for some ingredients.",
+        "description": "A plant found throughout Rust Horizons sectors. Useful for ingredients and compounds.",
         "price": 50
     },
     "cuminplant": {
@@ -9024,7 +9024,7 @@
     "dandelion": {
         "type": "object",
         "name": "Dandelion",
-        "description": "A cute little yellow plant that grows in the grass. Or on tree stumps.",
+        "description": "A resilient yellow weed that grows in contaminated soil. Often found near junk heaps.",
         "price": 50
     },
     "strawberry": {
@@ -9346,8 +9346,8 @@
     },
     "manaberry": {
         "type": "object",
-        "name": "Mana Berry",
-        "description": "I heard a story about a wizard that killed an entire town just to taste one. Too bad he slipped on his tunic and died before he could eat it.",
+        "name": "Drive Berry",
+        "description": "A volatile bio-berry loaded with residual energy from contaminated soil. Handle with care.",
         "price": 1000
     },
     "nexuscross": {
@@ -9576,7 +9576,7 @@
     "datacorefragement": {
         "type": "ingredient",
         "name": "Data-Core Fragment",
-        "description": "A piece of an ancient AI system. Contains invaluable information.",
+        "description": "A piece of an old-world AI system. Contains invaluable information.",
         "maxStackSize": 25,
         "bonuses": {
             "accuracy": 1,

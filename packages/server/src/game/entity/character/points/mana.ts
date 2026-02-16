@@ -1,47 +1,47 @@
 import Points from './points';
 
-export default class Mana extends Points {
-    private manaCallback?: () => void;
+export default class Drive extends Points {
+    private driveCallback?: () => void;
 
-    public constructor(mana: number, maxMana?: number) {
-        super(mana, maxMana || mana);
+    public constructor(drive: number, maxDrive?: number) {
+        super(drive, maxDrive || drive);
     }
 
     public override increment(amount: number): void {
         super.increment(amount);
 
-        this.manaCallback?.();
+        this.driveCallback?.();
     }
 
     public override decrement(amount: number): void {
         super.decrement(amount);
 
-        this.manaCallback?.();
+        this.driveCallback?.();
     }
 
-    public updateMana(mana: number, maxMana?: number): void {
-        super.updatePoints(mana, maxMana);
+    public updateDrive(drive: number, maxDrive?: number): void {
+        super.updatePoints(drive, maxDrive);
     }
 
-    public setMana(mana: number): void {
-        super.setPoints(mana);
+    public setDrive(drive: number): void {
+        super.setPoints(drive);
 
-        this.manaCallback?.();
+        this.driveCallback?.();
     }
 
-    public setMaxMana(maxMana: number): void {
-        super.setMaxPoints(maxMana);
+    public setMaxDrive(maxDrive: number): void {
+        super.setMaxPoints(maxDrive);
     }
 
-    public getMana(): number {
+    public getDrive(): number {
         return this.points;
     }
 
-    public getMaxMana(): number {
+    public getMaxDrive(): number {
         return this.maxPoints;
     }
 
-    public onMana(callback: () => void): void {
-        this.manaCallback = callback;
+    public onDrive(callback: () => void): void {
+        this.driveCallback = callback;
     }
 }

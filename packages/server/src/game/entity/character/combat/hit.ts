@@ -1,6 +1,6 @@
-import { Modules } from '@kaetram/common/network';
+import { Modules } from '@rusthorizons/common/network';
 
-import type { HitData } from '@kaetram/common/types/info';
+import type { HitData } from '@rusthorizons/common/types/info';
 
 export default class Hit {
     public constructor(

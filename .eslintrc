@@ -38,7 +38,7 @@
                             "**/../../hub",
                             "**/../../tools"
                         ],
-                        "message": "Import from '@kaetram'"
+                        "message": "Import from '@rusthorizons'"
                     }
                 ]
             }

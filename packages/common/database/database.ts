@@ -1,9 +1,9 @@
 import MongoDB from './mongodb/mongodb';
 
-import config from '@kaetram/common/config';
-import log from '@kaetram/common/util/log';
+import config from '@rusthorizons/common/config';
+import log from '@rusthorizons/common/util/log';
 
-import type { DatabaseTypes } from '@kaetram/common/types/database';
+import type { DatabaseTypes } from '@rusthorizons/common/types/database';
 
 export type DatabaseType = MongoDB | null;
 
