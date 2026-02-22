@@ -132,7 +132,7 @@ export default class Achievements extends Menu {
      * @returns A list element containing the achievement information.
      */
 
-    private createAchievement(task: Task, key: string): void {
+    private createAchievement(task: Task, _key: string): void {
         let element = document.createElement('li'),
             slot = document.createElement('div'),
             coin = document.createElement('div'),
@@ -168,11 +168,16 @@ export default class Achievements extends Menu {
             // Title is displayed as gold if the achievement is completed.
             title.style.color = '#f4b41b';
 
-            // Styling for the coin element.
-            coin.classList.add(task.secret ? `coin-${key}` : 'coin-default');
-        } else if (task.isStarted())
+            // Use trophy icon for completed achievements
+            coin.classList.add('achievement-completed');
+        } else if (task.isStarted()) {
+            // Use circle icon for in-progress achievements
+            coin.classList.add('achievement-progress');
             // Create and add the progress to the achievement element.
             element.append(this.createProgress(task));
+        }
+        // Use lock icon for locked achievements
+        else coin.classList.add('achievement-locked');
 
         this.list.append(element);
     }
@@ -227,8 +232,9 @@ export default class Achievements extends Menu {
             // Styling for the coin element.
             let slot = element.querySelector('.coin-slot > div')!;
 
-            slot.classList.add('coin');
-            slot.classList.add('coin-default');
+            // Clear existing classes and add completed achievement class
+            slot.className = '';
+            slot.classList.add('achievement-completed');
         } else {
             // Title is displayed as white if the achievement is not completed.
             title.style.color = '#fff';

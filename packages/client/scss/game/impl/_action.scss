@@ -1,5 +1,6 @@
 @use '../../abstracts/media';
 @use '../../abstracts/sprite';
+@use '../impl/lucide-ui' as lucide;
 
 #action-container {
     position: absolute;
@@ -76,17 +77,52 @@
     $hover: 2,
     $active: 1,
     $selectors: (
-        '.action-button',
-        '.action-attack',
-        '.action-equip',
-        '.action-drop-one',
-        '.action-drop-many',
-        '.action-eat',
-        '.action-interact',
-        '.action-trade',
-        '.action-potion',
-        '.action-follow',
-        '.action-examine',
-        '.action-addfriend'
+        '.action-button'
     )
 );
+
+// Action buttons using Lucide icons
+.action-attack,
+.action-equip,
+.action-drop-one,
+.action-drop-many,
+.action-eat,
+.action-interact,
+.action-trade,
+.action-potion,
+.action-follow,
+.action-examine,
+.action-addfriend {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4em;
+    height: 1.4em;
+    background: lucide.$ui-icon-color;
+    background-image: none !important;
+    -webkit-mask-image: var(--lucide-icon);
+    mask-image: var(--lucide-icon);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    border-radius: 2px;
+    transition: all 0.15s ease;
+}
+
+.action-attack:hover,
+.action-equip:hover,
+.action-drop-one:hover,
+.action-drop-many:hover,
+.action-eat:hover,
+.action-interact:hover,
+.action-trade:hover,
+.action-potion:hover,
+.action-follow:hover,
+.action-examine:hover,
+.action-addfriend:hover {
+    background: rgba(246, 166, 35, 0.9);
+}

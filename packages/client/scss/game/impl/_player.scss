@@ -47,16 +47,20 @@
     border-radius: 50%;
     background: conic-gradient(
         transparent 0deg,
-        rgba(255, 255, 255, 0.02) 40deg,
-        rgba(255, 255, 255, 0.06) 90deg,
-        rgba(255, 255, 255, 0.14) 140deg,
-        rgba(255, 255, 255, 0.3) 180deg,
-        rgba(255, 255, 255, 0.55) 210deg,
-        rgba(255, 255, 255, 0.9) 230deg,
-        rgba(255, 255, 255, 0.6) 250deg,
-        rgba(255, 255, 255, 0.35) 290deg,
-        rgba(255, 255, 255, 0.18) 320deg,
-        rgba(255, 255, 255, 0.08) 345deg,
+        rgba(255, 255, 255, 0.08) 25deg,
+        rgba(255, 255, 255, 0.25) 50deg,
+        rgba(255, 255, 255, 0.5) 75deg,
+        rgba(255, 255, 255, 0.8) 100deg,
+        rgba(255, 255, 255, 1.2) 125deg,
+        rgba(255, 255, 255, 1.5) 150deg,
+        rgba(255, 255, 255, 1.8) 175deg,
+        // Ultra bright center
+        rgba(255, 255, 255, 1.5) 200deg,
+        rgba(255, 255, 255, 1.2) 225deg,
+        rgba(255, 255, 255, 0.8) 250deg,
+        rgba(255, 255, 255, 0.5) 275deg,
+        rgba(255, 255, 255, 0.25) 300deg,
+        rgba(255, 255, 255, 0.08) 325deg,
         transparent 360deg
     );
     -webkit-mask: radial-gradient(circle, transparent 58%, #000 60%),
@@ -69,11 +73,12 @@
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    opacity: 0.9;
+    opacity: 1;
     mix-blend-mode: screen;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.95))
-        drop-shadow(0 0 36px rgba(255, 255, 255, 0.65)) blur(0.5px);
-    animation: hud-ring-shine 10.5s linear infinite;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1.2))
+        drop-shadow(0 0 55px rgba(255, 255, 255, 1)) drop-shadow(0 0 80px rgba(246, 166, 35, 0.6))
+        drop-shadow(0 0 120px rgba(255, 215, 0, 0.3)) blur(0.2px);
+    animation: hud-ring-shine 6.5s linear infinite;
     z-index: 2;
     pointer-events: none;
 }
@@ -82,7 +87,7 @@
     position: absolute;
     inset: 8px;
     border-radius: 50%;
-    background: rgba(42, 42, 42, 0.95);
+    background: rgb(42, 42, 42);
     box-shadow: inset 0 0 8px rgba(20, 20, 20, 0.6);
 }
 
@@ -98,19 +103,18 @@
 .hud-level {
     position: absolute;
     bottom: -8px;
-    right: -16px;
+    right: -8px; // Moved slightly to the left
     width: 24px;
     height: 24px;
     padding: 0;
     border-radius: 50%;
     background: rgba(34, 34, 34, 0.95);
-    border: 2px solid rgba(246, 166, 35, 0.9);
     color: #f6a623;
     font-size: 0.75em;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
-    z-index: 3;
+    z-index: 10; // Increased to be on top of everything
 }
 
 .hud-bars {
@@ -232,15 +236,44 @@
 
 @keyframes hud-ring-shine {
     0% {
-        transform: rotate(0deg);
-        opacity: 0.35;
+        transform: rotate(0deg) scale(1);
+        opacity: 0.7;
+        filter: brightness(0.9);
     }
-    50% {
-        opacity: 0.85;
+    15% {
+        transform: rotate(54deg) scale(1.03);
+        opacity: 0.9;
+        filter: brightness(1.2);
+    }
+    30% {
+        transform: rotate(108deg) scale(1.08);
+        opacity: 1.1;
+        filter: brightness(1.5);
+    }
+    45% {
+        transform: rotate(162deg) scale(1.03);
+        opacity: 1;
+        filter: brightness(1.4);
+    }
+    60% {
+        transform: rotate(216deg) scale(1);
+        opacity: 0.8;
+        filter: brightness(1);
+    }
+    75% {
+        transform: rotate(270deg) scale(0.97);
+        opacity: 0.9;
+        filter: brightness(1.1);
+    }
+    90% {
+        transform: rotate(324deg) scale(1.02);
+        opacity: 1;
+        filter: brightness(1.3);
     }
     100% {
-        transform: rotate(360deg);
-        opacity: 0.35;
+        transform: rotate(360deg) scale(1);
+        opacity: 0.7;
+        filter: brightness(0.9);
     }
 }
 

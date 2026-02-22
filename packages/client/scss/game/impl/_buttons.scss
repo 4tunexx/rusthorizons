@@ -28,13 +28,13 @@
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(4px);
 
-        color: #f6a623;
+        color: #ccc;
         font-size: 1.4rem;
         line-height: 3.6rem;
         text-align: center;
         font-weight: 700;
         text-shadow:
-            0 0 8px rgba(246, 166, 35, 0.8),
+            0 0 8px rgba(0, 0, 0, 0.8),
             0 2px 4px rgba(0, 0, 0, 0.9);
 
         animation: buttons-arrow-nudge 1s ease-in-out infinite alternate;

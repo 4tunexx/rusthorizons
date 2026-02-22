@@ -75,7 +75,19 @@ $text-title: #ffd58c;
     inset: 0;
     box-sizing: border-box;
     margin: auto;
-    @include panel-core(0.95em);
+
+    // Borderlands-style beveled panel (no corner cutting)
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #efefef;
 }
 
 .slice-menu-fancy {
@@ -83,7 +95,19 @@ $text-title: #ffd58c;
     inset: 0;
     box-sizing: border-box;
     margin: auto;
-    @include panel-core(1.35em);
+
+    // Borderlands-style beveled panel (no corner cutting)
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #efefef;
 }
 
 .slice-container {
@@ -129,7 +153,19 @@ $text-title: #ffd58c;
     height: 16em;
     margin: auto;
     padding: 1em;
-    @include panel-core(1.35em);
+
+    // Borderlands-style beveled panel (no corner cutting)
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #efefef;
 
     @media (--portrait) {
         flex-direction: column;
@@ -285,7 +321,19 @@ $text-title: #ffd58c;
     box-sizing: border-box;
     margin: auto;
     padding: 1em 0.675em 0.675em;
-    @include panel-core(0.9em);
+
+    // Borderlands-style beveled panel (no corner cutting)
+    background: rgba(22, 22, 22, 0.92);
+    border: 2px solid rgba(246, 166, 35, 0.85);
+    border-radius: 3px;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.7),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 3px 3px 0 rgba(0, 0, 0, 0.3),
+        inset -3px -3px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #efefef;
 }
 
 .slice-input {

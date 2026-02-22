@@ -68,12 +68,15 @@
     border: 3px solid rgba(246, 166, 35, 0.8);
     border-radius: 8px;
     box-shadow:
-        0 0 20px rgba(246, 166, 35, 0.4),
         0 5px 25px rgba(0, 0, 0, 0.8),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 
     transition: 0.7s bottom ease;
+
+    &:not(.active) {
+        display: none !important;
+    }
 }
 
 #notification-text-title {
@@ -84,9 +87,7 @@
     font-weight: 700;
     color: #f6a623;
     text-align: center;
-    text-shadow:
-        0 0 10px rgba(246, 166, 35, 0.6),
-        0 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 #notification-text-description {
