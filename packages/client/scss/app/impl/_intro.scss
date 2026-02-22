@@ -310,15 +310,16 @@ $bad: #ff6067;
     display: grid;
     grid-template-columns: 1.1fr 0.8fr 0.72fr;
     gap: 0.85em;
-    border: 1px solid $line;
-    border-radius: 0.95em;
-    padding: 1.1em;
+    border: 2px solid rgba(49, 214, 255, 0.35);
+    border-radius: 1.2em;
+    padding: 1.4em;
     background:
-        linear-gradient(115deg, rgba(17, 35, 74, 0.9), rgba(25, 14, 58, 0.84)),
+        linear-gradient(135deg, rgba(15, 40, 85, 0.95), rgba(30, 15, 70, 0.88)),
         url('/web/banner2.png') center / cover no-repeat;
     box-shadow:
-        0 14px 34px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        0 24px 50px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(49, 214, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 
@@ -326,41 +327,46 @@ $bad: #ff6067;
         content: '';
         position: absolute;
         inset: auto 0 0;
-        height: 35%;
-        background: linear-gradient(180deg, transparent, rgba(6, 10, 24, 0.56));
+        height: 40%;
+        background: linear-gradient(180deg, transparent, rgba(6, 10, 24, 0.68));
         pointer-events: none;
     }
 }
 
 .home-hero-tag {
     display: inline-block;
-    margin-bottom: 0.4em;
-    padding: 0.2em 0.7em;
+    margin-bottom: 0.5em;
+    padding: 0.35em 1em;
     border-radius: 999px;
-    border: 1px solid rgba(49, 214, 255, 0.5);
-    color: $cyan;
-    background: rgba(49, 214, 255, 0.14);
-    font-size: 0.64em;
-    letter-spacing: 0.12em;
-    font-weight: 700;
+    border: 1.5px solid rgba(49, 214, 255, 0.7);
+    color: #00d9ff;
+    background: rgba(49, 214, 255, 0.2);
+    font-size: 0.7em;
+    letter-spacing: 0.14em;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 #home-hero-heading {
     margin: 0;
-    font-size: 2.26em;
-    line-height: 1.04;
-    letter-spacing: 0.028em;
+    font-size: 2.6em;
+    line-height: 1.02;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+    color: #ffeb99;
     text-shadow:
-        0 0 18px rgba(143, 107, 255, 0.45),
-        0 8px 24px rgba(0, 0, 0, 0.46);
+        0 0 24px rgba(143, 107, 255, 0.58),
+        0 12px 32px rgba(0, 0, 0, 0.56),
+        2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 #home-hero-text p {
-    margin: 0.55em 0 0.85em;
-    max-width: 34em;
-    color: rgba(214, 226, 255, 0.84);
-    font-size: 0.78em;
-    line-height: 1.5;
+    margin: 0.7em 0 1.1em;
+    max-width: 36em;
+    color: rgba(220, 235, 255, 0.88);
+    font-size: 0.82em;
+    line-height: 1.58;
+    font-weight: 500;
 }
 
 #home-hero-btns {
@@ -387,17 +393,18 @@ $bad: #ff6067;
     display: flex;
     align-items: center;
     gap: 0.45em;
-    border: 1px solid rgba(49, 214, 255, 0.65);
-    background: linear-gradient(135deg, rgba(49, 214, 255, 0.4), rgba(143, 107, 255, 0.5));
+    border: 2px solid rgba(49, 214, 255, 0.8);
+    background: linear-gradient(135deg, #1c6ba0, #6b4fbf);
     color: #fff;
     box-shadow:
-        0 10px 24px rgba(33, 92, 177, 0.44),
-        0 0 0 1px rgba(49, 214, 255, 0.22) inset;
+        0 16px 36px rgba(33, 92, 177, 0.58),
+        0 0 24px rgba(49, 214, 255, 0.4),
+        0 0 0 1px rgba(49, 214, 255, 0.3) inset;
 
     &:hover {
-        transform: translateY(-1px);
+        transform: translateY(-2px);
         box-shadow:
-            0 14px 30px rgba(33, 92, 177, 0.54),
+            0 20px 44px rgba(33, 92, 177, 0.68),
             0 0 24px rgba(49, 214, 255, 0.24);
     }
 }
@@ -454,23 +461,28 @@ $bad: #ff6067;
 }
 
 .hfc-avatar {
-    width: 2.4em;
-    height: 2.4em;
-    border-radius: 0.5em;
+    width: 3.2em;
+    height: 3.2em;
+    border-radius: 999px;
     display: grid;
     place-items: center;
     background: linear-gradient(135deg, #2fd2ff, #7f69ff);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 18px rgba(49, 214, 255, 0.3);
 }
 
 .hfc-avatar-inner {
     font-weight: 900;
-    color: #050b16;
-    font-size: 0.7em;
+    color: #fff;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
 }
 
 .hfc-title {
-    font-size: 0.74em;
-    letter-spacing: 0.06em;
+    font-size: 0.82em;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    color: #fff;
 }
 
 .hfc-star {
@@ -505,10 +517,11 @@ $bad: #ff6067;
 }
 
 .hfc-stat {
-    background: rgba(18, 33, 64, 0.85);
-    border: 1px solid $line;
-    border-radius: 0.35em;
-    padding: 0.34em 0.4em;
+    background: linear-gradient(135deg, rgba(20, 38, 75, 0.8), rgba(18, 28, 60, 0.8));
+    border: 1.5px solid rgba(49, 214, 255, 0.3);
+    border-radius: 0.5em;
+    padding: 0.4em 0.5em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .hfc-stat-label {
@@ -538,22 +551,26 @@ $bad: #ff6067;
 
 .hfc-btn {
     flex: 1;
-    padding: 0.45em;
-    border-radius: 0.35em;
-    border: 1px solid $line;
-    background: rgba(20, 36, 70, 0.7);
-    color: $muted;
-    font-size: 0.58em;
-    letter-spacing: 0.07em;
+    padding: 0.55em;
+    border-radius: 0.5em;
+    border: 1.5px solid rgba(49, 214, 255, 0.5);
+    background: linear-gradient(135deg, rgba(49, 214, 255, 0.12), rgba(143, 107, 255, 0.12));
+    color: rgba(220, 235, 255, 0.9);
+    font-size: 0.62em;
+    letter-spacing: 0.08em;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.35em;
+    gap: 0.4em;
+    font-weight: 700;
+    transition: all 0.2s ease;
 }
 
 .hfc-btn:hover {
-    color: $cyan;
-    border-color: rgba(49, 214, 255, 0.66);
+    color: #00d9ff;
+    border-color: rgba(49, 214, 255, 0.8);
+    background: linear-gradient(135deg, rgba(49, 214, 255, 0.25), rgba(143, 107, 255, 0.2));
+    box-shadow: 0 8px 18px rgba(49, 214, 255, 0.3);
 }
 
 #home-achievements,
@@ -563,12 +580,12 @@ $bad: #ff6067;
 #home-right > #home-xpbook,
 #home-right > #home-player-profile,
 #home-right > #parchment {
-    border-radius: 0.85em;
-    border: 1px solid $line;
-    background: linear-gradient(180deg, rgba(12, 24, 48, 0.86), rgba(9, 18, 36, 0.86));
+    border-radius: 1.05em;
+    border: 1.5px solid rgba(88, 123, 215, 0.5);
+    background: linear-gradient(180deg, rgba(14, 28, 56, 0.92), rgba(11, 20, 42, 0.9));
     box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        0 12px 28px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 #home-achievements {
@@ -578,15 +595,19 @@ $bad: #ff6067;
 .home-section-header {
     display: flex;
     align-items: center;
-    gap: 0.5em;
-    margin-bottom: 0.6em;
+    gap: 0.6em;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.6em;
+    border-bottom: 1.5px solid rgba(49, 214, 255, 0.25);
 }
 
 .home-section-header h2 {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.92em;
     letter-spacing: 0.12em;
     flex: 1;
+    font-weight: 800;
+    color: #fff;
 }
 
 .home-section-controls {
@@ -597,12 +618,15 @@ $bad: #ff6067;
 
 .home-ctrl-btn,
 .home-see-all {
-    border: 1px solid $line;
-    background: rgba(21, 38, 75, 0.65);
-    color: $muted;
-    border-radius: 0.3em;
-    padding: 0.2em 0.45em;
-    font-size: 0.65em;
+    border: 1.5px solid rgba(49, 214, 255, 0.4);
+    background: rgba(20, 36, 70, 0.8);
+    color: rgba(220, 235, 255, 0.8);
+    border-radius: 0.45em;
+    padding: 0.25em 0.6em;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
 }
 
 .home-see-all {
@@ -612,50 +636,60 @@ $bad: #ff6067;
 .home-ctrl-btn:hover,
 .home-see-all:hover {
     color: $cyan;
-    border-color: rgba(49, 214, 255, 0.66);
+    border-color: rgba(49, 214, 255, 0.8);
+    background: rgba(49, 214, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(49, 214, 255, 0.2);
 }
 
 .home-ach-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.55em;
+    gap: 0.75em;
 }
 
 .home-ach-card {
-    padding: 0.58em;
-    border-radius: 0.72em;
-    border: 1px solid rgba(88, 123, 215, 0.45);
-    background: rgba(10, 20, 40, 0.82);
+    padding: 0.75em;
+    border-radius: 0.95em;
+    border: 1.5px solid rgba(88, 123, 215, 0.55);
+    background: linear-gradient(135deg, rgba(12, 28, 55, 0.92), rgba(15, 22, 48, 0.88));
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.55em;
     transition:
-        transform 0.15s,
-        box-shadow 0.15s,
-        border-color 0.15s;
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    text-align: center;
 }
 
 .home-ach-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(49, 214, 255, 0.6);
-    box-shadow: 0 0 18px rgba(49, 214, 255, 0.2);
+    transform: translateY(-4px);
+    border-color: rgba(49, 214, 255, 0.8);
+    box-shadow: 0 12px 28px rgba(49, 214, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .home-ach-icon {
-    width: 3.1em;
-    height: 3.1em;
-    border-radius: 0.5em;
+    width: 3.8em;
+    height: 3.8em;
+    border-radius: 0.65em;
     display: grid;
     place-items: center;
-    margin-bottom: 0;
+    margin-bottom: 0.1em;
     flex-shrink: 0;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.8em;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .home-ach-body strong {
     display: block;
-    font-size: 0.66em;
-    letter-spacing: 0.05em;
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.2em;
 }
 
 .home-ach-body p {
@@ -674,11 +708,13 @@ $bad: #ff6067;
 
 .home-ach-bar {
     height: 100%;
-    background: linear-gradient(90deg, $cyan, $purple);
+    background: linear-gradient(90deg, #00d9ff, #7e71ff);
+    box-shadow: 0 0 12px rgba(49, 214, 255, 0.6);
 }
 
 .home-ach-bar.green {
-    background: linear-gradient(90deg, #21bd62, #53e8a0);
+    background: linear-gradient(90deg, #1bd46e, #5fff95);
+    box-shadow: 0 0 12px rgba(54, 210, 127, 0.6);
 }
 
 .home-ach-count {
@@ -711,20 +747,21 @@ $bad: #ff6067;
 }
 
 .home-act-header {
-    font-size: 0.62em;
-    letter-spacing: 0.1em;
+    font-size: 0.7em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: $muted;
-    padding: 0.52em 0.62em;
-    background: rgba(16, 30, 59, 0.9);
-    border-bottom: 1px solid $line;
+    color: rgba(220, 235, 255, 0.75);
+    padding: 0.65em 0.75em;
+    background: rgba(16, 30, 59, 0.95);
+    border-bottom: 1.5px solid rgba(49, 214, 255, 0.2);
+    font-weight: 700;
 }
 
 .home-act-game,
 .home-act-cell {
-    padding: 0.55em 0.62em;
-    border-bottom: 1px solid rgba(78, 112, 195, 0.22);
-    font-size: 0.71em;
+    padding: 0.65em 0.75em;
+    border-bottom: 1px solid rgba(78, 112, 195, 0.25);
+    font-size: 0.75em;
     transition: background 0.15s ease;
 }
 
